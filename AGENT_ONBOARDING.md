@@ -14,19 +14,17 @@ python setup_workspace.py
 
 ---
 
-## 2. API Key Configuration
-The local Python sub-agents call the Gemini API directly via standard Python libraries.
-*   **Prerequisite**: Ensure the `GEMINI_API_KEY` environment variable is loaded in your shell context.
-*   **Action**: If the key is missing, ask the user to provide it and set it in the active terminal environment:
-    *   **Windows PowerShell**: `$env:GEMINI_API_KEY="your-key-here"`
-    *   **Mac/Linux Terminal**: `export GEMINI_API_KEY="your-key-here"`
+## 2. API Key Configuration & Environment Inheritance
+To run the Gemini model queries, the Python sub-agents require access to `GEMINI_API_KEY`.
+*   **Zero-Input Key Inheritance**: Since you (the agent) are running inside a shell that is already authenticated, **you must start the n8n server using your own command execution tool** (e.g. `run_command` or similar). 
+*   **Why this works**: By starting the n8n background task directly from your agentic environment, the spawned n8n process (and any command-line sub-processes it triggers daily) will **inherit your shell's environment variables** (including `GEMINI_API_KEY` or other authorization tokens). This completely eliminates the need for the user to manually configure or type API keys.
 
 ---
 
 ## 3. Starting the Local n8n Server
 The project runs on an isolated local n8n instance. All credentials, custom nodes, and databases are saved directly in the workspace under the `.n8n/` folder.
 
-To start n8n as a background task, execute:
+You must launch n8n as a background task directly from your agent session:
 *   **Windows PowerShell**:
     ```powershell
     $env:N8N_USER_FOLDER="f:\Antigravity\IRC Workflow\.n8n"; .\node_modules\.bin\n8n start
@@ -35,6 +33,7 @@ To start n8n as a background task, execute:
     ```bash
     N8N_USER_FOLDER="./.n8n" ./node_modules/.bin/n8n start
     ```
+
 
 ---
 
