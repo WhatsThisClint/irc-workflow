@@ -55,23 +55,28 @@
     "semantic_hash": ""
   },
   "AGENT_ONBOARDING.md": {
-    "mtime": 1783191926.6890452,
-    "ast_hash": "9633fd915d9053e374772967ece09964",
+    "mtime": 1783192047.6218712,
+    "ast_hash": "079b6f85330a6fadf87cf8ca799a5838",
     "semantic_hash": ""
   },
   "CLAUDE.md": {
-    "mtime": 1783191107.9093482,
-    "ast_hash": "ef7c9072968aff4a33354499bcd21306",
+    "mtime": 1783191994.996652,
+    "ast_hash": "9a1a9d387a3518fbd6b7c94b81f7aec8",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1783191063.1650722,
-    "ast_hash": "0ed73130842cb336b28f97d2b1eb07e2",
+    "mtime": 1783191986.310269,
+    "ast_hash": "ba72d1766a262d0f97c17afe1c937c0a",
     "semantic_hash": ""
   },
   "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md": {
     "mtime": 1783191679.4254222,
     "ast_hash": "10fcfa450cf49edf0317cdade9fb905b",
+    "semantic_hash": ""
+  },
+  "STRATEGY.md": {
+    "mtime": 1783192268.1894298,
+    "ast_hash": "3c4c42538dcbbe5617df4592467706a9",
     "semantic_hash": ""
   }
 }

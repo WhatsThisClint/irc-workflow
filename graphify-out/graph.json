@@ -315,7 +315,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L784",
       "id": "workflows_irc_master_workflow_connections",
-      "community": 5,
+      "community": 16,
       "norm_label": "connections"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L807",
       "id": "workflows_irc_master_workflow_connections_filter_unprocessed",
-      "community": 30,
+      "community": 16,
       "norm_label": "filter unprocessed"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L808",
       "id": "workflows_irc_master_workflow_filter_unprocessed_main",
-      "community": 30,
+      "community": 16,
       "norm_label": "main"
     },
     {
@@ -540,7 +540,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L932",
       "id": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
-      "community": 5,
+      "community": 40,
       "norm_label": "read sheet for monitoring"
     },
     {
@@ -549,7 +549,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L933",
       "id": "workflows_irc_master_workflow_read_sheet_for_monitoring_main",
-      "community": 5,
+      "community": 40,
       "norm_label": "main"
     },
     {
@@ -720,7 +720,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1059",
       "id": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
-      "community": 5,
+      "community": 36,
       "norm_label": "ai transcript task extractor"
     },
     {
@@ -729,7 +729,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1060",
       "id": "workflows_irc_master_workflow_ai_transcript_task_extractor_main",
-      "community": 5,
+      "community": 36,
       "norm_label": "main"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1070",
       "id": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
-      "community": 36,
+      "community": 16,
       "norm_label": "parse transcript tasks json"
     },
     {
@@ -747,7 +747,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1071",
       "id": "workflows_irc_master_workflow_parse_transcript_tasks_json_main",
-      "community": 36,
+      "community": 16,
       "norm_label": "main"
     },
     {
@@ -900,7 +900,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1169",
       "id": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
-      "community": 40,
+      "community": 16,
       "norm_label": "read weekly metrics from airtable"
     },
     {
@@ -909,7 +909,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1170",
       "id": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main",
-      "community": 40,
+      "community": 16,
       "norm_label": "main"
     },
     {
@@ -1183,19 +1183,19 @@
       "norm_label": "1. automated setup & diagnostics"
     },
     {
-      "label": "2. API Key Configuration",
+      "label": "2. API Key Configuration & Environment Inheritance",
       "file_type": "document",
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L17",
-      "id": "agent_onboarding_2_api_key_configuration",
+      "id": "agent_onboarding_2_api_key_configuration_environment_inheritance",
       "community": 4,
-      "norm_label": "2. api key configuration"
+      "norm_label": "2. api key configuration & environment inheritance"
     },
     {
       "label": "3. Starting the Local n8n Server",
       "file_type": "document",
       "source_file": "AGENT_ONBOARDING.md",
-      "source_location": "L26",
+      "source_location": "L24",
       "id": "agent_onboarding_3_starting_the_local_n8n_server",
       "community": 4,
       "norm_label": "3. starting the local n8n server"
@@ -1204,7 +1204,7 @@
       "label": "4. Key Workflows & Agent Architecture",
       "file_type": "document",
       "source_file": "AGENT_ONBOARDING.md",
-      "source_location": "L41",
+      "source_location": "L40",
       "id": "agent_onboarding_4_key_workflows_agent_architecture",
       "community": 4,
       "norm_label": "4. key workflows & agent architecture"
@@ -1213,7 +1213,7 @@
       "label": "5. Next Steps Checklist for Incoming Agents",
       "file_type": "document",
       "source_file": "AGENT_ONBOARDING.md",
-      "source_location": "L54",
+      "source_location": "L53",
       "id": "agent_onboarding_5_next_steps_checklist_for_incoming_agents",
       "community": 4,
       "norm_label": "5. next steps checklist for incoming agents"
@@ -1237,67 +1237,76 @@
       "norm_label": "claude.md (irc workflow memory bank)"
     },
     {
-      "label": "1. Project Overview",
+      "label": "1. Project & Academic Context",
       "file_type": "document",
       "source_file": "CLAUDE.md",
       "source_location": "L7",
-      "id": "claude_1_project_overview",
+      "id": "claude_1_project_academic_context",
       "community": 1,
-      "norm_label": "1. project overview"
+      "norm_label": "1. project & academic context"
     },
     {
-      "label": "2. Porting & Copy-Pasting to Another PC",
+      "label": "2. Portability & Agent Onboarding",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L12",
-      "id": "claude_2_porting_copy_pasting_to_another_pc",
+      "source_location": "L14",
+      "id": "claude_2_portability_agent_onboarding",
       "community": 1,
-      "norm_label": "2. porting & copy-pasting to another pc"
+      "norm_label": "2. portability & agent onboarding"
     },
     {
-      "label": "3. Development Commands",
+      "label": "3. Development & Execution Commands",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L26",
-      "id": "claude_3_development_commands",
+      "source_location": "L25",
+      "id": "claude_3_development_execution_commands",
       "community": 1,
-      "norm_label": "3. development commands"
+      "norm_label": "3. development & execution commands"
     },
     {
-      "label": "Starting n8n Server (Local)",
+      "label": "Starting n8n Local Server",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L28",
-      "id": "claude_starting_n8n_server_local",
+      "source_location": "L27",
+      "id": "claude_starting_n8n_local_server",
       "community": 1,
-      "norm_label": "starting n8n server (local)"
+      "norm_label": "starting n8n local server"
     },
     {
-      "label": "Running the Python AI Agent",
+      "label": "Direct Python Agent Commands",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L34",
-      "id": "claude_running_the_python_ai_agent",
+      "source_location": "L37",
+      "id": "claude_direct_python_agent_commands",
       "community": 1,
-      "norm_label": "running the python ai agent"
+      "norm_label": "direct python agent commands"
     },
     {
-      "label": "4. Folder & File Structure",
+      "label": "4. Multi-Agent Specialist Architecture",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L52",
-      "id": "claude_4_folder_file_structure",
+      "source_location": "L68",
+      "id": "claude_4_multi_agent_specialist_architecture",
       "community": 1,
-      "norm_label": "4. folder & file structure"
+      "norm_label": "4. multi-agent specialist architecture"
     },
     {
-      "label": "5. Key Design Decisions & Resolved Edge Cases",
+      "label": "5. Folder & File Structure",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L70",
-      "id": "claude_5_key_design_decisions_resolved_edge_cases",
+      "source_location": "L80",
+      "id": "claude_5_folder_file_structure",
       "community": 1,
-      "norm_label": "5. key design decisions & resolved edge cases"
+      "norm_label": "5. folder & file structure"
+    },
+    {
+      "label": "6. Key Design Decisions & Rationale",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L107",
+      "id": "claude_6_key_design_decisions_rationale",
+      "community": 1,
+      "norm_label": "6. key design decisions & rationale"
     },
     {
       "label": "README.md",
@@ -1309,49 +1318,211 @@
       "norm_label": "readme.md"
     },
     {
-      "label": "IRC Student Onboarding & Progress Tracking System",
+      "label": "India Research Corps (IRC) Student Tracking & Onboarding System",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "readme_irc_student_onboarding_progress_tracking_system",
+      "id": "readme_india_research_corps_irc_student_tracking_onboarding_system",
       "community": 6,
-      "norm_label": "irc student onboarding & progress tracking system"
+      "norm_label": "india research corps (irc) student tracking & onboarding system"
     },
     {
-      "label": "1. Master Google Sheet Schema",
+      "label": "1. Operational Context & Rationale",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L7",
-      "id": "readme_1_master_google_sheet_schema",
+      "id": "readme_1_operational_context_rationale",
       "community": 6,
-      "norm_label": "1. master google sheet schema"
+      "norm_label": "1. operational context & rationale"
     },
     {
-      "label": "2. Google Drive Folder & Permission Hierarchy",
+      "label": "The India Research Corps (IRC) Program",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
-      "id": "readme_2_google_drive_folder_permission_hierarchy",
+      "source_location": "L9",
+      "id": "readme_the_india_research_corps_irc_program",
       "community": 6,
-      "norm_label": "2. google drive folder & permission hierarchy"
+      "norm_label": "the india research corps (irc) program"
     },
     {
-      "label": "3. Asana Cohort Board Structure",
+      "label": "2. Detailed Edge-Case & Operational Logic Rules",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L22",
+      "id": "readme_2_detailed_edge_case_operational_logic_rules",
+      "community": 6,
+      "norm_label": "2. detailed edge-case & operational logic rules"
+    },
+    {
+      "label": "3. Funding & Impact Metrics Framework",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "id": "readme_3_funding_impact_metrics_framework",
+      "community": 6,
+      "norm_label": "3. funding & impact metrics framework"
+    },
+    {
+      "label": "3.1 Student Competency Growth Index",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L54",
-      "id": "readme_3_asana_cohort_board_structure",
+      "id": "readme_3_1_student_competency_growth_index",
       "community": 6,
-      "norm_label": "3. asana cohort board structure"
+      "norm_label": "3.1 student competency growth index"
     },
     {
-      "label": "4. How to Import the n8n Workflow",
+      "label": "3.2 Sponsor Alignment Index",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L72",
-      "id": "readme_4_how_to_import_the_n8n_workflow",
+      "source_location": "L61",
+      "id": "readme_3_2_sponsor_alignment_index",
       "community": 6,
-      "norm_label": "4. how to import the n8n workflow"
+      "norm_label": "3.2 sponsor alignment index"
+    },
+    {
+      "label": "3.3 Cohort Success Velocity",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "id": "readme_3_3_cohort_success_velocity",
+      "community": 6,
+      "norm_label": "3.3 cohort success velocity"
+    },
+    {
+      "label": "4. Master Google Sheet Schema",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "id": "readme_4_master_google_sheet_schema",
+      "community": 6,
+      "norm_label": "4. master google sheet schema"
+    },
+    {
+      "label": "5. Google Drive Folder & Permission Hierarchy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "id": "readme_5_google_drive_folder_permission_hierarchy",
+      "community": 6,
+      "norm_label": "5. google drive folder & permission hierarchy"
+    },
+    {
+      "label": "6. How to Import the n8n Master Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "id": "readme_6_how_to_import_the_n8n_master_workflow",
+      "community": 6,
+      "norm_label": "6. how to import the n8n master workflow"
+    },
+    {
+      "label": "7. Graphify Database",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "id": "readme_7_graphify_database",
+      "community": 6,
+      "norm_label": "7. graphify database"
+    },
+    {
+      "label": "STRATEGY.md",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L1",
+      "id": "strategy",
+      "community": 30,
+      "norm_label": "strategy.md"
+    },
+    {
+      "label": "India Research Corps Strategy",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L6",
+      "id": "strategy_india_research_corps_strategy",
+      "community": 30,
+      "norm_label": "india research corps strategy"
+    },
+    {
+      "label": "Target problem",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L8",
+      "id": "strategy_target_problem",
+      "community": 30,
+      "norm_label": "target problem"
+    },
+    {
+      "label": "Our approach",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L12",
+      "id": "strategy_our_approach",
+      "community": 30,
+      "norm_label": "our approach"
+    },
+    {
+      "label": "Who it's for",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L16",
+      "id": "strategy_who_it_s_for",
+      "community": 30,
+      "norm_label": "who it's for"
+    },
+    {
+      "label": "Key metrics",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L20",
+      "id": "strategy_key_metrics",
+      "community": 30,
+      "norm_label": "key metrics"
+    },
+    {
+      "label": "Tracks",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L26",
+      "id": "strategy_tracks",
+      "community": 30,
+      "norm_label": "tracks"
+    },
+    {
+      "label": "Onboarding Automation",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L28",
+      "id": "strategy_onboarding_automation",
+      "community": 30,
+      "norm_label": "onboarding automation"
+    },
+    {
+      "label": "Daily Monitor & Auditing",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L32",
+      "id": "strategy_daily_monitor_auditing",
+      "community": 30,
+      "norm_label": "daily monitor & auditing"
+    },
+    {
+      "label": "Cohort Dashboard & Reporting",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L36",
+      "id": "strategy_cohort_dashboard_reporting",
+      "community": 30,
+      "norm_label": "cohort dashboard & reporting"
+    },
+    {
+      "label": "Marketing",
+      "file_type": "document",
+      "source_file": "STRATEGY.md",
+      "source_location": "L40",
+      "id": "strategy_marketing",
+      "community": 30,
+      "norm_label": "marketing"
     },
     {
       "label": "2026-07-04-irc-workflow-scaling-requirements.md",
@@ -1460,6 +1631,123 @@
       "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps",
       "community": 0,
       "norm_label": "4. outstanding decisions / next steps"
+    },
+    {
+      "label": "2. API Key Configuration",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L17",
+      "community": 4,
+      "norm_label": "2. api key configuration",
+      "id": "agent_onboarding_2_api_key_configuration"
+    },
+    {
+      "label": "1. Project Overview",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "community": 1,
+      "norm_label": "1. project overview",
+      "id": "claude_1_project_overview"
+    },
+    {
+      "label": "2. Porting & Copy-Pasting to Another PC",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "community": 1,
+      "norm_label": "2. porting & copy-pasting to another pc",
+      "id": "claude_2_porting_copy_pasting_to_another_pc"
+    },
+    {
+      "label": "3. Development Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L26",
+      "community": 1,
+      "norm_label": "3. development commands",
+      "id": "claude_3_development_commands"
+    },
+    {
+      "label": "Starting n8n Server (Local)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "community": 1,
+      "norm_label": "starting n8n server (local)",
+      "id": "claude_starting_n8n_server_local"
+    },
+    {
+      "label": "Running the Python AI Agent",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "community": 1,
+      "norm_label": "running the python ai agent",
+      "id": "claude_running_the_python_ai_agent"
+    },
+    {
+      "label": "4. Folder & File Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "community": 1,
+      "norm_label": "4. folder & file structure",
+      "id": "claude_4_folder_file_structure"
+    },
+    {
+      "label": "5. Key Design Decisions & Resolved Edge Cases",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L70",
+      "community": 1,
+      "norm_label": "5. key design decisions & resolved edge cases",
+      "id": "claude_5_key_design_decisions_resolved_edge_cases"
+    },
+    {
+      "label": "IRC Student Onboarding & Progress Tracking System",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "irc student onboarding & progress tracking system",
+      "id": "readme_irc_student_onboarding_progress_tracking_system"
+    },
+    {
+      "label": "1. Master Google Sheet Schema",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "community": 6,
+      "norm_label": "1. master google sheet schema",
+      "id": "readme_1_master_google_sheet_schema"
+    },
+    {
+      "label": "2. Google Drive Folder & Permission Hierarchy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "community": 6,
+      "norm_label": "2. google drive folder & permission hierarchy",
+      "id": "readme_2_google_drive_folder_permission_hierarchy"
+    },
+    {
+      "label": "3. Asana Cohort Board Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "community": 6,
+      "norm_label": "3. asana cohort board structure",
+      "id": "readme_3_asana_cohort_board_structure"
+    },
+    {
+      "label": "4. How to Import the n8n Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "community": 6,
+      "norm_label": "4. how to import the n8n workflow",
+      "id": "readme_4_how_to_import_the_n8n_workflow"
     }
   ],
   "links": [
@@ -1469,9 +1757,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor",
-      "target": "agents_academic_auditor_audit_document",
-      "confidence_score": 1.0
+      "target": "agents_academic_auditor_audit_document"
     },
     {
       "relation": "contains",
@@ -1479,9 +1767,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor",
-      "target": "agents_academic_auditor_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_academic_auditor_call_gemini"
     },
     {
       "relation": "contains",
@@ -1489,9 +1777,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor",
-      "target": "agents_academic_auditor_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_academic_auditor_log_debug"
     },
     {
       "relation": "calls",
@@ -1500,9 +1788,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor_audit_document",
-      "target": "agents_academic_auditor_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_academic_auditor_log_debug"
     },
     {
       "relation": "calls",
@@ -1511,9 +1799,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor_audit_document",
-      "target": "agents_academic_auditor_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_academic_auditor_call_gemini"
     },
     {
       "relation": "contains",
@@ -1521,9 +1809,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent",
-      "target": "agents_alignment_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_alignment_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1531,9 +1819,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent",
-      "target": "agents_alignment_agent_check_alignment",
-      "confidence_score": 1.0
+      "target": "agents_alignment_agent_check_alignment"
     },
     {
       "relation": "contains",
@@ -1541,9 +1829,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent",
-      "target": "agents_alignment_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_alignment_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1552,9 +1840,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent_check_alignment",
-      "target": "agents_alignment_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_alignment_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1563,9 +1851,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent_check_alignment",
-      "target": "agents_alignment_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_alignment_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1573,9 +1861,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_calculate_phase",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_calculate_phase"
     },
     {
       "relation": "contains",
@@ -1583,9 +1871,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1593,9 +1881,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L98",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_compile_cheat_sheet",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_compile_cheat_sheet"
     },
     {
       "relation": "contains",
@@ -1603,9 +1891,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_draft_nudge_email",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_draft_nudge_email"
     },
     {
       "relation": "contains",
@@ -1613,9 +1901,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_extract_coordinator_feedback",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_extract_coordinator_feedback"
     },
     {
       "relation": "contains",
@@ -1623,9 +1911,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L154",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_generate_weekly_digest",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_generate_weekly_digest"
     },
     {
       "relation": "contains",
@@ -1633,9 +1921,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_coordinator_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1644,9 +1932,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent_calculate_phase",
-      "target": "agents_coordinator_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1655,9 +1943,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent_generate_weekly_digest",
-      "target": "agents_coordinator_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1666,9 +1954,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent_generate_weekly_digest",
-      "target": "agents_coordinator_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_coordinator_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1676,9 +1964,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor",
-      "target": "agents_mentor_auditor_audit_mentor",
-      "confidence_score": 1.0
+      "target": "agents_mentor_auditor_audit_mentor"
     },
     {
       "relation": "contains",
@@ -1686,9 +1974,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor",
-      "target": "agents_mentor_auditor_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_mentor_auditor_call_gemini"
     },
     {
       "relation": "contains",
@@ -1696,9 +1984,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor",
-      "target": "agents_mentor_auditor_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_mentor_auditor_log_debug"
     },
     {
       "relation": "calls",
@@ -1707,9 +1995,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor_audit_mentor",
-      "target": "agents_mentor_auditor_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_mentor_auditor_log_debug"
     },
     {
       "relation": "calls",
@@ -1718,9 +2006,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor_audit_mentor",
-      "target": "agents_mentor_auditor_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_mentor_auditor_call_gemini"
     },
     {
       "relation": "contains",
@@ -1728,9 +2016,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent",
-      "target": "agents_onboarding_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_onboarding_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1738,9 +2026,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent",
-      "target": "agents_onboarding_agent_generate_baseline",
-      "confidence_score": 1.0
+      "target": "agents_onboarding_agent_generate_baseline"
     },
     {
       "relation": "contains",
@@ -1748,9 +2036,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent",
-      "target": "agents_onboarding_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_onboarding_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1759,9 +2047,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent_generate_baseline",
-      "target": "agents_onboarding_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_onboarding_agent_log_debug"
     },
     {
       "relation": "calls",
@@ -1770,9 +2058,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent_generate_baseline",
-      "target": "agents_onboarding_agent_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_onboarding_agent_call_gemini"
     },
     {
       "relation": "contains",
@@ -1780,9 +2068,9 @@
       "source_file": "agents/transcript_parser.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_transcript_parser",
-      "target": "agents_transcript_parser_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_transcript_parser_call_gemini"
     },
     {
       "relation": "contains",
@@ -1790,9 +2078,9 @@
       "source_file": "agents/transcript_parser.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_transcript_parser",
-      "target": "agents_transcript_parser_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_transcript_parser_log_debug"
     },
     {
       "relation": "contains",
@@ -1800,9 +2088,9 @@
       "source_file": "agents/transcript_parser.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_transcript_parser",
-      "target": "agents_transcript_parser_parse_transcript",
-      "confidence_score": 1.0
+      "target": "agents_transcript_parser_parse_transcript"
     },
     {
       "relation": "calls",
@@ -1811,9 +2099,9 @@
       "source_file": "agents/transcript_parser.py",
       "source_location": "L55",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_transcript_parser_parse_transcript",
-      "target": "agents_transcript_parser_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_transcript_parser_log_debug"
     },
     {
       "relation": "calls",
@@ -1822,9 +2110,9 @@
       "source_file": "agents/transcript_parser.py",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_transcript_parser_parse_transcript",
-      "target": "agents_transcript_parser_call_gemini",
-      "confidence_score": 1.0
+      "target": "agents_transcript_parser_call_gemini"
     },
     {
       "relation": "contains",
@@ -1832,9 +2120,9 @@
       "source_file": "irc_agent.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "irc_agent",
-      "target": "irc_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "irc_agent_log_debug"
     },
     {
       "relation": "contains",
@@ -1842,9 +2130,9 @@
       "source_file": "irc_agent.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "irc_agent",
-      "target": "irc_agent_run_agent_script",
-      "confidence_score": 1.0
+      "target": "irc_agent_run_agent_script"
     },
     {
       "relation": "calls",
@@ -1853,9 +2141,9 @@
       "source_file": "irc_agent.py",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "irc_agent_run_agent_script",
-      "target": "irc_agent_log_debug",
-      "confidence_score": 1.0
+      "target": "irc_agent_log_debug"
     },
     {
       "relation": "contains",
@@ -1863,9 +2151,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow",
-      "target": "workflows_irc_master_workflow_active",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_active"
     },
     {
       "relation": "contains",
@@ -1873,9 +2161,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L784",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow",
-      "target": "workflows_irc_master_workflow_connections",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections"
     },
     {
       "relation": "contains",
@@ -1883,9 +2171,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow",
-      "target": "workflows_irc_master_workflow_name",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_name"
     },
     {
       "relation": "contains",
@@ -1893,9 +2181,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow",
-      "target": "workflows_irc_master_workflow_nodes",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_nodes"
     },
     {
       "relation": "contains",
@@ -1903,9 +2191,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow",
-      "target": "workflows_irc_master_workflow_settings",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_settings"
     },
     {
       "relation": "contains",
@@ -1913,9 +2201,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_ai_document_auditor",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_ai_document_auditor"
     },
     {
       "relation": "contains",
@@ -1923,9 +2211,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L965",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator"
     },
     {
       "relation": "contains",
@@ -1933,9 +2221,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L866",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_ai_expert_report_generator"
     },
     {
       "relation": "contains",
@@ -1943,9 +2231,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1059",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor"
     },
     {
       "relation": "contains",
@@ -1953,9 +2241,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator"
     },
     {
       "relation": "contains",
@@ -1963,9 +2251,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L888",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc"
     },
     {
       "relation": "contains",
@@ -1973,9 +2261,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L850",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_admin_only_folder",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_admin_only_folder"
     },
     {
       "relation": "contains",
@@ -1983,9 +2271,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1037",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync"
     },
     {
       "relation": "contains",
@@ -1993,9 +2281,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L899",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_asana_student_section",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_asana_student_section"
     },
     {
       "relation": "contains",
@@ -2003,9 +2291,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L877",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive"
     },
     {
       "relation": "contains",
@@ -2013,9 +2301,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L910",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_session_1_task",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_session_1_task"
     },
     {
       "relation": "contains",
@@ -2023,9 +2311,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L834",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_shared_space_folder",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_shared_space_folder"
     },
     {
       "relation": "contains",
@@ -2033,9 +2321,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L818",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_student_main_folder",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_student_main_folder"
     },
     {
       "relation": "contains",
@@ -2043,9 +2331,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1026",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync"
     },
     {
       "relation": "contains",
@@ -2053,9 +2341,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_draft_nudge_email",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_draft_nudge_email"
     },
     {
       "relation": "contains",
@@ -2063,9 +2351,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L943",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_filter_active_students",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_filter_active_students"
     },
     {
       "relation": "contains",
@@ -2073,9 +2361,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L807",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_filter_unprocessed",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_filter_unprocessed"
     },
     {
       "relation": "contains",
@@ -2083,9 +2371,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1081",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_get_inception_report_content",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_get_inception_report_content"
     },
     {
       "relation": "contains",
@@ -2093,9 +2381,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1010",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_is_gate_status_pass",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_is_gate_status_pass"
     },
     {
       "relation": "contains",
@@ -2103,9 +2391,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1048",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_list_new_transcripts",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_list_new_transcripts"
     },
     {
       "relation": "contains",
@@ -2113,9 +2401,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1136",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable"
     },
     {
       "relation": "contains",
@@ -2123,9 +2411,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_parse_audit_json",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_parse_audit_json"
     },
     {
       "relation": "contains",
@@ -2133,9 +2421,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1070",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json"
     },
     {
       "relation": "contains",
@@ -2143,9 +2431,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L992",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_presentation_gate_overdue"
     },
     {
       "relation": "contains",
@@ -2153,9 +2441,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L932",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring"
     },
     {
       "relation": "contains",
@@ -2163,9 +2451,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L796",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding"
     },
     {
       "relation": "contains",
@@ -2173,9 +2461,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L954",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_read_student_gantt_chart",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_read_student_gantt_chart"
     },
     {
       "relation": "contains",
@@ -2183,9 +2471,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable"
     },
     {
       "relation": "contains",
@@ -2193,9 +2481,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L921",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am"
     },
     {
       "relation": "contains",
@@ -2203,9 +2491,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L785",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am"
     },
     {
       "relation": "contains",
@@ -2213,9 +2501,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1125",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc"
     },
     {
       "relation": "contains",
@@ -2223,9 +2511,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L976",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet"
     },
     {
       "relation": "contains",
@@ -2233,9 +2521,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_weekly_friday_trigger",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_weekly_friday_trigger"
     },
     {
       "relation": "contains",
@@ -2243,9 +2531,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1092",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_write_temp_audit_files",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_write_temp_audit_files"
     },
     {
       "relation": "contains",
@@ -2253,9 +2541,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1180",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections",
-      "target": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file"
     },
     {
       "relation": "contains",
@@ -2263,9 +2551,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L786",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am",
-      "target": "workflows_irc_master_workflow_schedule_trigger_daily_9_am_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_schedule_trigger_daily_9_am_main"
     },
     {
       "relation": "contains",
@@ -2273,9 +2561,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L797",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding",
-      "target": "workflows_irc_master_workflow_read_sheet_for_onboarding_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_read_sheet_for_onboarding_main"
     },
     {
       "relation": "contains",
@@ -2283,9 +2571,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L808",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_filter_unprocessed",
-      "target": "workflows_irc_master_workflow_filter_unprocessed_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_filter_unprocessed_main"
     },
     {
       "relation": "contains",
@@ -2293,9 +2581,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L819",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_student_main_folder",
-      "target": "workflows_irc_master_workflow_create_student_main_folder_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_student_main_folder_main"
     },
     {
       "relation": "contains",
@@ -2303,9 +2591,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L835",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_shared_space_folder",
-      "target": "workflows_irc_master_workflow_create_shared_space_folder_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_shared_space_folder_main"
     },
     {
       "relation": "contains",
@@ -2313,9 +2601,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L851",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_admin_only_folder",
-      "target": "workflows_irc_master_workflow_create_admin_only_folder_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_admin_only_folder_main"
     },
     {
       "relation": "contains",
@@ -2323,9 +2611,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L867",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
-      "target": "workflows_irc_master_workflow_ai_expert_report_generator_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_ai_expert_report_generator_main"
     },
     {
       "relation": "contains",
@@ -2333,9 +2621,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L878",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive",
-      "target": "workflows_irc_master_workflow_create_sample_doc_in_drive_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_sample_doc_in_drive_main"
     },
     {
       "relation": "contains",
@@ -2343,9 +2631,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L889",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc",
-      "target": "workflows_irc_master_workflow_create_admin_cheat_sheet_doc_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_admin_cheat_sheet_doc_main"
     },
     {
       "relation": "contains",
@@ -2353,9 +2641,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L900",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_asana_student_section",
-      "target": "workflows_irc_master_workflow_create_asana_student_section_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_asana_student_section_main"
     },
     {
       "relation": "contains",
@@ -2363,9 +2651,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L911",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_session_1_task",
-      "target": "workflows_irc_master_workflow_create_session_1_task_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_session_1_task_main"
     },
     {
       "relation": "contains",
@@ -2373,9 +2661,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L922",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am",
-      "target": "workflows_irc_master_workflow_schedule_trigger_daily_8_am_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_schedule_trigger_daily_8_am_main"
     },
     {
       "relation": "contains",
@@ -2383,9 +2671,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L933",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
-      "target": "workflows_irc_master_workflow_read_sheet_for_monitoring_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_read_sheet_for_monitoring_main"
     },
     {
       "relation": "contains",
@@ -2393,9 +2681,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L944",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_filter_active_students",
-      "target": "workflows_irc_master_workflow_filter_active_students_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_filter_active_students_main"
     },
     {
       "relation": "contains",
@@ -2403,9 +2691,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L955",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_read_student_gantt_chart",
-      "target": "workflows_irc_master_workflow_read_student_gantt_chart_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_read_student_gantt_chart_main"
     },
     {
       "relation": "contains",
@@ -2413,9 +2701,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L966",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator",
-      "target": "workflows_irc_master_workflow_ai_dynamic_phase_calculator_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_ai_dynamic_phase_calculator_main"
     },
     {
       "relation": "contains",
@@ -2423,9 +2711,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L977",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet",
-      "target": "workflows_irc_master_workflow_update_phase_in_master_sheet_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_update_phase_in_master_sheet_main"
     },
     {
       "relation": "contains",
@@ -2433,9 +2721,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L993",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
-      "target": "workflows_irc_master_workflow_presentation_gate_overdue_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_presentation_gate_overdue_main"
     },
     {
       "relation": "contains",
@@ -2443,9 +2731,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1011",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_is_gate_status_pass",
-      "target": "workflows_irc_master_workflow_is_gate_status_pass_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_is_gate_status_pass_main"
     },
     {
       "relation": "contains",
@@ -2453,9 +2741,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1027",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync",
-      "target": "workflows_irc_master_workflow_create_weekly_calendar_sync_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_weekly_calendar_sync_main"
     },
     {
       "relation": "contains",
@@ -2463,9 +2751,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1038",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync",
-      "target": "workflows_irc_master_workflow_create_alternate_bi_weekly_mentor_sync_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_create_alternate_bi_weekly_mentor_sync_main"
     },
     {
       "relation": "contains",
@@ -2473,9 +2761,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1049",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_list_new_transcripts",
-      "target": "workflows_irc_master_workflow_list_new_transcripts_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_list_new_transcripts_main"
     },
     {
       "relation": "contains",
@@ -2483,9 +2771,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1060",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
-      "target": "workflows_irc_master_workflow_ai_transcript_task_extractor_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_ai_transcript_task_extractor_main"
     },
     {
       "relation": "contains",
@@ -2493,9 +2781,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1071",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
-      "target": "workflows_irc_master_workflow_parse_transcript_tasks_json_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_parse_transcript_tasks_json_main"
     },
     {
       "relation": "contains",
@@ -2503,9 +2791,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1082",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_get_inception_report_content",
-      "target": "workflows_irc_master_workflow_get_inception_report_content_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_get_inception_report_content_main"
     },
     {
       "relation": "contains",
@@ -2513,9 +2801,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1093",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_write_temp_audit_files",
-      "target": "workflows_irc_master_workflow_write_temp_audit_files_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_write_temp_audit_files_main"
     },
     {
       "relation": "contains",
@@ -2523,9 +2811,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_ai_document_auditor",
-      "target": "workflows_irc_master_workflow_ai_document_auditor_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_ai_document_auditor_main"
     },
     {
       "relation": "contains",
@@ -2533,9 +2821,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_parse_audit_json",
-      "target": "workflows_irc_master_workflow_parse_audit_json_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_parse_audit_json_main"
     },
     {
       "relation": "contains",
@@ -2543,9 +2831,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc",
-      "target": "workflows_irc_master_workflow_update_admin_cheat_sheet_doc_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_update_admin_cheat_sheet_doc_main"
     },
     {
       "relation": "contains",
@@ -2553,9 +2841,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1137",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable",
-      "target": "workflows_irc_master_workflow_log_competency_scores_to_airtable_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_log_competency_scores_to_airtable_main"
     },
     {
       "relation": "contains",
@@ -2563,9 +2851,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1148",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_draft_nudge_email",
-      "target": "workflows_irc_master_workflow_draft_nudge_email_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_draft_nudge_email_main"
     },
     {
       "relation": "contains",
@@ -2573,9 +2861,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_weekly_friday_trigger",
-      "target": "workflows_irc_master_workflow_weekly_friday_trigger_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_weekly_friday_trigger_main"
     },
     {
       "relation": "contains",
@@ -2583,9 +2871,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
-      "target": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main"
     },
     {
       "relation": "contains",
@@ -2593,9 +2881,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1181",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file",
-      "target": "workflows_irc_master_workflow_write_weekly_metrics_temp_file_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_write_weekly_metrics_temp_file_main"
     },
     {
       "relation": "contains",
@@ -2603,9 +2891,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
-      "target": "workflows_irc_master_workflow_ai_weekly_digest_generator_main",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_ai_weekly_digest_generator_main"
     },
     {
       "relation": "contains",
@@ -2613,9 +2901,9 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1204",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "workflows_irc_master_workflow_settings",
-      "target": "workflows_irc_master_workflow_settings_executiontimeout",
-      "confidence_score": 1.0
+      "target": "workflows_irc_master_workflow_settings_executiontimeout"
     },
     {
       "relation": "contains",
@@ -2623,9 +2911,9 @@
       "source_file": "package.json",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_description",
-      "confidence_score": 1.0
+      "target": "package_description"
     },
     {
       "relation": "contains",
@@ -2633,9 +2921,9 @@
       "source_file": "package.json",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_devdependencies",
-      "confidence_score": 1.0
+      "target": "package_devdependencies"
     },
     {
       "relation": "contains",
@@ -2643,9 +2931,9 @@
       "source_file": "package.json",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_main",
-      "confidence_score": 1.0
+      "target": "package_main"
     },
     {
       "relation": "contains",
@@ -2653,9 +2941,9 @@
       "source_file": "package.json",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_name",
-      "confidence_score": 1.0
+      "target": "package_name"
     },
     {
       "relation": "contains",
@@ -2663,9 +2951,9 @@
       "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_scripts",
-      "confidence_score": 1.0
+      "target": "package_scripts"
     },
     {
       "relation": "contains",
@@ -2673,9 +2961,9 @@
       "source_file": "package.json",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package",
-      "target": "package_version",
-      "confidence_score": 1.0
+      "target": "package_version"
     },
     {
       "relation": "contains",
@@ -2683,9 +2971,9 @@
       "source_file": "package.json",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_scripts",
-      "target": "package_scripts_start",
-      "confidence_score": 1.0
+      "target": "package_scripts_start"
     },
     {
       "relation": "contains",
@@ -2693,9 +2981,9 @@
       "source_file": "package.json",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_n8n",
-      "confidence_score": 1.0
+      "target": "package_devdependencies_n8n"
     },
     {
       "relation": "contains",
@@ -2703,9 +2991,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace",
-      "target": "setup_workspace_check_command",
-      "confidence_score": 1.0
+      "target": "setup_workspace_check_command"
     },
     {
       "relation": "contains",
@@ -2713,9 +3001,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace",
-      "target": "setup_workspace_log",
-      "confidence_score": 1.0
+      "target": "setup_workspace_log"
     },
     {
       "relation": "contains",
@@ -2723,9 +3011,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace",
-      "target": "setup_workspace_main",
-      "confidence_score": 1.0
+      "target": "setup_workspace_main"
     },
     {
       "relation": "contains",
@@ -2733,9 +3021,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace",
-      "target": "setup_workspace_run_cmd",
-      "confidence_score": 1.0
+      "target": "setup_workspace_run_cmd"
     },
     {
       "relation": "calls",
@@ -2744,9 +3032,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace_main",
-      "target": "setup_workspace_log",
-      "confidence_score": 1.0
+      "target": "setup_workspace_log"
     },
     {
       "relation": "calls",
@@ -2755,9 +3043,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace_main",
-      "target": "setup_workspace_check_command",
-      "confidence_score": 1.0
+      "target": "setup_workspace_check_command"
     },
     {
       "relation": "calls",
@@ -2766,9 +3054,9 @@
       "source_file": "setup_workspace.py",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "setup_workspace_main",
-      "target": "setup_workspace_run_cmd",
-      "confidence_score": 1.0
+      "target": "setup_workspace_run_cmd"
     },
     {
       "relation": "contains",
@@ -2776,9 +3064,9 @@
       "source_file": "test_workflow_mock.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_workflow_mock",
-      "target": "test_workflow_mock_calculate_milestones",
-      "confidence_score": 1.0
+      "target": "test_workflow_mock_calculate_milestones"
     },
     {
       "relation": "contains",
@@ -2786,9 +3074,9 @@
       "source_file": "test_workflow_mock.py",
       "source_location": "L51",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_workflow_mock",
-      "target": "test_workflow_mock_print_mock_prompt_templates",
-      "confidence_score": 1.0
+      "target": "test_workflow_mock_print_mock_prompt_templates"
     },
     {
       "relation": "rationale_for",
@@ -2796,9 +3084,9 @@
       "source_file": "test_workflow_mock.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_workflow_mock_rationale_1",
-      "target": "test_workflow_mock",
-      "confidence_score": 1.0
+      "target": "test_workflow_mock"
     },
     {
       "relation": "rationale_for",
@@ -2806,9 +3094,9 @@
       "source_file": "test_workflow_mock.py",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_workflow_mock_rationale_11",
-      "target": "test_workflow_mock_calculate_milestones",
-      "confidence_score": 1.0
+      "target": "test_workflow_mock_calculate_milestones"
     },
     {
       "relation": "rationale_for",
@@ -2816,9 +3104,9 @@
       "source_file": "test_workflow_mock.py",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_workflow_mock_rationale_52",
-      "target": "test_workflow_mock_print_mock_prompt_templates",
-      "confidence_score": 1.0
+      "target": "test_workflow_mock_print_mock_prompt_templates"
     },
     {
       "relation": "contains",
@@ -2826,9 +3114,9 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding",
-      "target": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_ai_agent_workspace_onboarding_guide"
     },
     {
       "relation": "contains",
@@ -2836,9 +3124,19 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_1_automated_setup_diagnostics",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_1_automated_setup_diagnostics"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_2_api_key_configuration"
     },
     {
       "relation": "contains",
@@ -2847,7 +3145,7 @@
       "source_location": "L17",
       "weight": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_2_api_key_configuration",
+      "target": "agent_onboarding_2_api_key_configuration_environment_inheritance",
       "confidence_score": 1.0
     },
     {
@@ -2856,9 +3154,9 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_3_starting_the_local_n8n_server",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_3_starting_the_local_n8n_server"
     },
     {
       "relation": "contains",
@@ -2866,9 +3164,9 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_4_key_workflows_agent_architecture",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_4_key_workflows_agent_architecture"
     },
     {
       "relation": "contains",
@@ -2876,9 +3174,9 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_5_next_steps_checklist_for_incoming_agents",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_5_next_steps_checklist_for_incoming_agents"
     },
     {
       "relation": "contains",
@@ -2886,9 +3184,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_claude_md_irc_workflow_memory_bank",
-      "confidence_score": 1.0
+      "target": "claude_claude_md_irc_workflow_memory_bank"
     },
     {
       "relation": "contains",
@@ -2897,7 +3195,27 @@
       "source_location": "L7",
       "weight": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_1_project_overview",
+      "target": "claude_1_project_academic_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_1_project_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_2_portability_agent_onboarding",
       "confidence_score": 1.0
     },
     {
@@ -2906,9 +3224,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_2_porting_copy_pasting_to_another_pc",
-      "confidence_score": 1.0
+      "target": "claude_2_porting_copy_pasting_to_another_pc"
     },
     {
       "relation": "contains",
@@ -2916,8 +3234,18 @@
       "source_file": "CLAUDE.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_3_development_commands",
+      "target": "claude_3_development_commands"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_3_development_execution_commands",
       "confidence_score": 1.0
     },
     {
@@ -2926,8 +3254,28 @@
       "source_file": "CLAUDE.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_4_folder_file_structure",
+      "target": "claude_4_folder_file_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_4_multi_agent_specialist_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_5_folder_file_structure",
       "confidence_score": 1.0
     },
     {
@@ -2936,28 +3284,38 @@
       "source_file": "CLAUDE.md",
       "source_location": "L70",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_5_key_design_decisions_resolved_edge_cases",
+      "target": "claude_5_key_design_decisions_resolved_edge_cases"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_6_key_design_decisions_rationale",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L34",
+      "source_location": "L37",
       "weight": 1.0,
-      "source": "claude_3_development_commands",
-      "target": "claude_running_the_python_ai_agent",
+      "source": "claude_3_development_execution_commands",
+      "target": "claude_direct_python_agent_commands",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
-      "source": "claude_3_development_commands",
-      "target": "claude_starting_n8n_server_local",
+      "source": "claude_3_development_execution_commands",
+      "target": "claude_starting_n8n_local_server",
       "confidence_score": 1.0
     },
     {
@@ -2967,8 +3325,18 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "readme",
-      "target": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_india_research_corps_irc_student_tracking_onboarding_system",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_irc_student_onboarding_progress_tracking_system"
     },
     {
       "relation": "contains",
@@ -2976,18 +3344,78 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
-      "source": "readme_irc_student_onboarding_progress_tracking_system",
-      "target": "readme_1_master_google_sheet_schema",
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_1_operational_context_rationale",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L22",
       "weight": 1.0,
-      "source": "readme_irc_student_onboarding_progress_tracking_system",
-      "target": "readme_2_google_drive_folder_permission_hierarchy",
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_2_detailed_edge_case_operational_logic_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_3_funding_impact_metrics_framework",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_4_master_google_sheet_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_5_google_drive_folder_permission_hierarchy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_6_how_to_import_the_n8n_master_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_7_graphify_database",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_1_operational_context_rationale",
+      "target": "readme_the_india_research_corps_irc_program",
       "confidence_score": 1.0
     },
     {
@@ -2996,18 +3424,128 @@
       "source_file": "README.md",
       "source_location": "L54",
       "weight": 1.0,
-      "source": "readme_irc_student_onboarding_progress_tracking_system",
-      "target": "readme_3_asana_cohort_board_structure",
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_1_student_competency_growth_index",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L72",
+      "source_location": "L61",
       "weight": 1.0,
-      "source": "readme_irc_student_onboarding_progress_tracking_system",
-      "target": "readme_4_how_to_import_the_n8n_workflow",
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_2_sponsor_alignment_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_3_cohort_success_velocity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "strategy",
+      "target": "strategy_india_research_corps_strategy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_key_metrics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_marketing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_our_approach",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_target_problem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_tracks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "strategy_india_research_corps_strategy",
+      "target": "strategy_who_it_s_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "strategy_tracks",
+      "target": "strategy_cohort_dashboard_reporting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "strategy_tracks",
+      "target": "strategy_daily_monitor_auditing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "STRATEGY.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "strategy_tracks",
+      "target": "strategy_onboarding_automation",
       "confidence_score": 1.0
     },
     {
@@ -3016,9 +3554,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking"
     },
     {
       "relation": "contains",
@@ -3026,9 +3564,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_1_objectives_focus_areas",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_1_objectives_focus_areas"
     },
     {
       "relation": "contains",
@@ -3036,9 +3574,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic"
     },
     {
       "relation": "contains",
@@ -3046,9 +3584,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design"
     },
     {
       "relation": "contains",
@@ -3056,9 +3594,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps"
     },
     {
       "relation": "contains",
@@ -3066,9 +3604,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_1_student_progress_tracking",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_1_student_progress_tracking"
     },
     {
       "relation": "contains",
@@ -3076,9 +3614,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_2_mentor_engagement_audit",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_2_mentor_engagement_audit"
     },
     {
       "relation": "contains",
@@ -3086,9 +3624,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_3_cohort_operational_kpi_definitions",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_3_cohort_operational_kpi_definitions"
     },
     {
       "relation": "contains",
@@ -3096,9 +3634,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_4_funding_impact_metrics_for_pitching_scaling",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_4_funding_impact_metrics_for_pitching_scaling"
     },
     {
       "relation": "contains",
@@ -3106,9 +3644,9 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_1_google_sheets_dashboard_tab",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_1_google_sheets_dashboard_tab"
     },
     {
       "relation": "contains",
@@ -3116,11 +3654,71 @@
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
-      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_2_airtable_logging_schema",
-      "confidence_score": 1.0
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_2_airtable_logging_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_3_development_commands",
+      "target": "claude_running_the_python_ai_agent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "claude_3_development_commands",
+      "target": "claude_starting_n8n_server_local"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_1_master_google_sheet_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_2_google_drive_folder_permission_hierarchy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_3_asana_cohort_board_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_4_how_to_import_the_n8n_workflow"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "762811c1cef0ba5b19bda0e650349435e26201c3"
+  "built_at_commit": "e360f6794a0aa1b32d471c88fbed4405ee4e644d"
 }

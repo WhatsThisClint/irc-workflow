@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 15 files · ~9,630 words
+- 16 files · ~10,933 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 162 nodes · 164 edges · 48 communities (15 shown, 33 thin omitted)
+- 194 nodes · 195 edges · 48 communities (16 shown, 32 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `762811c1`
+- Built from commit: `e360f679`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,15 +66,15 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `connections` - 36 edges
-2. `AI Agent Workspace Onboarding Guide` - 6 edges
-3. `CLAUDE.md (IRC Workflow Memory Bank)` - 6 edges
-4. `IRC Student Onboarding & Progress Tracking System` - 5 edges
-5. `Requirements: IRC Workflow Scaling & Performance Tracking` - 5 edges
-6. `2. Metric Specifications & Tracking Logic` - 5 edges
-7. `main()` - 4 edges
-8. `audit_document()` - 3 edges
-9. `check_alignment()` - 3 edges
-10. `log_debug()` - 3 edges
+2. `CLAUDE.md (IRC Workflow Memory Bank)` - 12 edges
+3. `India Research Corps (IRC) Student Tracking & Onboarding System` - 8 edges
+4. `AI Agent Workspace Onboarding Guide` - 7 edges
+5. `India Research Corps Strategy` - 7 edges
+6. `Requirements: IRC Workflow Scaling & Performance Tracking` - 5 edges
+7. `2. Metric Specifications & Tracking Logic` - 5 edges
+8. `IRC Student Onboarding & Progress Tracking System` - 5 edges
+9. `main()` - 4 edges
+10. `3. Funding & Impact Metrics Framework` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
@@ -82,15 +82,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (48 total, 33 thin omitted)
+## Communities (48 total, 32 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
 Nodes (11): 1. Objectives & Focus Areas, 2.1 Student Progress Tracking, 2.2 Mentor Engagement Audit, 2.3 Cohort & Operational KPI Definitions, 2.4 Funding & Impact Metrics (For Pitching & Scaling), 2. Metric Specifications & Tracking Logic, 3.1 Google Sheets Dashboard Tab, 3.2 Airtable Logging Schema (+3 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.22
-Nodes (8): 1. Project Overview, 2. Porting & Copy-Pasting to Another PC, 3. Development Commands, 4. Folder & File Structure, 5. Key Design Decisions & Resolved Edge Cases, CLAUDE.md (IRC Workflow Memory Bank), Running the Python AI Agent, Starting n8n Server (Local)
+Cohesion: 0.12
+Nodes (16): 1. Project & Academic Context, 1. Project Overview, 2. Portability & Agent Onboarding, 2. Porting & Copy-Pasting to Another PC, 3. Development Commands, 3. Development & Execution Commands, 4. Folder & File Structure, 4. Multi-Agent Specialist Architecture (+8 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.22
@@ -101,16 +101,12 @@ Cohesion: 0.36
 Nodes (4): calculate_phase(), call_gemini(), generate_weekly_digest(), log_debug()
 
 ### Community 4 - "Community 4"
-Cohesion: 0.29
-Nodes (6): 1. Automated Setup & Diagnostics, 2. API Key Configuration, 3. Starting the Local n8n Server, 4. Key Workflows & Agent Architecture, 5. Next Steps Checklist for Incoming Agents, AI Agent Workspace Onboarding Guide
-
-### Community 5 - "Community 5"
-Cohesion: 0.29
-Nodes (7): main, main, connections, AI Dynamic Phase Calculator, AI Transcript Task Extractor, Read Sheet for Monitoring, main
+Cohesion: 0.25
+Nodes (7): 1. Automated Setup & Diagnostics, 2. API Key Configuration, 2. API Key Configuration & Environment Inheritance, 3. Starting the Local n8n Server, 4. Key Workflows & Agent Architecture, 5. Next Steps Checklist for Incoming Agents, AI Agent Workspace Onboarding Guide
 
 ### Community 6 - "Community 6"
-Cohesion: 0.33
-Nodes (5): 1. Master Google Sheet Schema, 2. Google Drive Folder & Permission Hierarchy, 3. Asana Cohort Board Structure, 4. How to Import the n8n Workflow, IRC Student Onboarding & Progress Tracking System
+Cohesion: 0.11
+Nodes (17): 1. Master Google Sheet Schema, 1. Operational Context & Rationale, 2. Detailed Edge-Case & Operational Logic Rules, 2. Google Drive Folder & Permission Hierarchy, 3.1 Student Competency Growth Index, 3.2 Sponsor Alignment Index, 3.3 Cohort Success Velocity, 3. Asana Cohort Board Structure (+9 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.33
@@ -144,19 +140,27 @@ Nodes (3): call_gemini(), generate_baseline(), log_debug()
 Cohesion: 0.83
 Nodes (3): call_gemini(), log_debug(), parse_transcript()
 
+### Community 16 - "Community 16"
+Cohesion: 0.22
+Nodes (9): main, connections, AI Document Auditor, Filter Unprocessed, Parse Transcript Tasks JSON, Read Weekly Metrics from Airtable, main, main (+1 more)
+
+### Community 30 - "Community 30"
+Cohesion: 0.18
+Nodes (10): Cohort Dashboard & Reporting, Daily Monitor & Auditing, India Research Corps Strategy, Key metrics, Marketing, Onboarding Automation, Our approach, Target problem (+2 more)
+
 ## Knowledge Gaps
-- **68 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+63 more)
+- **93 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+88 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `connections` connect `Community 5` to `Community 8`, `Community 16`, `Community 17`, `Community 18`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 24`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 30`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`?**
-  _High betweenness centrality (0.217) - this node is a cross-community bridge._
-- **Why does `Schedule Trigger (Daily 9 AM)` connect `Community 42` to `Community 5`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `Read Sheet for Onboarding` connect `Community 38` to `Community 5`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
+- **Why does `connections` connect `Community 16` to `Community 5`, `Community 8`, `Community 17`, `Community 18`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 24`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`?**
+  _High betweenness centrality (0.151) - this node is a cross-community bridge._
 - **What connects `name`, `nodes`, `main` to the rest of the system?**
-  _71 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _96 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
+- **Should `Community 6` be split into smaller, more focused modules?**
+  _Cohesion score 0.1111111111111111 - nodes in this community are weakly interconnected._
