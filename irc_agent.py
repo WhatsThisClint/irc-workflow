@@ -1,246 +1,30 @@
 import os
 import sys
 import json
-import urllib.request
 import argparse
-from datetime import datetime
+import subprocess
 
-# Force UTF-8 encoding for stdout/stderr to prevent CP1252 console crashes on Windows
+# Force UTF-8 encoding
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
 
 def log_debug(msg):
-    print(f"[DEBUG] {msg}", file=sys.stderr)
+    print(f"[DEBUG] [Router] {msg}", file=sys.stderr)
 
-def call_gemini(prompt, response_mime_type="text/plain"):
+def run_agent_script(script_path, args_list):
     """
-    Direct HTTPS call to the Gemini API using Python's standard library.
+    Executes a sub-agent python script and returns its stdout.
     """
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        log_debug("Error: GEMINI_API_KEY not found.")
-        print(json.dumps({"error": "GEMINI_API_KEY environment variable not found."}))
-        sys.exit(1)
-        
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    headers = {"Content-Type": "application/json"}
-    
-    payload = {
-        "contents": [{
-            "parts": [{
-                "text": prompt
-            }]
-        }],
-        "generationConfig": {
-            "responseMimeType": response_mime_type
-        }
-    }
-    
-    log_debug(f"Sending request to Gemini API (URL: {url})...")
-    try:
-        req = urllib.request.Request(
-            url, 
-            data=json.dumps(payload).encode("utf-8"), 
-            headers=headers, 
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=60) as response:
-            log_debug("Request sent. Reading response...")
-            res_data = json.loads(response.read().decode("utf-8"))
-            log_debug("Response decoded successfully.")
-            return res_data["candidates"][0]["content"]["parts"][0]["text"]
-    except Exception as e:
-        log_debug(f"Error occurred: {str(e)}")
-        print(json.dumps({"error": f"Failed to connect to Gemini API: {str(e)}"}))
-        sys.exit(1)
-
-def generate_baseline(student_name, question, problem, degree_level, duration_months):
-    """
-    Generates a full, domain-expert baseline Inception Report tailored to degree level and duration.
-    """
-    prompt = f"""
-You are a senior socio-hydrology and water systems expert at WELL Labs, Bangalore.
-Your task is to conduct deep research and write a highly thorough, professional, baseline Inception Report for a Master's thesis student named '{student_name}'.
-The research question is: '{question}'
-The problem statement is: '{problem}'
-
-This Inception Report serves as the baseline technical reference for the program coordinator. It must be written from the perspective of an expert doing the actual work, detailing the exact methodologies, frameworks, data parameters, and risk mitigations.
-
-ADJUST THE COHORT RIGOR ACCORDING TO:
-1. Degree Level: {degree_level}
-   - BSc: Focus on basic field feasibility, simple surveys, direct physical measurements, and a clear, descriptive approach.
-   - MSc: Require robust data triangulation (primary and secondary comparison), statistical analyses, and structured socio-economic interviews.
-   - PhD: Require high theoretical novelty, advanced mathematical or system dynamics modeling, extensive literature review, and academic publication readiness.
-2. Program Duration: {duration_months} months
-   - Adjust the complexity of the data collection and literature review proportionally. A longer program (10 months) requires deeper research and longer observation cycles; a shorter program (6 months) must prioritize rapid execution and immediate fieldwork tasks.
-
-Follow the exact template structure below:
-
-# Inception Report: {question}
-**Prepared by**: AI Research Advisor (WELL Labs)
-**Student**: {student_name} (Degree: {degree_level}, Duration: {duration_months} Months)
-**Date**: {datetime_now()}
-
-## 1. Context & Literature Review Scope
-- Provide a robust background on this problem within India's socio-hydrological context.
-- Identify the key academic literatures, legal acts/policies, and historical datasets required.
-
-## 2. Research Conceptual Model
-- Detail the core system variables (natural, social, and economic).
-- Outline how these variables interact (e.g. extraction rates vs. agricultural crop choices vs. groundwater table).
-
-## 3. Data Collection Methodology
-- Define the exact field methods (e.g. household interviews, borewell monitoring, crop mapping).
-- Specify sample sizes, target demographics, and geographic selection criteria.
-- Create a Data Requirements Matrix: list variables, frequency, and source type (primary/secondary).
-
-## 4. Fieldwork Timeline & Seasonal Considerations
-- Outline the fieldwork plan.
-- Explicitly detail monsoon dependencies (pre-monsoon baseline vs. post-monsoon readings) and how it affects the timetable.
-
-## 5. Potential Constraints & Risk Mitigation
-- Identify community trust barriers, seasonal accessibility limits, and data reliability risks.
-- Propose mitigation strategies for each.
-"""
-    return call_gemini(prompt)
-
-def audit_doc(student_report_text, baseline_report_text, degree_level, duration_months):
-    """
-    Compares the student's active report against the AI baseline, and audits the mentor's feedback.
-    """
-    prompt = f"""
-You are an Academic Director auditing a student's thesis progress.
-Below are two documents:
-1. The AI-generated Baseline Inception Report (benchmark standards):
-{baseline_report_text}
-
-2. The Student's current Inception Report (collaboratively written by the student and mentor):
-{student_report_text}
-
-Analyze and compare the two reports. Your job is to identify technical gaps in the student's work and evaluate the mentor's contributions.
-
-EVALUATE ACCORDING TO PROPORTIONAL RIGOR:
-- Degree Level: {degree_level} (BSc: basic field feasibility; MSc: methodological rigor; PhD: modeling complexity and publication novelty).
-- Program Duration: {duration_months} months (shorter cycles favor rapid fieldwork; longer cycles favor exhaustive literature and deep monitoring).
-
-Provide your evaluation in a JSON structure containing:
-1. "critique": A detailed summary of technical gaps in the student's report compared to the baseline.
-2. "mentor_score": A rating from 1 to 10 of the mentor's engagement based on active and resolved comments/edits found in the text (1 = ghosting/no feedback; 10 = deep, rigorous methodology guidance).
-3. "mentor_critique": Evaluation of the mentor's input. Are they catching methodology gaps or slacking off on minor formatting?
-4. "reflection_questions": A list of 3-4 specific, high-leverage reflection questions to ask BOTH the student and the mentor during the weekly meeting to test their alignment and logic.
-
-Output the result strictly as a valid JSON object matching this schema:
-{{
-  "critique": "string",
-  "mentor_score": 8,
-  "mentor_critique": "string",
-  "reflection_questions": ["string", "string", "string"]
-}}
-"""
-    return call_gemini(prompt, response_mime_type="application/json")
-
-def parse_transcript(transcript_text):
-    """
-    Parses a meeting transcript and extracts actionable tasks for Student, Mentor, and Coordinator.
-    Filters out minor discussion points to prevent Asana clutter.
-    """
-    prompt = f"""
-You are an Operations Analyst tracking thesis progress.
-Read the following meeting transcript:
-"{transcript_text}"
-
-Extract all substantive, actionable action items discussed. Skip minor discussion points, administrative updates, or casual chatter.
-Classify each task by assignee (STUDENT, MENTOR, or COORDINATOR).
-For each task, provide:
-1. "task_name": A short name (e.g., "Draft fieldwork questionnaire").
-2. "details": A clear explanation of what needs to be done.
-3. "due_date": The due date (formatted as YYYY-MM-DD) if mentioned or inferred relative to today, otherwise set to null.
-
-Output the result strictly as a JSON object matching this schema:
-{{
-  "tasks": [
-    {{
-      "assignee": "STUDENT",
-      "task_name": "string",
-      "details": "string",
-      "due_date": "string or null"
-    }}
-  ]
-}}
-"""
-    return call_gemini(prompt, response_mime_type="application/json")
-
-def calculate_phase(gantt_json_file, cohort_start_date_str, duration_months):
-    """
-    Evaluates current project phase using Gantt dates. Falls back to elapsed calendar time.
-    """
-    today = datetime.now()
-    log_debug(f"Calculating phase. Today: {today.strftime('%Y-%m-%d')}, Cohort Start: {cohort_start_date_str}, Duration: {duration_months} Months")
-    
-    # Attempt to parse Gantt JSON first
-    gantt_data = None
-    if gantt_json_file:
-        try:
-            with open(gantt_json_file, "r", encoding="utf-8") as f:
-                gantt_data = json.load(f)
-            log_debug("Successfully loaded Gantt JSON file.")
-        except Exception as e:
-            log_debug(f"Gantt file parse error (will use calendar fallback): {str(e)}")
-            
-    # If Gantt data is available, check active phase
-    if gantt_data:
-        try:
-            # We assume Gantt JSON represents rows of task schedules:
-            # [{"task_name": "...", "start_date": "YYYY-MM-DD", "end_date": "YYYY-MM-DD"}]
-            # We locate the task covering today's date
-            for row in gantt_data:
-                task = row.get("task_name", "")
-                start_str = row.get("start_date") or row.get("start")
-                end_str = row.get("end_date") or row.get("end")
-                if start_str and end_str:
-                    start_dt = datetime.strptime(start_str.split("T")[0], "%Y-%m-%d")
-                    end_dt = datetime.strptime(end_str.split("T")[0], "%Y-%m-%d")
-                    if start_dt <= today <= end_dt:
-                        log_debug(f"Today falls within Gantt task: '{task}'")
-                        if "induction" in task.lower() or "literature" in task.lower():
-                            return "Induction"
-                        elif "fieldwork" in task.lower() or "data collection" in task.lower() or "survey" in task.lower():
-                            return "Fieldwork"
-                        elif "mid-term" in task.lower() or "review" in task.lower():
-                            return "Mid-term Review"
-                        elif "drafting" in task.lower() or "writing" in task.lower() or "thesis" in task.lower():
-                            return "Thesis Drafting"
-                        elif "complete" in task.lower() or "submit" in task.lower():
-                            return "Completed"
-            log_debug("No current active task found in Gantt chart rows.")
-        except Exception as e:
-            log_debug(f"Error parsing Gantt rows: {str(e)}")
-            
-    # Fallback: elapsed calendar time calculation
-    try:
-        start_date = datetime.strptime(cohort_start_date_str.split("T")[0], "%Y-%m-%d")
-        delta_months = (today.year - start_date.year) * 12 + today.month - start_date.month
-        log_debug(f"Calendar fallback: {delta_months} months elapsed since start.")
-        
-        if delta_months <= 1:
-            return "Induction"
-        elif delta_months >= duration_months:
-            return "Completed"
-        elif delta_months >= (duration_months - 1):
-            return "Thesis Drafting"
-        elif delta_months >= (duration_months // 2):
-            return "Mid-term Review"
-        else:
-            return "Fieldwork"
-    except Exception as e:
-        log_debug(f"Calendar fallback error: {str(e)}")
-        return "Induction"
-
-def datetime_now():
-    return datetime.now().strftime("%Y-%m-%d")
+    cmd = [sys.executable, script_path] + args_list
+    log_debug(f"Executing: {' '.join(cmd)}")
+    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
+    if result.returncode != 0:
+        log_debug(f"Sub-agent failed: {result.stderr}")
+        raise RuntimeError(f"Sub-agent failed: {result.stderr}")
+    return result.stdout
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="IRC AI Workflow Agent")
+    parser = argparse.ArgumentParser(description="IRC AI Workflow Agent Router")
     parser.add_argument("--action", required=True, choices=["generate-baseline", "audit-doc", "parse-transcript", "calculate-phase"])
     parser.add_argument("--student", help="Student name")
     parser.add_argument("--question", help="Research question")
@@ -254,46 +38,122 @@ if __name__ == "__main__":
     parser.add_argument("--cohort-start-date", help="Cohort start date YYYY-MM-DD")
     
     args = parser.parse_args()
-    log_debug(f"Starting action: {args.action}")
+    log_debug(f"Routing action: {args.action}")
+    
+    # Set paths to specialized agents
+    onboarding_script = "agents/onboarding_agent.py"
+    academic_script = "agents/academic_auditor.py"
+    mentor_script = "agents/mentor_auditor.py"
+    transcript_script = "agents/transcript_parser.py"
+    coordinator_script = "agents/coordinator_agent.py"
     
     if args.action == "generate-baseline":
-        if not args.student or not args.question or not args.problem:
-            print(json.dumps({"error": "Missing parameters for generate-baseline."}))
-            sys.exit(1)
-        output = generate_baseline(args.student, args.question, args.problem, args.degree_level, args.duration_months)
-        print(output)
-        
-    elif args.action == "audit-doc":
-        if not args.student_report_file or not args.baseline_report_file:
-            print(json.dumps({"error": "Missing file paths for audit-doc."}))
-            sys.exit(1)
         try:
-            with open(args.student_report_file, "r", encoding="utf-8") as f:
-                student_text = f.read()
-            with open(args.baseline_report_file, "r", encoding="utf-8") as f:
-                baseline_text = f.read()
-            output = audit_doc(student_text, baseline_text, args.degree_level, args.duration_months)
+            output = run_agent_script(onboarding_script, [
+                args.student, args.question, args.problem, args.degree_level, str(args.duration_months)
+            ])
             print(output)
         except Exception as e:
-            print(json.dumps({"error": f"Failed to read files: {str(e)}"}))
-            sys.exit(1)
-            
-    elif args.action == "parse-transcript":
-        if not args.transcript_file:
-            print(json.dumps({"error": "Missing transcript-file for parse-transcript."}))
-            sys.exit(1)
-        try:
-            with open(args.transcript_file, "r", encoding="utf-8") as f:
-                transcript_text = f.read()
-            output = parse_transcript(transcript_text)
-            print(output)
-        except Exception as e:
-            print(json.dumps({"error": f"Failed to read transcript file: {str(e)}"}))
+            print(json.dumps({"error": str(e)}))
             sys.exit(1)
             
     elif args.action == "calculate-phase":
-        if not args.cohort_start_date:
-            print(json.dumps({"error": "Missing cohort-start-date for calculate-phase."}))
+        try:
+            output = run_agent_script(coordinator_script, [
+                "--action", "calculate-phase",
+                "--cohort-start-date", args.cohort_start_date,
+                "--duration-months", str(args.duration_months),
+                "--gantt-file", args.gantt_file if args.gantt_file else ""
+            ])
+            print(output)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
             sys.exit(1)
-        output = calculate_phase(args.gantt_file, args.cohort_start_date, args.duration_months)
-        print(output)
+            
+    elif args.action == "parse-transcript":
+        try:
+            output = run_agent_script(transcript_script, [args.transcript_file])
+            print(output)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
+            sys.exit(1)
+            
+    elif args.action == "audit-doc":
+        # Multi-Agent Coordination Loop:
+        # 1. First, check if there is an existing Cheat Sheet to extract coordinator feedback memory.
+        #    If student_report_file exists, we search in its directory for S.No prefixed cheat sheets.
+        dir_name = os.path.dirname(args.student_report_file) if args.student_report_file else "."
+        # Define files
+        student_name = args.student if args.student else "Student"
+        memory_file = os.path.join(dir_name, f"memory.json")
+        cheat_sheet_file = os.path.join(dir_name, f"cheat_sheet.md")
+        
+        # Write mock files if they don't exist to prevent crashes during dry runs
+        if not os.path.exists(cheat_sheet_file) and args.student_report_file:
+            try:
+                with open(cheat_sheet_file, "w", encoding="utf-8") as f:
+                    f.write(f"# IRC Admin Cheat Sheet: {student_name}\n\n## Coordinator Feedback/Corrections\n")
+            except Exception:
+                pass
+                
+        # 2. Extract feedback and save to memory.json
+        if os.path.exists(cheat_sheet_file):
+            try:
+                run_agent_script(coordinator_script, [
+                    "--action", "extract-feedback",
+                    "--cheat-sheet-file", cheat_sheet_file,
+                    "--memory-file", memory_file
+                ])
+            except Exception as e:
+                log_debug(f"Memory extraction warning: {e}")
+                
+        # 3. Spawn Academic Auditor
+        academic_output_file = os.path.join(dir_name, "academic_temp.json")
+        try:
+            academic_json = run_agent_script(academic_script, [
+                args.student_report_file,
+                args.baseline_report_file,
+                args.degree_level,
+                str(args.duration_months),
+                memory_file
+            ])
+            with open(academic_output_file, "w", encoding="utf-8") as f:
+                f.write(academic_json)
+        except Exception as e:
+            print(json.dumps({"error": f"Academic Auditor failed: {str(e)}"}))
+            sys.exit(1)
+            
+        # 4. Spawn Mentor Auditor
+        mentor_output_file = os.path.join(dir_name, "mentor_temp.json")
+        try:
+            # We pass the student report file as both comments and text for this fallback
+            mentor_json = run_agent_script(mentor_script, [
+                args.student_report_file,
+                args.student_report_file
+            ])
+            with open(mentor_output_file, "w", encoding="utf-8") as f:
+                f.write(mentor_json)
+        except Exception as e:
+            print(json.dumps({"error": f"Mentor Auditor failed: {str(e)}"}))
+            sys.exit(1)
+            
+        # 5. Spawn Coordinator Agent to compile final report
+        try:
+            report_json = run_agent_script(coordinator_script, [
+                "--action", "compile-report",
+                "--student", student_name,
+                "--academic-critique-file", academic_output_file,
+                "--mentor-critique-file", mentor_output_file,
+                "--memory-file", memory_file
+            ])
+            
+            # Clean up temp files
+            for temp_file in [academic_output_file, mentor_output_file]:
+                if os.path.exists(temp_file):
+                    os.remove(temp_file)
+                    
+            # Output final json for n8n to digest
+            print(report_json)
+        except Exception as e:
+            print(json.dumps({"error": f"Coordinator compilation failed: {str(e)}"}))
+            sys.exit(1)
