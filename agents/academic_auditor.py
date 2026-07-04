@@ -51,14 +51,19 @@ EVALUATE ACCORDING TO PROPORTIONAL RIGOR:
 Output the result strictly as a valid JSON object matching this schema:
 {{
   "critique": "A detailed summary of technical gaps in the student's report compared to the baseline and your feedback memory.",
-  "reflection_questions": ["A list of 3-4 specific, high-leverage reflection questions to ask the student during the weekly sync."]
+  "reflection_questions": ["A list of 3-4 specific, high-leverage reflection questions to ask the student during the weekly sync."],
+  "competency_scores": {{
+    "scientific_methodology": 8, // Integer score from 1 to 10
+    "data_triangulation": 7, // Integer score from 1 to 10
+    "academic_writing_clarity": 8 // Integer score from 1 to 10
+  }}
 }}
 """
     log_debug("Calling Gemini 3.5 Flash for document audit...")
     return call_gemini(prompt, api_key)
 
 if __name__ == "__main__":
-    if len(sys.argv) < 7:
+    if len(sys.argv) < 6:
         print(json.dumps({"error": "Missing parameters"}))
         sys.exit(1)
         

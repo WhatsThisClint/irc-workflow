@@ -42,12 +42,24 @@ The Google Sheets Dashboard and Airtable event logs will compile and display:
 *   **Operational Task Completion Rate**: Tracking the speed at which action items extracted from transcripts (for students, mentors, and coordinators) are marked complete in Asana.
 *   **Inception Gate Success Rate**: Percentage of students successfully passing the 1-month presentation gate.
 
+### 2.4 Funding & Impact Metrics (For Pitching & Scaling)
+To prove research quality and process efficiency to future funding partners, the system tracks and compiles:
+*   **Student Competency Growth Index**:
+    *   *Mechanism*: For every audit, the AI Academic Auditor scores the report on the **Core Academic Triad** (Scientific Methodology, Data Triangulation, and Academic Writing Clarity) on a scale of 1-10.
+    *   *KPI*: Logs the trajectory and calculates the delta/growth slope from Month 1 to Final Thesis.
+*   **Sponsor Alignment Index**:
+    *   *Mechanism*: A dual-check AI audit comparing the student's research against the sponsor's original problem statement.
+    *   *Milestones*: Executed at the **Month 1 Inception Gate** (to correct drift early) and at **Final Thesis Submission** (to prove alignment/impact).
+*   **Cohort Success Velocity**:
+    *   *Mechanism*: Tracks total delay days categorized by cohort phase (Induction, Fieldwork, Thesis).
+    *   *KPI*: Compares current cohort phase averages against historical cohort baselines to display process maturity.
+
 ---
 
 ## 3. Technology & Integration Design
 
 ```mermaid
-graph LR
+graph TD
     A[n8n / Daily Runner] --> B[Read Google Doc History & Comments]
     A --> C[Read Meeting Transcripts]
     A --> D[Compare Asana Task Dates]
@@ -58,22 +70,28 @@ graph LR
     
     E --> F[Update Master Sheet 'Dashboard' Tab]
     E --> G[Log Events to Airtable]
+    
+    F --> H[Funding / Pitch Deck Exports]
 ```
 
 ### 3.1 Google Sheets Dashboard Tab
 *   Contains summary tables for average cohort slippage.
 *   Shows charts displaying mentor engagement scores and task resolution rates.
+*   **Funding Metrics Panel**: Visualizes student competency growth slopes (triad), sponsor alignment scores, and cohort-to-cohort phase delay comparisons.
 *   Flags high-risk students and unresponsive mentors in red.
 
 ### 3.2 Airtable Logging Schema
-*   **Students Table**: Student details, cohort, and calculated timeline offsets.
+*   **Students Table**: Student details, cohort, calculated timeline offsets, and final Sponsor Alignment Index.
+*   **Competency Logs Table**: [NEW] Time-stamped scores for the Core Academic Triad (Methodology, Triangulation, Clarity) for calculating student growth curves.
 *   **Task Logs Table**: Every Asana task created, assigned, due date, actual completion date, and delay days.
 *   **Mentor Audits Table**: Logs each comment review event, feedback classification, transcript tone analysis, and calculated weekly engagement score.
-*   **Metrics Table**: Daily snapshot of cohort-level KPIs (average slippage, task completion rate).
+*   **Metrics Table**: Daily snapshot of cohort-level KPIs (average slippage, task completion rate, phase bottlenecks, historical comparisons).
 
 ---
 
 ## 4. Outstanding Decisions / Next Steps
 
 *   **Airtable Credentials**: You will need to provide an Airtable Base ID and API token to connect n8n.
+*   **Historical Baselines**: For the Cohort Success Velocity chart, you will need to enter the average delays from your previous cohort cycles into the Airtable `Metrics` table.
 *   **OpenAI/Gemini Token Usage**: The AI analysis of Google Doc history and transcripts will run daily. We will build prompts that extract compact summaries to minimize API costs.
+

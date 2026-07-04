@@ -1,0 +1,3126 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "academic_auditor.py",
+      "file_type": "code",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L1",
+      "id": "agents_academic_auditor",
+      "community": 10,
+      "norm_label": "academic_auditor.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L9",
+      "id": "agents_academic_auditor_log_debug",
+      "community": 10,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L12",
+      "id": "agents_academic_auditor_call_gemini",
+      "community": 10,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "audit_document()",
+      "file_type": "code",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L30",
+      "id": "agents_academic_auditor_audit_document",
+      "community": 10,
+      "norm_label": "audit_document()"
+    },
+    {
+      "label": "alignment_agent.py",
+      "file_type": "code",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L1",
+      "id": "agents_alignment_agent",
+      "community": 11,
+      "norm_label": "alignment_agent.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L9",
+      "id": "agents_alignment_agent_log_debug",
+      "community": 11,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L12",
+      "id": "agents_alignment_agent_call_gemini",
+      "community": 11,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "check_alignment()",
+      "file_type": "code",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L30",
+      "id": "agents_alignment_agent_check_alignment",
+      "community": 11,
+      "norm_label": "check_alignment()"
+    },
+    {
+      "label": "coordinator_agent.py",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L1",
+      "id": "agents_coordinator_agent",
+      "community": 3,
+      "norm_label": "coordinator_agent.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L11",
+      "id": "agents_coordinator_agent_log_debug",
+      "community": 3,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L14",
+      "id": "agents_coordinator_agent_call_gemini",
+      "community": 3,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "extract_coordinator_feedback()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L31",
+      "id": "agents_coordinator_agent_extract_coordinator_feedback",
+      "community": 3,
+      "norm_label": "extract_coordinator_feedback()"
+    },
+    {
+      "label": "calculate_phase()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L47",
+      "id": "agents_coordinator_agent_calculate_phase",
+      "community": 3,
+      "norm_label": "calculate_phase()"
+    },
+    {
+      "label": "compile_cheat_sheet()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L98",
+      "id": "agents_coordinator_agent_compile_cheat_sheet",
+      "community": 3,
+      "norm_label": "compile_cheat_sheet()"
+    },
+    {
+      "label": "draft_nudge_email()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L130",
+      "id": "agents_coordinator_agent_draft_nudge_email",
+      "community": 3,
+      "norm_label": "draft_nudge_email()"
+    },
+    {
+      "label": "generate_weekly_digest()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L154",
+      "id": "agents_coordinator_agent_generate_weekly_digest",
+      "community": 3,
+      "norm_label": "generate_weekly_digest()"
+    },
+    {
+      "label": "mentor_auditor.py",
+      "file_type": "code",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L1",
+      "id": "agents_mentor_auditor",
+      "community": 12,
+      "norm_label": "mentor_auditor.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L9",
+      "id": "agents_mentor_auditor_log_debug",
+      "community": 12,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L12",
+      "id": "agents_mentor_auditor_call_gemini",
+      "community": 12,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "audit_mentor()",
+      "file_type": "code",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L30",
+      "id": "agents_mentor_auditor_audit_mentor",
+      "community": 12,
+      "norm_label": "audit_mentor()"
+    },
+    {
+      "label": "onboarding_agent.py",
+      "file_type": "code",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L1",
+      "id": "agents_onboarding_agent",
+      "community": 13,
+      "norm_label": "onboarding_agent.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L11",
+      "id": "agents_onboarding_agent_log_debug",
+      "community": 13,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L14",
+      "id": "agents_onboarding_agent_call_gemini",
+      "community": 13,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "generate_baseline()",
+      "file_type": "code",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L31",
+      "id": "agents_onboarding_agent_generate_baseline",
+      "community": 13,
+      "norm_label": "generate_baseline()"
+    },
+    {
+      "label": "transcript_parser.py",
+      "file_type": "code",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L1",
+      "id": "agents_transcript_parser",
+      "community": 14,
+      "norm_label": "transcript_parser.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L9",
+      "id": "agents_transcript_parser_log_debug",
+      "community": 14,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L12",
+      "id": "agents_transcript_parser_call_gemini",
+      "community": 14,
+      "norm_label": "call_gemini()"
+    },
+    {
+      "label": "parse_transcript()",
+      "file_type": "code",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L30",
+      "id": "agents_transcript_parser_parse_transcript",
+      "community": 14,
+      "norm_label": "parse_transcript()"
+    },
+    {
+      "label": "irc_agent.py",
+      "file_type": "code",
+      "source_file": "irc_agent.py",
+      "source_location": "L1",
+      "id": "irc_agent",
+      "community": 15,
+      "norm_label": "irc_agent.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "irc_agent.py",
+      "source_location": "L11",
+      "id": "irc_agent_log_debug",
+      "community": 15,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "run_agent_script()",
+      "file_type": "code",
+      "source_file": "irc_agent.py",
+      "source_location": "L14",
+      "id": "irc_agent_run_agent_script",
+      "community": 15,
+      "norm_label": "run_agent_script()"
+    },
+    {
+      "label": "irc_master_workflow.json",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1",
+      "id": "workflows_irc_master_workflow",
+      "community": 8,
+      "norm_label": "irc_master_workflow.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L2",
+      "id": "workflows_irc_master_workflow_name",
+      "community": 8,
+      "norm_label": "name"
+    },
+    {
+      "label": "nodes",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L3",
+      "id": "workflows_irc_master_workflow_nodes",
+      "community": 8,
+      "norm_label": "nodes"
+    },
+    {
+      "label": "connections",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L784",
+      "id": "workflows_irc_master_workflow_connections",
+      "community": 5,
+      "norm_label": "connections"
+    },
+    {
+      "label": "Schedule Trigger (Daily 9 AM)",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L785",
+      "id": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am",
+      "community": 42,
+      "norm_label": "schedule trigger (daily 9 am)"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L786",
+      "id": "workflows_irc_master_workflow_schedule_trigger_daily_9_am_main",
+      "community": 42,
+      "norm_label": "main"
+    },
+    {
+      "label": "Read Sheet for Onboarding",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L796",
+      "id": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding",
+      "community": 38,
+      "norm_label": "read sheet for onboarding"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L797",
+      "id": "workflows_irc_master_workflow_read_sheet_for_onboarding_main",
+      "community": 38,
+      "norm_label": "main"
+    },
+    {
+      "label": "Filter Unprocessed",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L807",
+      "id": "workflows_irc_master_workflow_connections_filter_unprocessed",
+      "community": 30,
+      "norm_label": "filter unprocessed"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L808",
+      "id": "workflows_irc_master_workflow_filter_unprocessed_main",
+      "community": 30,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Student Main Folder",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L818",
+      "id": "workflows_irc_master_workflow_connections_create_student_main_folder",
+      "community": 26,
+      "norm_label": "create student main folder"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L819",
+      "id": "workflows_irc_master_workflow_create_student_main_folder_main",
+      "community": 26,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Shared Space Folder",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L834",
+      "id": "workflows_irc_master_workflow_connections_create_shared_space_folder",
+      "community": 25,
+      "norm_label": "create shared space folder"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L835",
+      "id": "workflows_irc_master_workflow_create_shared_space_folder_main",
+      "community": 25,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Admin Only Folder",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L850",
+      "id": "workflows_irc_master_workflow_connections_create_admin_only_folder",
+      "community": 20,
+      "norm_label": "create admin only folder"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L851",
+      "id": "workflows_irc_master_workflow_create_admin_only_folder_main",
+      "community": 20,
+      "norm_label": "main"
+    },
+    {
+      "label": "AI Expert Report Generator",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L866",
+      "id": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
+      "community": 17,
+      "norm_label": "ai expert report generator"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L867",
+      "id": "workflows_irc_master_workflow_ai_expert_report_generator_main",
+      "community": 17,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Sample Doc in Drive",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L877",
+      "id": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive",
+      "community": 23,
+      "norm_label": "create sample doc in drive"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L878",
+      "id": "workflows_irc_master_workflow_create_sample_doc_in_drive_main",
+      "community": 23,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Admin Cheat Sheet Doc",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L888",
+      "id": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc",
+      "community": 19,
+      "norm_label": "create admin cheat sheet doc"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L889",
+      "id": "workflows_irc_master_workflow_create_admin_cheat_sheet_doc_main",
+      "community": 19,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Asana Student Section",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L899",
+      "id": "workflows_irc_master_workflow_connections_create_asana_student_section",
+      "community": 22,
+      "norm_label": "create asana student section"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L900",
+      "id": "workflows_irc_master_workflow_create_asana_student_section_main",
+      "community": 22,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Session 1 Task",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L910",
+      "id": "workflows_irc_master_workflow_connections_create_session_1_task",
+      "community": 24,
+      "norm_label": "create session 1 task"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L911",
+      "id": "workflows_irc_master_workflow_create_session_1_task_main",
+      "community": 24,
+      "norm_label": "main"
+    },
+    {
+      "label": "Schedule Trigger (Daily 8 AM)",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L921",
+      "id": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am",
+      "community": 41,
+      "norm_label": "schedule trigger (daily 8 am)"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L922",
+      "id": "workflows_irc_master_workflow_schedule_trigger_daily_8_am_main",
+      "community": 41,
+      "norm_label": "main"
+    },
+    {
+      "label": "Read Sheet for Monitoring",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L932",
+      "id": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
+      "community": 5,
+      "norm_label": "read sheet for monitoring"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L933",
+      "id": "workflows_irc_master_workflow_read_sheet_for_monitoring_main",
+      "community": 5,
+      "norm_label": "main"
+    },
+    {
+      "label": "Filter Active Students",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L943",
+      "id": "workflows_irc_master_workflow_connections_filter_active_students",
+      "community": 29,
+      "norm_label": "filter active students"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L944",
+      "id": "workflows_irc_master_workflow_filter_active_students_main",
+      "community": 29,
+      "norm_label": "main"
+    },
+    {
+      "label": "Read Student Gantt Chart",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L954",
+      "id": "workflows_irc_master_workflow_connections_read_student_gantt_chart",
+      "community": 39,
+      "norm_label": "read student gantt chart"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L955",
+      "id": "workflows_irc_master_workflow_read_student_gantt_chart_main",
+      "community": 39,
+      "norm_label": "main"
+    },
+    {
+      "label": "AI Dynamic Phase Calculator",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L965",
+      "id": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator",
+      "community": 5,
+      "norm_label": "ai dynamic phase calculator"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L966",
+      "id": "workflows_irc_master_workflow_ai_dynamic_phase_calculator_main",
+      "community": 5,
+      "norm_label": "main"
+    },
+    {
+      "label": "Update Phase in Master Sheet",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L976",
+      "id": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet",
+      "community": 44,
+      "norm_label": "update phase in master sheet"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L977",
+      "id": "workflows_irc_master_workflow_update_phase_in_master_sheet_main",
+      "community": 44,
+      "norm_label": "main"
+    },
+    {
+      "label": "Presentation Gate Overdue?",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L992",
+      "id": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
+      "community": 37,
+      "norm_label": "presentation gate overdue?"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L993",
+      "id": "workflows_irc_master_workflow_presentation_gate_overdue_main",
+      "community": 37,
+      "norm_label": "main"
+    },
+    {
+      "label": "Is Gate Status == Pass?",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1010",
+      "id": "workflows_irc_master_workflow_connections_is_gate_status_pass",
+      "community": 32,
+      "norm_label": "is gate status == pass?"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1011",
+      "id": "workflows_irc_master_workflow_is_gate_status_pass_main",
+      "community": 32,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Weekly Calendar Sync",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1026",
+      "id": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync",
+      "community": 27,
+      "norm_label": "create weekly calendar sync"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1027",
+      "id": "workflows_irc_master_workflow_create_weekly_calendar_sync_main",
+      "community": 27,
+      "norm_label": "main"
+    },
+    {
+      "label": "Create Alternate Bi-Weekly Mentor Sync",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1037",
+      "id": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync",
+      "community": 21,
+      "norm_label": "create alternate bi-weekly mentor sync"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1038",
+      "id": "workflows_irc_master_workflow_create_alternate_bi_weekly_mentor_sync_main",
+      "community": 21,
+      "norm_label": "main"
+    },
+    {
+      "label": "List New Transcripts",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1048",
+      "id": "workflows_irc_master_workflow_connections_list_new_transcripts",
+      "community": 33,
+      "norm_label": "list new transcripts"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1049",
+      "id": "workflows_irc_master_workflow_list_new_transcripts_main",
+      "community": 33,
+      "norm_label": "main"
+    },
+    {
+      "label": "AI Transcript Task Extractor",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1059",
+      "id": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
+      "community": 5,
+      "norm_label": "ai transcript task extractor"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1060",
+      "id": "workflows_irc_master_workflow_ai_transcript_task_extractor_main",
+      "community": 5,
+      "norm_label": "main"
+    },
+    {
+      "label": "Parse Transcript Tasks JSON",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1070",
+      "id": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
+      "community": 36,
+      "norm_label": "parse transcript tasks json"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1071",
+      "id": "workflows_irc_master_workflow_parse_transcript_tasks_json_main",
+      "community": 36,
+      "norm_label": "main"
+    },
+    {
+      "label": "Get Inception Report Content",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1081",
+      "id": "workflows_irc_master_workflow_connections_get_inception_report_content",
+      "community": 31,
+      "norm_label": "get inception report content"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1082",
+      "id": "workflows_irc_master_workflow_get_inception_report_content_main",
+      "community": 31,
+      "norm_label": "main"
+    },
+    {
+      "label": "Write Temp Audit Files",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1092",
+      "id": "workflows_irc_master_workflow_connections_write_temp_audit_files",
+      "community": 46,
+      "norm_label": "write temp audit files"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1093",
+      "id": "workflows_irc_master_workflow_write_temp_audit_files_main",
+      "community": 46,
+      "norm_label": "main"
+    },
+    {
+      "label": "AI Document Auditor",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1103",
+      "id": "workflows_irc_master_workflow_connections_ai_document_auditor",
+      "community": 16,
+      "norm_label": "ai document auditor"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1104",
+      "id": "workflows_irc_master_workflow_ai_document_auditor_main",
+      "community": 16,
+      "norm_label": "main"
+    },
+    {
+      "label": "Parse Audit JSON",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1114",
+      "id": "workflows_irc_master_workflow_connections_parse_audit_json",
+      "community": 35,
+      "norm_label": "parse audit json"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1115",
+      "id": "workflows_irc_master_workflow_parse_audit_json_main",
+      "community": 35,
+      "norm_label": "main"
+    },
+    {
+      "label": "Update Admin Cheat Sheet Doc",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1125",
+      "id": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc",
+      "community": 43,
+      "norm_label": "update admin cheat sheet doc"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1126",
+      "id": "workflows_irc_master_workflow_update_admin_cheat_sheet_doc_main",
+      "community": 43,
+      "norm_label": "main"
+    },
+    {
+      "label": "Log Competency Scores to Airtable",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1136",
+      "id": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable",
+      "community": 34,
+      "norm_label": "log competency scores to airtable"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1137",
+      "id": "workflows_irc_master_workflow_log_competency_scores_to_airtable_main",
+      "community": 34,
+      "norm_label": "main"
+    },
+    {
+      "label": "Draft Nudge Email",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1147",
+      "id": "workflows_irc_master_workflow_connections_draft_nudge_email",
+      "community": 28,
+      "norm_label": "draft nudge email"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1148",
+      "id": "workflows_irc_master_workflow_draft_nudge_email_main",
+      "community": 28,
+      "norm_label": "main"
+    },
+    {
+      "label": "weekly-friday-trigger",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1158",
+      "id": "workflows_irc_master_workflow_connections_weekly_friday_trigger",
+      "community": 45,
+      "norm_label": "weekly-friday-trigger"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1159",
+      "id": "workflows_irc_master_workflow_weekly_friday_trigger_main",
+      "community": 45,
+      "norm_label": "main"
+    },
+    {
+      "label": "Read Weekly Metrics from Airtable",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1169",
+      "id": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
+      "community": 40,
+      "norm_label": "read weekly metrics from airtable"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1170",
+      "id": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main",
+      "community": 40,
+      "norm_label": "main"
+    },
+    {
+      "label": "Write Weekly Metrics Temp File",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1180",
+      "id": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file",
+      "community": 47,
+      "norm_label": "write weekly metrics temp file"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1181",
+      "id": "workflows_irc_master_workflow_write_weekly_metrics_temp_file_main",
+      "community": 47,
+      "norm_label": "main"
+    },
+    {
+      "label": "AI Weekly Digest Generator",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1191",
+      "id": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
+      "community": 18,
+      "norm_label": "ai weekly digest generator"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1192",
+      "id": "workflows_irc_master_workflow_ai_weekly_digest_generator_main",
+      "community": 18,
+      "norm_label": "main"
+    },
+    {
+      "label": "settings",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1203",
+      "id": "workflows_irc_master_workflow_settings",
+      "community": 8,
+      "norm_label": "settings"
+    },
+    {
+      "label": "executionTimeout",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1204",
+      "id": "workflows_irc_master_workflow_settings_executiontimeout",
+      "community": 8,
+      "norm_label": "executiontimeout"
+    },
+    {
+      "label": "active",
+      "file_type": "code",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1206",
+      "id": "workflows_irc_master_workflow_active",
+      "community": 8,
+      "norm_label": "active"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "id": "package",
+      "community": 2,
+      "norm_label": "package.json"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "id": "package_name",
+      "community": 2,
+      "norm_label": "name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "id": "package_version",
+      "community": 2,
+      "norm_label": "version"
+    },
+    {
+      "label": "description",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "id": "package_description",
+      "community": 2,
+      "norm_label": "description"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "id": "package_main",
+      "community": 2,
+      "norm_label": "main"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "id": "package_scripts",
+      "community": 2,
+      "norm_label": "scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "id": "package_scripts_start",
+      "community": 2,
+      "norm_label": "start"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "id": "package_devdependencies",
+      "community": 2,
+      "norm_label": "devdependencies"
+    },
+    {
+      "label": "n8n",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "id": "package_devdependencies_n8n",
+      "community": 2,
+      "norm_label": "n8n"
+    },
+    {
+      "label": "setup_workspace.py",
+      "file_type": "code",
+      "source_file": "setup_workspace.py",
+      "source_location": "L1",
+      "id": "setup_workspace",
+      "community": 9,
+      "norm_label": "setup_workspace.py"
+    },
+    {
+      "label": "log()",
+      "file_type": "code",
+      "source_file": "setup_workspace.py",
+      "source_location": "L6",
+      "id": "setup_workspace_log",
+      "community": 9,
+      "norm_label": "log()"
+    },
+    {
+      "label": "check_command()",
+      "file_type": "code",
+      "source_file": "setup_workspace.py",
+      "source_location": "L9",
+      "id": "setup_workspace_check_command",
+      "community": 9,
+      "norm_label": "check_command()"
+    },
+    {
+      "label": "run_cmd()",
+      "file_type": "code",
+      "source_file": "setup_workspace.py",
+      "source_location": "L12",
+      "id": "setup_workspace_run_cmd",
+      "community": 9,
+      "norm_label": "run_cmd()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "setup_workspace.py",
+      "source_location": "L19",
+      "id": "setup_workspace_main",
+      "community": 9,
+      "norm_label": "main()"
+    },
+    {
+      "label": "test_workflow_mock.py",
+      "file_type": "code",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L1",
+      "id": "test_workflow_mock",
+      "community": 7,
+      "norm_label": "test_workflow_mock.py"
+    },
+    {
+      "label": "calculate_milestones()",
+      "file_type": "code",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L10",
+      "id": "test_workflow_mock_calculate_milestones",
+      "community": 7,
+      "norm_label": "calculate_milestones()"
+    },
+    {
+      "label": "print_mock_prompt_templates()",
+      "file_type": "code",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L51",
+      "id": "test_workflow_mock_print_mock_prompt_templates",
+      "community": 7,
+      "norm_label": "print_mock_prompt_templates()"
+    },
+    {
+      "label": "IRC Student Workflow Mock & Verification Runner This script simulates the dynami",
+      "file_type": "rationale",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L1",
+      "id": "test_workflow_mock_rationale_1",
+      "community": 7,
+      "norm_label": "irc student workflow mock & verification runner this script simulates the dynami"
+    },
+    {
+      "label": "Simulates the dynamic milestone calculations based on Cohort Start Date and Dura",
+      "file_type": "rationale",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L11",
+      "id": "test_workflow_mock_rationale_11",
+      "community": 7,
+      "norm_label": "simulates the dynamic milestone calculations based on cohort start date and dura"
+    },
+    {
+      "label": "Displays the formatted prompts sent to AI nodes for validation.",
+      "file_type": "rationale",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L52",
+      "id": "test_workflow_mock_rationale_52",
+      "community": 7,
+      "norm_label": "displays the formatted prompts sent to ai nodes for validation."
+    },
+    {
+      "label": "AGENT_ONBOARDING.md",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L1",
+      "id": "agent_onboarding",
+      "community": 4,
+      "norm_label": "agent_onboarding.md"
+    },
+    {
+      "label": "AI Agent Workspace Onboarding Guide",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L1",
+      "id": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "community": 4,
+      "norm_label": "ai agent workspace onboarding guide"
+    },
+    {
+      "label": "1. Automated Setup & Diagnostics",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L7",
+      "id": "agent_onboarding_1_automated_setup_diagnostics",
+      "community": 4,
+      "norm_label": "1. automated setup & diagnostics"
+    },
+    {
+      "label": "2. API Key Configuration",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L17",
+      "id": "agent_onboarding_2_api_key_configuration",
+      "community": 4,
+      "norm_label": "2. api key configuration"
+    },
+    {
+      "label": "3. Starting the Local n8n Server",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L26",
+      "id": "agent_onboarding_3_starting_the_local_n8n_server",
+      "community": 4,
+      "norm_label": "3. starting the local n8n server"
+    },
+    {
+      "label": "4. Key Workflows & Agent Architecture",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L41",
+      "id": "agent_onboarding_4_key_workflows_agent_architecture",
+      "community": 4,
+      "norm_label": "4. key workflows & agent architecture"
+    },
+    {
+      "label": "5. Next Steps Checklist for Incoming Agents",
+      "file_type": "document",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L54",
+      "id": "agent_onboarding_5_next_steps_checklist_for_incoming_agents",
+      "community": 4,
+      "norm_label": "5. next steps checklist for incoming agents"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude",
+      "community": 1,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "CLAUDE.md (IRC Workflow Memory Bank)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "id": "claude_claude_md_irc_workflow_memory_bank",
+      "community": 1,
+      "norm_label": "claude.md (irc workflow memory bank)"
+    },
+    {
+      "label": "1. Project Overview",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "id": "claude_1_project_overview",
+      "community": 1,
+      "norm_label": "1. project overview"
+    },
+    {
+      "label": "2. Porting & Copy-Pasting to Another PC",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "id": "claude_2_porting_copy_pasting_to_another_pc",
+      "community": 1,
+      "norm_label": "2. porting & copy-pasting to another pc"
+    },
+    {
+      "label": "3. Development Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L26",
+      "id": "claude_3_development_commands",
+      "community": 1,
+      "norm_label": "3. development commands"
+    },
+    {
+      "label": "Starting n8n Server (Local)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "id": "claude_starting_n8n_server_local",
+      "community": 1,
+      "norm_label": "starting n8n server (local)"
+    },
+    {
+      "label": "Running the Python AI Agent",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "id": "claude_running_the_python_ai_agent",
+      "community": 1,
+      "norm_label": "running the python ai agent"
+    },
+    {
+      "label": "4. Folder & File Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "id": "claude_4_folder_file_structure",
+      "community": 1,
+      "norm_label": "4. folder & file structure"
+    },
+    {
+      "label": "5. Key Design Decisions & Resolved Edge Cases",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L70",
+      "id": "claude_5_key_design_decisions_resolved_edge_cases",
+      "community": 1,
+      "norm_label": "5. key design decisions & resolved edge cases"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme",
+      "community": 6,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "IRC Student Onboarding & Progress Tracking System",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_irc_student_onboarding_progress_tracking_system",
+      "community": 6,
+      "norm_label": "irc student onboarding & progress tracking system"
+    },
+    {
+      "label": "1. Master Google Sheet Schema",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "id": "readme_1_master_google_sheet_schema",
+      "community": 6,
+      "norm_label": "1. master google sheet schema"
+    },
+    {
+      "label": "2. Google Drive Folder & Permission Hierarchy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "id": "readme_2_google_drive_folder_permission_hierarchy",
+      "community": 6,
+      "norm_label": "2. google drive folder & permission hierarchy"
+    },
+    {
+      "label": "3. Asana Cohort Board Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "id": "readme_3_asana_cohort_board_structure",
+      "community": 6,
+      "norm_label": "3. asana cohort board structure"
+    },
+    {
+      "label": "4. How to Import the n8n Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "id": "readme_4_how_to_import_the_n8n_workflow",
+      "community": 6,
+      "norm_label": "4. how to import the n8n workflow"
+    },
+    {
+      "label": "2026-07-04-irc-workflow-scaling-requirements.md",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L1",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements",
+      "community": 0,
+      "norm_label": "2026-07-04-irc-workflow-scaling-requirements.md"
+    },
+    {
+      "label": "Requirements: IRC Workflow Scaling & Performance Tracking",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L1",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "community": 0,
+      "norm_label": "requirements: irc workflow scaling & performance tracking"
+    },
+    {
+      "label": "1. Objectives & Focus Areas",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L7",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_1_objectives_focus_areas",
+      "community": 0,
+      "norm_label": "1. objectives & focus areas"
+    },
+    {
+      "label": "2. Metric Specifications & Tracking Logic",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L19",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "community": 0,
+      "norm_label": "2. metric specifications & tracking logic"
+    },
+    {
+      "label": "2.1 Student Progress Tracking",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L21",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_1_student_progress_tracking",
+      "community": 0,
+      "norm_label": "2.1 student progress tracking"
+    },
+    {
+      "label": "2.2 Mentor Engagement Audit",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L28",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_2_mentor_engagement_audit",
+      "community": 0,
+      "norm_label": "2.2 mentor engagement audit"
+    },
+    {
+      "label": "2.3 Cohort & Operational KPI Definitions",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L38",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_3_cohort_operational_kpi_definitions",
+      "community": 0,
+      "norm_label": "2.3 cohort & operational kpi definitions"
+    },
+    {
+      "label": "2.4 Funding & Impact Metrics (For Pitching & Scaling)",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L45",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_4_funding_impact_metrics_for_pitching_scaling",
+      "community": 0,
+      "norm_label": "2.4 funding & impact metrics (for pitching & scaling)"
+    },
+    {
+      "label": "3. Technology & Integration Design",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L59",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
+      "community": 0,
+      "norm_label": "3. technology & integration design"
+    },
+    {
+      "label": "3.1 Google Sheets Dashboard Tab",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L77",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_1_google_sheets_dashboard_tab",
+      "community": 0,
+      "norm_label": "3.1 google sheets dashboard tab"
+    },
+    {
+      "label": "3.2 Airtable Logging Schema",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L83",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_2_airtable_logging_schema",
+      "community": 0,
+      "norm_label": "3.2 airtable logging schema"
+    },
+    {
+      "label": "4. Outstanding Decisions / Next Steps",
+      "file_type": "document",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L92",
+      "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps",
+      "community": 0,
+      "norm_label": "4. outstanding decisions / next steps"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "agents_academic_auditor",
+      "target": "agents_academic_auditor_audit_document",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "agents_academic_auditor",
+      "target": "agents_academic_auditor_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_academic_auditor",
+      "target": "agents_academic_auditor_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "agents_academic_auditor_audit_document",
+      "target": "agents_academic_auditor_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "agents_academic_auditor_audit_document",
+      "target": "agents_academic_auditor_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "agents_alignment_agent",
+      "target": "agents_alignment_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "agents_alignment_agent",
+      "target": "agents_alignment_agent_check_alignment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_alignment_agent",
+      "target": "agents_alignment_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "agents_alignment_agent_check_alignment",
+      "target": "agents_alignment_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "agents_alignment_agent_check_alignment",
+      "target": "agents_alignment_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_calculate_phase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_compile_cheat_sheet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_draft_nudge_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_extract_coordinator_feedback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_generate_weekly_digest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_coordinator_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent_calculate_phase",
+      "target": "agents_coordinator_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent_generate_weekly_digest",
+      "target": "agents_coordinator_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent_generate_weekly_digest",
+      "target": "agents_coordinator_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor",
+      "target": "agents_mentor_auditor_audit_mentor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor",
+      "target": "agents_mentor_auditor_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor",
+      "target": "agents_mentor_auditor_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor_audit_mentor",
+      "target": "agents_mentor_auditor_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor_audit_mentor",
+      "target": "agents_mentor_auditor_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent",
+      "target": "agents_onboarding_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent",
+      "target": "agents_onboarding_agent_generate_baseline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent",
+      "target": "agents_onboarding_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent_generate_baseline",
+      "target": "agents_onboarding_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent_generate_baseline",
+      "target": "agents_onboarding_agent_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "agents_transcript_parser",
+      "target": "agents_transcript_parser_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_transcript_parser",
+      "target": "agents_transcript_parser_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "agents_transcript_parser",
+      "target": "agents_transcript_parser_parse_transcript",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "agents_transcript_parser_parse_transcript",
+      "target": "agents_transcript_parser_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/transcript_parser.py",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "agents_transcript_parser_parse_transcript",
+      "target": "agents_transcript_parser_call_gemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "irc_agent.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "irc_agent",
+      "target": "irc_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "irc_agent.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "irc_agent",
+      "target": "irc_agent_run_agent_script",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "irc_agent.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "irc_agent_run_agent_script",
+      "target": "irc_agent_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1206",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow",
+      "target": "workflows_irc_master_workflow_active",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L784",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow",
+      "target": "workflows_irc_master_workflow_connections",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow",
+      "target": "workflows_irc_master_workflow_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow",
+      "target": "workflows_irc_master_workflow_nodes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1203",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow",
+      "target": "workflows_irc_master_workflow_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1103",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_ai_document_auditor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L965",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L866",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1059",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1191",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L888",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L850",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_admin_only_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1037",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L899",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_asana_student_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L877",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L910",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_session_1_task",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L834",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_shared_space_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L818",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_student_main_folder",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1026",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1147",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_draft_nudge_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L943",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_filter_active_students",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L807",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_filter_unprocessed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1081",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_get_inception_report_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1010",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_is_gate_status_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1048",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_list_new_transcripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1136",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1114",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_parse_audit_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1070",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L992",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L932",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L796",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L954",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_read_student_gantt_chart",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1169",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L921",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L785",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1125",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L976",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1158",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_weekly_friday_trigger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1092",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_write_temp_audit_files",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1180",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections",
+      "target": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L786",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_schedule_trigger_daily_9_am",
+      "target": "workflows_irc_master_workflow_schedule_trigger_daily_9_am_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L797",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_read_sheet_for_onboarding",
+      "target": "workflows_irc_master_workflow_read_sheet_for_onboarding_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L808",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_filter_unprocessed",
+      "target": "workflows_irc_master_workflow_filter_unprocessed_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L819",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_student_main_folder",
+      "target": "workflows_irc_master_workflow_create_student_main_folder_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L835",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_shared_space_folder",
+      "target": "workflows_irc_master_workflow_create_shared_space_folder_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L851",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_admin_only_folder",
+      "target": "workflows_irc_master_workflow_create_admin_only_folder_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L867",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
+      "target": "workflows_irc_master_workflow_ai_expert_report_generator_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L878",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_sample_doc_in_drive",
+      "target": "workflows_irc_master_workflow_create_sample_doc_in_drive_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L889",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_admin_cheat_sheet_doc",
+      "target": "workflows_irc_master_workflow_create_admin_cheat_sheet_doc_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L900",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_asana_student_section",
+      "target": "workflows_irc_master_workflow_create_asana_student_section_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L911",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_session_1_task",
+      "target": "workflows_irc_master_workflow_create_session_1_task_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L922",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_schedule_trigger_daily_8_am",
+      "target": "workflows_irc_master_workflow_schedule_trigger_daily_8_am_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L933",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_read_sheet_for_monitoring",
+      "target": "workflows_irc_master_workflow_read_sheet_for_monitoring_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L944",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_filter_active_students",
+      "target": "workflows_irc_master_workflow_filter_active_students_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L955",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_read_student_gantt_chart",
+      "target": "workflows_irc_master_workflow_read_student_gantt_chart_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L966",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_ai_dynamic_phase_calculator",
+      "target": "workflows_irc_master_workflow_ai_dynamic_phase_calculator_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L977",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_update_phase_in_master_sheet",
+      "target": "workflows_irc_master_workflow_update_phase_in_master_sheet_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L993",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
+      "target": "workflows_irc_master_workflow_presentation_gate_overdue_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1011",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_is_gate_status_pass",
+      "target": "workflows_irc_master_workflow_is_gate_status_pass_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1027",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_weekly_calendar_sync",
+      "target": "workflows_irc_master_workflow_create_weekly_calendar_sync_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1038",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_create_alternate_bi_weekly_mentor_sync",
+      "target": "workflows_irc_master_workflow_create_alternate_bi_weekly_mentor_sync_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1049",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_list_new_transcripts",
+      "target": "workflows_irc_master_workflow_list_new_transcripts_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1060",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_ai_transcript_task_extractor",
+      "target": "workflows_irc_master_workflow_ai_transcript_task_extractor_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1071",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
+      "target": "workflows_irc_master_workflow_parse_transcript_tasks_json_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1082",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_get_inception_report_content",
+      "target": "workflows_irc_master_workflow_get_inception_report_content_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1093",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_write_temp_audit_files",
+      "target": "workflows_irc_master_workflow_write_temp_audit_files_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1104",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_ai_document_auditor",
+      "target": "workflows_irc_master_workflow_ai_document_auditor_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1115",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_parse_audit_json",
+      "target": "workflows_irc_master_workflow_parse_audit_json_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1126",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_update_admin_cheat_sheet_doc",
+      "target": "workflows_irc_master_workflow_update_admin_cheat_sheet_doc_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1137",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_log_competency_scores_to_airtable",
+      "target": "workflows_irc_master_workflow_log_competency_scores_to_airtable_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1148",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_draft_nudge_email",
+      "target": "workflows_irc_master_workflow_draft_nudge_email_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1159",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_weekly_friday_trigger",
+      "target": "workflows_irc_master_workflow_weekly_friday_trigger_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1170",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
+      "target": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1181",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_write_weekly_metrics_temp_file",
+      "target": "workflows_irc_master_workflow_write_weekly_metrics_temp_file_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1192",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
+      "target": "workflows_irc_master_workflow_ai_weekly_digest_generator_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "n8n/workflows/irc_master_workflow.json",
+      "source_location": "L1204",
+      "weight": 1.0,
+      "source": "workflows_irc_master_workflow_settings",
+      "target": "workflows_irc_master_workflow_settings_executiontimeout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_description",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_devdependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_scripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "package",
+      "target": "package_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_n8n",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "setup_workspace",
+      "target": "setup_workspace_check_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "setup_workspace",
+      "target": "setup_workspace_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "setup_workspace",
+      "target": "setup_workspace_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "setup_workspace",
+      "target": "setup_workspace_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "setup_workspace_main",
+      "target": "setup_workspace_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "setup_workspace_main",
+      "target": "setup_workspace_check_command",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "setup_workspace.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "setup_workspace_main",
+      "target": "setup_workspace_run_cmd",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "test_workflow_mock",
+      "target": "test_workflow_mock_calculate_milestones",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "test_workflow_mock",
+      "target": "test_workflow_mock_print_mock_prompt_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "test_workflow_mock_rationale_1",
+      "target": "test_workflow_mock",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "test_workflow_mock_rationale_11",
+      "target": "test_workflow_mock_calculate_milestones",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "test_workflow_mock.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "test_workflow_mock_rationale_52",
+      "target": "test_workflow_mock_print_mock_prompt_templates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agent_onboarding",
+      "target": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_1_automated_setup_diagnostics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_2_api_key_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_3_starting_the_local_n8n_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_4_key_workflows_agent_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENT_ONBOARDING.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
+      "target": "agent_onboarding_5_next_steps_checklist_for_incoming_agents",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_claude_md_irc_workflow_memory_bank",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_1_project_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_2_porting_copy_pasting_to_another_pc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_3_development_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_4_folder_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "claude_claude_md_irc_workflow_memory_bank",
+      "target": "claude_5_key_design_decisions_resolved_edge_cases",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "claude_3_development_commands",
+      "target": "claude_running_the_python_ai_agent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "claude_3_development_commands",
+      "target": "claude_starting_n8n_server_local",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_irc_student_onboarding_progress_tracking_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_1_master_google_sheet_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_2_google_drive_folder_permission_hierarchy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_3_asana_cohort_board_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "readme_irc_student_onboarding_progress_tracking_system",
+      "target": "readme_4_how_to_import_the_n8n_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_1_objectives_focus_areas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_requirements_irc_workflow_scaling_performance_tracking",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_1_student_progress_tracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_2_mentor_engagement_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_3_cohort_operational_kpi_definitions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_metric_specifications_tracking_logic",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_2_4_funding_impact_metrics_for_pitching_scaling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_1_google_sheets_dashboard_tab",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_technology_integration_design",
+      "target": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_3_2_airtable_logging_schema",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "762811c1cef0ba5b19bda0e650349435e26201c3"
+}

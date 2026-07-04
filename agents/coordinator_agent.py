@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import argparse
+import urllib.request
 from datetime import datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -10,10 +11,24 @@ sys.stderr.reconfigure(encoding='utf-8')
 def log_debug(msg):
     print(f"[DEBUG] [CoordinatorAgent] {msg}", file=sys.stderr)
 
+def call_gemini(prompt, api_key):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
+    headers = {"Content-Type": "application/json"}
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}]
+    }
+    
+    req = urllib.request.Request(
+        url, 
+        data=json.dumps(payload).encode("utf-8"), 
+        headers=headers, 
+        method="POST"
+    )
+    with urllib.request.urlopen(req, timeout=60) as response:
+        res_data = json.loads(response.read().decode("utf-8"))
+        return res_data["candidates"][0]["content"]["parts"][0]["text"]
+
 def extract_coordinator_feedback(cheat_sheet_text):
-    """
-    Parses feedback written under the ## Coordinator Feedback/Corrections section.
-    """
     lines = cheat_sheet_text.split("\n")
     feedback_lines = []
     capture = False
@@ -22,7 +37,6 @@ def extract_coordinator_feedback(cheat_sheet_text):
             capture = True
             continue
         if capture:
-            # Stop if we hit another header
             if line.startswith("#"):
                 break
             feedback_lines.append(line)
@@ -31,9 +45,6 @@ def extract_coordinator_feedback(cheat_sheet_text):
     return feedback
 
 def calculate_phase(gantt_json_file, cohort_start_date_str, duration_months):
-    """
-    Calculates current project phase using Gantt dates or elapsed calendar time.
-    """
     today = datetime.now()
     gantt_data = None
     if gantt_json_file and os.path.exists(gantt_json_file):
@@ -66,7 +77,6 @@ def calculate_phase(gantt_json_file, cohort_start_date_str, duration_months):
         except Exception as e:
             log_debug(f"Error parsing Gantt rows: {str(e)}")
             
-    # Fallback elapsed calendar time
     try:
         start_date = datetime.strptime(cohort_start_date_str.split("T")[0], "%Y-%m-%d")
         delta_months = (today.year - start_date.year) * 12 + today.month - start_date.month
@@ -85,10 +95,7 @@ def calculate_phase(gantt_json_file, cohort_start_date_str, duration_months):
         log_debug(f"Calendar fallback error: {str(e)}")
         return "Induction"
 
-def compile_cheat_sheet(student_name, critique, mentor_score, mentor_critique, reflection_questions, feedback_memory):
-    """
-    Compiles the final markdown structure for the Admin Cheat Sheet.
-    """
+def compile_cheat_sheet(student_name, critique, mentor_score, mentor_critique, reflection_questions, feedback_memory, methodology_score, triangulation_score, clarity_score, alignment_index, alignment_critique):
     questions_md = "\n".join([f"*   {q}" for q in reflection_questions])
     
     cheat_sheet = f"""# IRC Admin Cheat Sheet: {student_name}
@@ -98,23 +105,29 @@ def compile_cheat_sheet(student_name, critique, mentor_score, mentor_critique, r
 ## 1. Technical Gap Critique (Student Report vs. Baseline)
 {critique}
 
-## 2. Mentor Engagement Assessment
+## 2. Core Academic Competency Ratings
+*   **Scientific Methodology**: {methodology_score}/10
+*   **Data Triangulation**: {triangulation_score}/10
+*   **Academic Writing Clarity**: {clarity_score}/10
+
+## 3. Sponsor Alignment Index
+*   **Alignment Score**: {alignment_index}%
+*   **Critique**: {alignment_critique}
+
+## 4. Mentor Engagement Assessment
 *   **Mentor Score**: {mentor_score}/10
 *   **Mentor Evaluation**: {mentor_critique}
 
-## 3. Recommended Meeting Reflection Questions
+## 5. Recommended Meeting Reflection Questions
 {questions_md}
 
-## 4. Coordinator Feedback/Corrections
+## 6. Coordinator Feedback/Corrections
 *Write your corrections and feedback here. The AI will absorb them to customize the next audit.*
 {feedback_memory if feedback_memory else ""}
 """
     return cheat_sheet
 
 def draft_nudge_email(student_name, critique, mentor_score):
-    """
-    Drafts a personalized follow-up nudge email based on audit findings.
-    """
     if mentor_score <= 4:
         subject = f"IRC Progress Sync: Let's get aligned, {student_name}"
         body = f"""Hi {student_name},
@@ -138,21 +151,59 @@ Coordinator"""
 
     return {"subject": subject, "body": body}
 
+def generate_weekly_digest(weekly_data_json, api_key):
+    prompt = f"""
+You are the Academic and Operations Director at WELL Labs, Bangalore.
+Review the following aggregated weekly snapshot data for the current India Research Corps (IRC) student cohort:
+{weekly_data_json}
+
+Write a comprehensive, professional, executive Weekly Director Digest report. This report is designed for presentation to funding partners and directors to prove operational scalability and student capability growth.
+
+Follow this exact structure:
+
+# IRC Weekly Director Digest: Cohort Executive Review
+**Week ending**: {datetime.now().strftime("%Y-%m-%d")}
+
+## 1. Executive Summary
+Provide a high-level summary (3-4 sentences) of overall cohort health, highlighting scaling successes and critical blockers.
+
+## 2. Cohort Timeline & Success Velocity
+*   Analyze the average delays by phase (Induction vs. Fieldwork vs. Thesis).
+*   Compare these delays to the historical cohort baselines. Highlight any reduction in average delay days showing process maturity.
+
+## 3. Student Competency Growth Trajectory
+*   Report on the average scores for the Core Academic Triad (Scientific Methodology, Data Triangulation, Writing Clarity).
+*   Quantify the competency gains/slopes from early drafts to current drafts.
+
+## 4. Sponsor & Partner Agency Alignment
+*   Review the average Sponsor Alignment Index scores across the cohort.
+*   Detail how well the active projects are answering sponsors' real-world water problems.
+
+## 5. Critical Escalations & Operations Warnings
+*   List any active student red flags (lagging edits) or unresponsive mentors.
+*   Recommend immediate interventions for the upcoming week.
+"""
+    log_debug("Calling Gemini 3.5 Flash for weekly digest generation...")
+    return call_gemini(prompt, api_key)
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IRC Coordinator Agent")
-    parser.add_argument("--action", required=True, choices=["calculate-phase", "extract-feedback", "compile-report"])
+    parser.add_argument("--action", required=True, choices=["calculate-phase", "extract-feedback", "compile-report", "compile-weekly-digest"])
     parser.add_argument("--gantt-file", help="Path to Gantt Chart JSON")
     parser.add_argument("--cohort-start-date", help="Cohort start date")
     parser.add_argument("--duration-months", type=int, default=6, help="Cohort duration")
     parser.add_argument("--cheat-sheet-file", help="Path to previous cheat sheet text file")
     parser.add_argument("--memory-file", help="Path to write/read memory JSON")
+    parser.add_argument("--weekly-metrics-file", help="Path to weekly metrics JSON file")
     
     # Arguments for compiling the final report
     parser.add_argument("--student", help="Student name")
     parser.add_argument("--academic-critique-file", help="Path to academic auditor JSON output")
     parser.add_argument("--mentor-critique-file", help="Path to mentor auditor JSON output")
+    parser.add_argument("--alignment-critique-file", help="Path to alignment agent JSON output")
     
     args = parser.parse_args()
+    api_key = os.environ.get("GEMINI_API_KEY")
     
     if args.action == "calculate-phase":
         output = calculate_phase(args.gantt_file, args.cohort_start_date, args.duration_months)
@@ -167,7 +218,6 @@ if __name__ == "__main__":
                 content = f.read()
             feedback = extract_coordinator_feedback(content)
             
-            # Save to memory file
             memory_data = {"feedback": feedback}
             with open(args.memory_file, "w", encoding="utf-8") as f:
                 json.dump(memory_data, f, indent=2)
@@ -178,14 +228,9 @@ if __name__ == "__main__":
             sys.exit(1)
             
     elif args.action == "compile-report":
-        if not args.student or not args.academic-critique-file or not args.mentor-critique-file:
-            # argparse parses dashes, so academic-critique-file maps to args.academic_critique_file
-            # but wait, let's look at python's namespace replacement: dashes become underscores
-            pass
-        
-        # Safe namespace parsing for argparse dashes
         academic_file = getattr(args, "academic_critique_file", None)
         mentor_file = getattr(args, "mentor_critique_file", None)
+        alignment_file = getattr(args, "alignment_critique_file", None)
         
         try:
             with open(academic_file, "r", encoding="utf-8") as f:
@@ -193,6 +238,14 @@ if __name__ == "__main__":
             with open(mentor_file, "r", encoding="utf-8") as f:
                 mentor_data = json.load(f)
                 
+            alignment_index = 100
+            alignment_critique = "Not checked (outside gate)."
+            if alignment_file and os.path.exists(alignment_file):
+                with open(alignment_file, "r", encoding="utf-8") as f:
+                    alignment_data = json.load(f)
+                    alignment_index = alignment_data.get("sponsor_alignment_index", 100)
+                    alignment_critique = alignment_data.get("alignment_critique", "")
+            
             feedback_memory = ""
             if args.memory_file and os.path.exists(args.memory_file):
                 with open(args.memory_file, "r", encoding="utf-8") as f:
@@ -201,6 +254,12 @@ if __name__ == "__main__":
             
             critique = academic_data.get("critique", "")
             reflection_questions = academic_data.get("reflection_questions", [])
+            
+            competency_scores = academic_data.get("competency_scores", {})
+            methodology_score = competency_scores.get("scientific_methodology", 5)
+            triangulation_score = competency_scores.get("data_triangulation", 5)
+            clarity_score = competency_scores.get("academic_writing_clarity", 5)
+            
             mentor_score = mentor_data.get("mentor_score", 5)
             mentor_critique = mentor_data.get("mentor_critique", "")
             
@@ -210,17 +269,40 @@ if __name__ == "__main__":
                 mentor_score, 
                 mentor_critique, 
                 reflection_questions, 
-                feedback_memory
+                feedback_memory,
+                methodology_score,
+                triangulation_score,
+                clarity_score,
+                alignment_index,
+                alignment_critique
             )
             
             nudge = draft_nudge_email(args.student, critique, mentor_score)
             
             output_report = {
                 "cheat_sheet": cheat_sheet,
+                "scientific_methodology": methodology_score,
+                "data_triangulation": triangulation_score,
+                "academic_writing_clarity": clarity_score,
+                "sponsor_alignment_index": alignment_index,
+                "mentor_score": mentor_score,
                 "nudge_subject": nudge["subject"],
                 "nudge_body": nudge["body"]
             }
             print(json.dumps(output_report))
         except Exception as e:
             print(json.dumps({"error": f"Failed to compile report: {str(e)}"}))
+            sys.exit(1)
+            
+    elif args.action == "compile-weekly-digest":
+        if not args.weekly_metrics_file:
+            print(json.dumps({"error": "Missing --weekly-metrics-file parameter."}))
+            sys.exit(1)
+        try:
+            with open(args.weekly_metrics_file, "r", encoding="utf-8") as f:
+                weekly_data = f.read()
+            digest = generate_weekly_digest(weekly_data, api_key)
+            print(digest)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
             sys.exit(1)

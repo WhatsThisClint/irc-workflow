@@ -1,0 +1,77 @@
+{
+  "agents/academic_auditor.py": {
+    "mtime": 1783191797.4556963,
+    "ast_hash": "387ec3a894f4e987404cded8d54bb7da",
+    "semantic_hash": ""
+  },
+  "agents/alignment_agent.py": {
+    "mtime": 1783191793.6718028,
+    "ast_hash": "57402a1821b320905f2d9a258db35118",
+    "semantic_hash": ""
+  },
+  "agents/coordinator_agent.py": {
+    "mtime": 1783191803.9208333,
+    "ast_hash": "376731c7f64e2a7ae6c18cd504cf3df7",
+    "semantic_hash": ""
+  },
+  "agents/mentor_auditor.py": {
+    "mtime": 1783191473.474616,
+    "ast_hash": "999ae5f7f1e759c551f01fed2d79a165",
+    "semantic_hash": ""
+  },
+  "agents/onboarding_agent.py": {
+    "mtime": 1783191465.6953573,
+    "ast_hash": "c47dd07f41c75e4ff721593394920ab4",
+    "semantic_hash": ""
+  },
+  "agents/transcript_parser.py": {
+    "mtime": 1783191477.4827335,
+    "ast_hash": "48fb2d5a0f54dc26574db7c3f4d3ac22",
+    "semantic_hash": ""
+  },
+  "irc_agent.py": {
+    "mtime": 1783191808.8309226,
+    "ast_hash": "47f92dbd88fdc221151484e90b821d7a",
+    "semantic_hash": ""
+  },
+  "n8n/workflows/irc_master_workflow.json": {
+    "mtime": 1783191862.1100972,
+    "ast_hash": "5af4ede97e65c663379577a87db50e1b",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1783189317.252817,
+    "ast_hash": "6aea232e9815743b414e5207da3e2844",
+    "semantic_hash": ""
+  },
+  "setup_workspace.py": {
+    "mtime": 1783191922.8895926,
+    "ast_hash": "58ab9241ea7b986018042b382368c99c",
+    "semantic_hash": ""
+  },
+  "test_workflow_mock.py": {
+    "mtime": 1783189068.1621537,
+    "ast_hash": "912a940297b81262e421db074af3880f",
+    "semantic_hash": ""
+  },
+  "AGENT_ONBOARDING.md": {
+    "mtime": 1783191926.6890452,
+    "ast_hash": "9633fd915d9053e374772967ece09964",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1783191107.9093482,
+    "ast_hash": "ef7c9072968aff4a33354499bcd21306",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1783191063.1650722,
+    "ast_hash": "0ed73130842cb336b28f97d2b1eb07e2",
+    "semantic_hash": ""
+  },
+  "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md": {
+    "mtime": 1783191679.4254222,
+    "ast_hash": "10fcfa450cf49edf0317cdade9fb905b",
+    "semantic_hash": ""
+  }
+}

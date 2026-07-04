@@ -12,9 +12,6 @@ def log_debug(msg):
     print(f"[DEBUG] [Router] {msg}", file=sys.stderr)
 
 def run_agent_script(script_path, args_list):
-    """
-    Executes a sub-agent python script and returns its stdout.
-    """
     cmd = [sys.executable, script_path] + args_list
     log_debug(f"Executing: {' '.join(cmd)}")
     result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
@@ -25,7 +22,7 @@ def run_agent_script(script_path, args_list):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IRC AI Workflow Agent Router")
-    parser.add_argument("--action", required=True, choices=["generate-baseline", "audit-doc", "parse-transcript", "calculate-phase"])
+    parser.add_argument("--action", required=True, choices=["generate-baseline", "audit-doc", "parse-transcript", "calculate-phase", "check-alignment", "compile-weekly-digest"])
     parser.add_argument("--student", help="Student name")
     parser.add_argument("--question", help="Research question")
     parser.add_argument("--problem", help="Problem statement")
@@ -36,16 +33,18 @@ if __name__ == "__main__":
     parser.add_argument("--transcript-file", help="Path to transcript text file")
     parser.add_argument("--gantt-file", help="Path to Gantt Chart JSON file")
     parser.add_argument("--cohort-start-date", help="Cohort start date YYYY-MM-DD")
+    parser.add_argument("--sponsor-problem", help="Sponsor's problem statement for alignment check")
+    parser.add_argument("--weekly-metrics-file", help="Path to weekly metrics JSON file")
     
     args = parser.parse_args()
     log_debug(f"Routing action: {args.action}")
     
-    # Set paths to specialized agents
     onboarding_script = "agents/onboarding_agent.py"
     academic_script = "agents/academic_auditor.py"
     mentor_script = "agents/mentor_auditor.py"
     transcript_script = "agents/transcript_parser.py"
     coordinator_script = "agents/coordinator_agent.py"
+    alignment_script = "agents/alignment_agent.py"
     
     if args.action == "generate-baseline":
         try:
@@ -78,17 +77,33 @@ if __name__ == "__main__":
             print(json.dumps({"error": str(e)}))
             sys.exit(1)
             
+    elif args.action == "check-alignment":
+        try:
+            output = run_agent_script(alignment_script, [
+                args.student_report_file, args.sponsor_problem
+            ])
+            print(output)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
+            sys.exit(1)
+            
+    elif args.action == "compile-weekly-digest":
+        try:
+            output = run_agent_script(coordinator_script, [
+                "--action", "compile-weekly-digest",
+                "--weekly-metrics-file", args.weekly_metrics_file
+            ])
+            print(output)
+        except Exception as e:
+            print(json.dumps({"error": str(e)}))
+            sys.exit(1)
+            
     elif args.action == "audit-doc":
-        # Multi-Agent Coordination Loop:
-        # 1. First, check if there is an existing Cheat Sheet to extract coordinator feedback memory.
-        #    If student_report_file exists, we search in its directory for S.No prefixed cheat sheets.
         dir_name = os.path.dirname(args.student_report_file) if args.student_report_file else "."
-        # Define files
         student_name = args.student if args.student else "Student"
         memory_file = os.path.join(dir_name, f"memory.json")
         cheat_sheet_file = os.path.join(dir_name, f"cheat_sheet.md")
         
-        # Write mock files if they don't exist to prevent crashes during dry runs
         if not os.path.exists(cheat_sheet_file) and args.student_report_file:
             try:
                 with open(cheat_sheet_file, "w", encoding="utf-8") as f:
@@ -96,7 +111,6 @@ if __name__ == "__main__":
             except Exception:
                 pass
                 
-        # 2. Extract feedback and save to memory.json
         if os.path.exists(cheat_sheet_file):
             try:
                 run_agent_script(coordinator_script, [
@@ -107,7 +121,7 @@ if __name__ == "__main__":
             except Exception as e:
                 log_debug(f"Memory extraction warning: {e}")
                 
-        # 3. Spawn Academic Auditor
+        # 1. Spawn Academic Auditor
         academic_output_file = os.path.join(dir_name, "academic_temp.json")
         try:
             academic_json = run_agent_script(academic_script, [
@@ -123,10 +137,9 @@ if __name__ == "__main__":
             print(json.dumps({"error": f"Academic Auditor failed: {str(e)}"}))
             sys.exit(1)
             
-        # 4. Spawn Mentor Auditor
+        # 2. Spawn Mentor Auditor
         mentor_output_file = os.path.join(dir_name, "mentor_temp.json")
         try:
-            # We pass the student report file as both comments and text for this fallback
             mentor_json = run_agent_script(mentor_script, [
                 args.student_report_file,
                 args.student_report_file
@@ -137,22 +150,38 @@ if __name__ == "__main__":
             print(json.dumps({"error": f"Mentor Auditor failed: {str(e)}"}))
             sys.exit(1)
             
-        # 5. Spawn Coordinator Agent to compile final report
+        # 3. Optional: Spawn Sponsor Alignment Agent (only if problem statement is passed)
+        alignment_output_file = os.path.join(dir_name, "alignment_temp.json")
+        if args.sponsor_problem:
+            try:
+                alignment_json = run_agent_script(alignment_script, [
+                    args.student_report_file,
+                    args.sponsor_problem
+                ])
+                with open(alignment_output_file, "w", encoding="utf-8") as f:
+                    f.write(alignment_json)
+            except Exception as e:
+                log_debug(f"Sponsor Alignment check failed: {e}")
+                
+        # 4. Spawn Coordinator Agent to compile final report
         try:
-            report_json = run_agent_script(coordinator_script, [
+            compile_args = [
                 "--action", "compile-report",
                 "--student", student_name,
                 "--academic-critique-file", academic_output_file,
                 "--mentor-critique-file", mentor_output_file,
                 "--memory-file", memory_file
-            ])
+            ]
+            if os.path.exists(alignment_output_file):
+                compile_args.extend(["--alignment-critique-file", alignment_output_file])
+                
+            report_json = run_agent_script(coordinator_script, compile_args)
             
             # Clean up temp files
-            for temp_file in [academic_output_file, mentor_output_file]:
+            for temp_file in [academic_output_file, mentor_output_file, alignment_output_file]:
                 if os.path.exists(temp_file):
                     os.remove(temp_file)
                     
-            # Output final json for n8n to digest
             print(report_json)
         except Exception as e:
             print(json.dumps({"error": f"Coordinator compilation failed: {str(e)}"}))

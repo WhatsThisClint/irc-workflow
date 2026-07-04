@@ -577,6 +577,208 @@
         2250,
         700
       ]
+    },
+    {
+      "parameters": {
+        "documentId": "={{ $node[\"Read Sheet for Monitoring\"].json[\"Reflection Google Doc Link\"].split('/d/')[1].split('/')[0] }}",
+        "options": {}
+      },
+      "id": "get-inception-report-content",
+      "name": "Get Inception Report Content",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        950,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const fs = require('fs');\nconst path = require('path');\nconst dir = 'docs/temp';\nif (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });\n\nconst reportPath = path.join(dir, 'student_report.txt');\nfs.writeFileSync(reportPath, $input.item.json.text, 'utf-8');\n\nreturn { report_path: reportPath };"
+      },
+      "id": "write-temp-audit-files",
+      "name": "Write Temp Audit Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1150,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python \"f:/Antigravity/IRC Workflow/irc_agent.py\" --action audit-doc --student \"{{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}\" --student-report-file \"docs/temp/student_report.txt\" --baseline-report-file \"docs/temp/student_report.txt\" --degree-level \"{{ $node[\"Filter Active Students\"].json[\"Degree Level\"] }}\" --duration-months \"{{ $node[\"Filter Active Students\"].json[\"Total Duration\"] }}\" --sponsor-problem \"{{ $node[\"Filter Active Students\"].json[\"Problem Statement\"] }}\""
+      },
+      "id": "ai-document-auditor",
+      "name": "AI Document Auditor",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1350,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const output = JSON.parse($input.item.json.stdout);\nreturn output;"
+      },
+      "id": "parse-audit-json",
+      "name": "Parse Audit JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1550,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": "={{ $node[\"Read Sheet for Onboarding\"].json[\"Reflection Google Doc Link\"].split('/d/')[1].split('/')[0] }}",
+        "text": "={{ $json[\"cheat_sheet\"] }}",
+        "options": {}
+      },
+      "id": "update-admin-cheat-sheet-doc",
+      "name": "Update Admin Cheat Sheet Doc",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 1,
+      "position": [
+        1750,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "base": "appBaseId",
+        "table": "Competency Logs",
+        "fieldsUi": {
+          "parameter": [
+            {
+              "name": "Student",
+              "value": "={{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}"
+            },
+            {
+              "name": "Scientific Methodology",
+              "value": "={{ $json[\"scientific_methodology\"] }}"
+            },
+            {
+              "name": "Data Triangulation",
+              "value": "={{ $json[\"data_triangulation\"] }}"
+            },
+            {
+              "name": "Academic Writing Clarity",
+              "value": "={{ $json[\"academic_writing_clarity\"] }}"
+            },
+            {
+              "name": "Sponsor Alignment Index",
+              "value": "={{ $json[\"sponsor_alignment_index\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "log-competency-scores",
+      "name": "Log Competency Scores to Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        1950,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "={{ $json[\"nudge_subject\"] }}",
+        "emailType": "draft",
+        "message": "={{ $json[\"nudge_body\"] }}"
+      },
+      "id": "draft-nudge-email",
+      "name": "Draft Nudge Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        2150,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "expression": "5",
+              "value": "17"
+            }
+          ]
+        }
+      },
+      "id": "weekly-friday-trigger",
+      "name": "Schedule Trigger (Weekly Friday 5 PM)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        100,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "list",
+        "base": "appBaseId",
+        "table": "Daily Snapshots / Metrics Table",
+        "additionalFields": {
+          "filterByFormula": "CREATED_TIME() > DATEADD(TODAY(), -7, 'days')"
+        }
+      },
+      "id": "read-weekly-metrics-airtable",
+      "name": "Read Weekly Metrics from Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        300,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const fs = require('fs');\nconst path = require('path');\nconst dir = 'docs/temp';\nif (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });\n\nconst metricsPath = path.join(dir, 'weekly_metrics.json');\nfs.writeFileSync(metricsPath, JSON.stringify($input.all().map(item => item.json), null, 2), 'utf-8');\n\nreturn { metrics_path: metricsPath };"
+      },
+      "id": "write-weekly-metrics-temp",
+      "name": "Write Weekly Metrics Temp File",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        500,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python \"f:/Antigravity/IRC Workflow/irc_agent.py\" --action compile-weekly-digest --weekly-metrics-file docs/temp/weekly_metrics.json"
+      },
+      "id": "ai-weekly-digest-generator",
+      "name": "AI Weekly Digest Generator",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        700,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "IRC Weekly Director Digest: Cohort Executive Review",
+        "message": "={{ $json[\"stdout\"] }}",
+        "options": {}
+      },
+      "id": "send-digest-email",
+      "name": "Send Digest Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        900,
+        800
+      ]
     }
   ],
   "connections": {
@@ -778,6 +980,11 @@
             "node": "Presentation Gate Overdue?",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Get Inception Report Content",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -865,6 +1072,127 @@
         [
           {
             "node": "Sync Action Items to Asana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Inception Report Content": {
+      "main": [
+        [
+          {
+            "node": "Write Temp Audit Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Temp Audit Files": {
+      "main": [
+        [
+          {
+            "node": "AI Document Auditor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Document Auditor": {
+      "main": [
+        [
+          {
+            "node": "Parse Audit JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Audit JSON": {
+      "main": [
+        [
+          {
+            "node": "Update Admin Cheat Sheet Doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Admin Cheat Sheet Doc": {
+      "main": [
+        [
+          {
+            "node": "Log Competency Scores to Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Competency Scores to Airtable": {
+      "main": [
+        [
+          {
+            "node": "Draft Nudge Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Draft Nudge Email": {
+      "main": [
+        [
+          {
+            "node": "Presentation Gate Overdue?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "weekly-friday-trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Weekly Metrics from Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Weekly Metrics from Airtable": {
+      "main": [
+        [
+          {
+            "node": "Write Weekly Metrics Temp File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write Weekly Metrics Temp File": {
+      "main": [
+        [
+          {
+            "node": "AI Weekly Digest Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Weekly Digest Generator": {
+      "main": [
+        [
+          {
+            "node": "Send Digest Email",
             "type": "main",
             "index": 0
           }
