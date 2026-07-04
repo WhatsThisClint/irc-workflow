@@ -14,11 +14,14 @@ def log_debug(msg):
 def run_agent_script(script_path, args_list):
     cmd = [sys.executable, script_path] + args_list
     log_debug(f"Executing: {' '.join(cmd)}")
-    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8")
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.path.dirname(os.path.abspath(__file__))
+    result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", env=env)
     if result.returncode != 0:
         log_debug(f"Sub-agent failed: {result.stderr}")
         raise RuntimeError(f"Sub-agent failed: {result.stderr}")
     return result.stdout
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IRC AI Workflow Agent Router")

@@ -1,32 +1,12 @@
-import os
 import sys
 import json
 import argparse
-import urllib.request
 from datetime import datetime
-
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+from agents.llm_client import call_llm
 
 def log_debug(msg):
     print(f"[DEBUG] [CoordinatorAgent] {msg}", file=sys.stderr)
 
-def call_gemini(prompt, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    headers = {"Content-Type": "application/json"}
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}]
-    }
-    
-    req = urllib.request.Request(
-        url, 
-        data=json.dumps(payload).encode("utf-8"), 
-        headers=headers, 
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=60) as response:
-        res_data = json.loads(response.read().decode("utf-8"))
-        return res_data["candidates"][0]["content"]["parts"][0]["text"]
 
 def extract_coordinator_feedback(cheat_sheet_text):
     lines = cheat_sheet_text.split("\n")
@@ -151,7 +131,7 @@ Coordinator"""
 
     return {"subject": subject, "body": body}
 
-def generate_weekly_digest(weekly_data_json, api_key):
+def generate_weekly_digest(weekly_data_json):
     prompt = f"""
 You are the Academic and Operations Director at WELL Labs, Bangalore.
 Review the following aggregated weekly snapshot data for the current India Research Corps (IRC) student cohort:
@@ -183,8 +163,9 @@ Provide a high-level summary (3-4 sentences) of overall cohort health, highlight
 *   List any active student red flags (lagging edits) or unresponsive mentors.
 *   Recommend immediate interventions for the upcoming week.
 """
-    log_debug("Calling Gemini 3.5 Flash for weekly digest generation...")
-    return call_gemini(prompt, api_key)
+    log_debug("Calling LLM client for weekly digest generation...")
+    return call_llm(prompt)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IRC Coordinator Agent")
@@ -203,7 +184,6 @@ if __name__ == "__main__":
     parser.add_argument("--alignment-critique-file", help="Path to alignment agent JSON output")
     
     args = parser.parse_args()
-    api_key = os.environ.get("GEMINI_API_KEY")
     
     if args.action == "calculate-phase":
         output = calculate_phase(args.gantt_file, args.cohort_start_date, args.duration_months)
@@ -301,8 +281,9 @@ if __name__ == "__main__":
         try:
             with open(args.weekly_metrics_file, "r", encoding="utf-8") as f:
                 weekly_data = f.read()
-            digest = generate_weekly_digest(weekly_data, api_key)
+            digest = generate_weekly_digest(weekly_data)
             print(digest)
         except Exception as e:
             print(json.dumps({"error": str(e)}))
             sys.exit(1)
+

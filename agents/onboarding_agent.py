@@ -1,34 +1,14 @@
-import os
 import sys
 import json
-import urllib.request
 from datetime import datetime
-
-# Force UTF-8 encoding
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+from agents.llm_client import call_llm
 
 def log_debug(msg):
     print(f"[DEBUG] [OnboardingAgent] {msg}", file=sys.stderr)
 
-def call_gemini(prompt, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    headers = {"Content-Type": "application/json"}
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}]
-    }
-    
-    req = urllib.request.Request(
-        url, 
-        data=json.dumps(payload).encode("utf-8"), 
-        headers=headers, 
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=60) as response:
-        res_data = json.loads(response.read().decode("utf-8"))
-        return res_data["candidates"][0]["content"]["parts"][0]["text"]
 
-def generate_baseline(student_name, question, problem, degree_level, duration_months, api_key):
+def generate_baseline(student_name, question, problem, degree_level, duration_months):
+
     prompt = f"""
 You are a senior socio-hydrology and water systems expert at WELL Labs, Bangalore.
 Your task is to write a highly thorough, professional, baseline Inception Report for a student named '{student_name}'.
@@ -58,15 +38,14 @@ Follow the exact template structure below:
 ## 4. Fieldwork Timeline & Seasonal Considerations
 ## 5. Potential Constraints & Risk Mitigation
 """
-    log_debug("Calling Gemini 3.5 Flash for baseline report...")
-    return call_gemini(prompt, api_key)
+    log_debug("Calling LLM client for baseline report...")
+    return call_llm(prompt)
 
 if __name__ == "__main__":
     if len(sys.argv) < 6:
         print(json.dumps({"error": "Missing parameters"}))
         sys.exit(1)
         
-    api_key = os.environ.get("GEMINI_API_KEY")
     student = sys.argv[1]
     question = sys.argv[2]
     problem = sys.argv[3]
@@ -74,8 +53,9 @@ if __name__ == "__main__":
     duration = int(sys.argv[5])
     
     try:
-        report = generate_baseline(student, question, problem, degree, duration, api_key)
+        report = generate_baseline(student, question, problem, degree, duration)
         print(report)
     except Exception as e:
         print(json.dumps({"error": str(e)}))
         sys.exit(1)
+

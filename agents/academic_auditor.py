@@ -1,33 +1,12 @@
-import os
 import sys
 import json
-import urllib.request
-
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+from agents.llm_client import call_llm
 
 def log_debug(msg):
     print(f"[DEBUG] [AcademicAuditor] {msg}", file=sys.stderr)
 
-def call_gemini(prompt, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    headers = {"Content-Type": "application/json"}
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"responseMimeType": "application/json"}
-    }
-    
-    req = urllib.request.Request(
-        url, 
-        data=json.dumps(payload).encode("utf-8"), 
-        headers=headers, 
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=60) as response:
-        res_data = json.loads(response.read().decode("utf-8"))
-        return res_data["candidates"][0]["content"]["parts"][0]["text"]
+def audit_document(student_text, baseline_text, degree_level, duration_months, memory_text):
 
-def audit_document(student_text, baseline_text, degree_level, duration_months, memory_text, api_key):
     prompt = f"""
 You are an Academic Director auditing a student's thesis progress.
 Below are the reference files:
@@ -59,15 +38,14 @@ Output the result strictly as a valid JSON object matching this schema:
   }}
 }}
 """
-    log_debug("Calling Gemini 3.5 Flash for document audit...")
-    return call_gemini(prompt, api_key)
+    log_debug("Calling LLM client for document audit...")
+    return call_llm(prompt, json_mode=True)
 
 if __name__ == "__main__":
     if len(sys.argv) < 6:
         print(json.dumps({"error": "Missing parameters"}))
         sys.exit(1)
         
-    api_key = os.environ.get("GEMINI_API_KEY")
     student_file = sys.argv[1]
     baseline_file = sys.argv[2]
     degree = sys.argv[3]
@@ -86,8 +64,9 @@ if __name__ == "__main__":
                 memory_data = json.load(f)
                 memory_text = memory_data.get("feedback", "")
                 
-        output = audit_document(student_text, baseline_text, degree, duration, memory_text, api_key)
+        output = audit_document(student_text, baseline_text, degree, duration, memory_text)
         print(output)
     except Exception as e:
         print(json.dumps({"error": str(e)}))
         sys.exit(1)
+

@@ -1,33 +1,11 @@
-import os
 import sys
 import json
-import urllib.request
-
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+from agents.llm_client import call_llm
 
 def log_debug(msg):
     print(f"[DEBUG] [AlignmentAgent] {msg}", file=sys.stderr)
 
-def call_gemini(prompt, api_key):
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
-    headers = {"Content-Type": "application/json"}
-    payload = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"responseMimeType": "application/json"}
-    }
-    
-    req = urllib.request.Request(
-        url, 
-        data=json.dumps(payload).encode("utf-8"), 
-        headers=headers, 
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=60) as response:
-        res_data = json.loads(response.read().decode("utf-8"))
-        return res_data["candidates"][0]["content"]["parts"][0]["text"]
-
-def check_alignment(student_text, problem_statement, api_key):
+def check_alignment(student_text, problem_statement):
     prompt = f"""
 You are a Partner Engagement Lead evaluating environmental research alignment.
 Below are the reference documents:
@@ -46,15 +24,14 @@ Output the result strictly as a valid JSON object matching this schema:
   "alignment_critique": "A detailed explanation of how well the research matches the problem statement, highlighting any drift or gaps."
 }}
 """
-    log_debug("Calling Gemini 3.5 Flash for sponsor alignment check...")
-    return call_gemini(prompt, api_key)
+    log_debug("Calling LLM client for sponsor alignment check...")
+    return call_llm(prompt, json_mode=True)
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         print(json.dumps({"error": "Missing parameters. Required: [student_report_file] [problem_statement]"}))
         sys.exit(1)
         
-    api_key = os.environ.get("GEMINI_API_KEY")
     student_file = sys.argv[1]
     problem_statement = sys.argv[2]
     
@@ -62,8 +39,9 @@ if __name__ == "__main__":
         with open(student_file, "r", encoding="utf-8") as f:
             student_text = f.read()
             
-        output = check_alignment(student_text, problem_statement, api_key)
+        output = check_alignment(student_text, problem_statement)
         print(output)
     except Exception as e:
         print(json.dumps({"error": str(e)}))
         sys.exit(1)
+

@@ -16,25 +16,16 @@
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/academic_auditor.py",
-      "source_location": "L9",
+      "source_location": "L5",
       "id": "agents_academic_auditor_log_debug",
       "community": 10,
       "norm_label": "log_debug()"
     },
     {
-      "label": "call_gemini()",
-      "file_type": "code",
-      "source_file": "agents/academic_auditor.py",
-      "source_location": "L12",
-      "id": "agents_academic_auditor_call_gemini",
-      "community": 10,
-      "norm_label": "call_gemini()"
-    },
-    {
       "label": "audit_document()",
       "file_type": "code",
       "source_file": "agents/academic_auditor.py",
-      "source_location": "L30",
+      "source_location": "L8",
       "id": "agents_academic_auditor_audit_document",
       "community": 10,
       "norm_label": "audit_document()"
@@ -45,34 +36,25 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L1",
       "id": "agents_alignment_agent",
-      "community": 11,
+      "community": 10,
       "norm_label": "alignment_agent.py"
     },
     {
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/alignment_agent.py",
-      "source_location": "L9",
+      "source_location": "L5",
       "id": "agents_alignment_agent_log_debug",
-      "community": 11,
+      "community": 10,
       "norm_label": "log_debug()"
-    },
-    {
-      "label": "call_gemini()",
-      "file_type": "code",
-      "source_file": "agents/alignment_agent.py",
-      "source_location": "L12",
-      "id": "agents_alignment_agent_call_gemini",
-      "community": 11,
-      "norm_label": "call_gemini()"
     },
     {
       "label": "check_alignment()",
       "file_type": "code",
       "source_file": "agents/alignment_agent.py",
-      "source_location": "L30",
+      "source_location": "L8",
       "id": "agents_alignment_agent_check_alignment",
-      "community": 11,
+      "community": 10,
       "norm_label": "check_alignment()"
     },
     {
@@ -88,25 +70,16 @@
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L11",
+      "source_location": "L7",
       "id": "agents_coordinator_agent_log_debug",
       "community": 3,
       "norm_label": "log_debug()"
     },
     {
-      "label": "call_gemini()",
-      "file_type": "code",
-      "source_file": "agents/coordinator_agent.py",
-      "source_location": "L14",
-      "id": "agents_coordinator_agent_call_gemini",
-      "community": 3,
-      "norm_label": "call_gemini()"
-    },
-    {
       "label": "extract_coordinator_feedback()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L31",
+      "source_location": "L11",
       "id": "agents_coordinator_agent_extract_coordinator_feedback",
       "community": 3,
       "norm_label": "extract_coordinator_feedback()"
@@ -115,7 +88,7 @@
       "label": "calculate_phase()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L47",
+      "source_location": "L27",
       "id": "agents_coordinator_agent_calculate_phase",
       "community": 3,
       "norm_label": "calculate_phase()"
@@ -124,7 +97,7 @@
       "label": "compile_cheat_sheet()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L98",
+      "source_location": "L78",
       "id": "agents_coordinator_agent_compile_cheat_sheet",
       "community": 3,
       "norm_label": "compile_cheat_sheet()"
@@ -133,7 +106,7 @@
       "label": "draft_nudge_email()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L130",
+      "source_location": "L110",
       "id": "agents_coordinator_agent_draft_nudge_email",
       "community": 3,
       "norm_label": "draft_nudge_email()"
@@ -142,10 +115,37 @@
       "label": "generate_weekly_digest()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L154",
+      "source_location": "L134",
       "id": "agents_coordinator_agent_generate_weekly_digest",
       "community": 3,
       "norm_label": "generate_weekly_digest()"
+    },
+    {
+      "label": "llm_client.py",
+      "file_type": "code",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L1",
+      "id": "agents_llm_client",
+      "community": 10,
+      "norm_label": "llm_client.py"
+    },
+    {
+      "label": "log_debug()",
+      "file_type": "code",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L9",
+      "id": "agents_llm_client_log_debug",
+      "community": 10,
+      "norm_label": "log_debug()"
+    },
+    {
+      "label": "call_llm()",
+      "file_type": "code",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L12",
+      "id": "agents_llm_client_call_llm",
+      "community": 10,
+      "norm_label": "call_llm()"
     },
     {
       "label": "mentor_auditor.py",
@@ -153,34 +153,25 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L1",
       "id": "agents_mentor_auditor",
-      "community": 12,
+      "community": 10,
       "norm_label": "mentor_auditor.py"
     },
     {
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/mentor_auditor.py",
-      "source_location": "L9",
+      "source_location": "L5",
       "id": "agents_mentor_auditor_log_debug",
-      "community": 12,
+      "community": 10,
       "norm_label": "log_debug()"
-    },
-    {
-      "label": "call_gemini()",
-      "file_type": "code",
-      "source_file": "agents/mentor_auditor.py",
-      "source_location": "L12",
-      "id": "agents_mentor_auditor_call_gemini",
-      "community": 12,
-      "norm_label": "call_gemini()"
     },
     {
       "label": "audit_mentor()",
       "file_type": "code",
       "source_file": "agents/mentor_auditor.py",
-      "source_location": "L30",
+      "source_location": "L8",
       "id": "agents_mentor_auditor_audit_mentor",
-      "community": 12,
+      "community": 10,
       "norm_label": "audit_mentor()"
     },
     {
@@ -189,34 +180,25 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L1",
       "id": "agents_onboarding_agent",
-      "community": 13,
+      "community": 10,
       "norm_label": "onboarding_agent.py"
     },
     {
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/onboarding_agent.py",
-      "source_location": "L11",
+      "source_location": "L6",
       "id": "agents_onboarding_agent_log_debug",
-      "community": 13,
+      "community": 10,
       "norm_label": "log_debug()"
-    },
-    {
-      "label": "call_gemini()",
-      "file_type": "code",
-      "source_file": "agents/onboarding_agent.py",
-      "source_location": "L14",
-      "id": "agents_onboarding_agent_call_gemini",
-      "community": 13,
-      "norm_label": "call_gemini()"
     },
     {
       "label": "generate_baseline()",
       "file_type": "code",
       "source_file": "agents/onboarding_agent.py",
-      "source_location": "L31",
+      "source_location": "L10",
       "id": "agents_onboarding_agent_generate_baseline",
-      "community": 13,
+      "community": 10,
       "norm_label": "generate_baseline()"
     },
     {
@@ -315,7 +297,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L784",
       "id": "workflows_irc_master_workflow_connections",
-      "community": 16,
+      "community": 5,
       "norm_label": "connections"
     },
     {
@@ -360,7 +342,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L807",
       "id": "workflows_irc_master_workflow_connections_filter_unprocessed",
-      "community": 16,
+      "community": 12,
       "norm_label": "filter unprocessed"
     },
     {
@@ -369,7 +351,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L808",
       "id": "workflows_irc_master_workflow_filter_unprocessed_main",
-      "community": 16,
+      "community": 12,
       "norm_label": "main"
     },
     {
@@ -432,7 +414,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L866",
       "id": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
-      "community": 17,
+      "community": 5,
       "norm_label": "ai expert report generator"
     },
     {
@@ -441,7 +423,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L867",
       "id": "workflows_irc_master_workflow_ai_expert_report_generator_main",
-      "community": 17,
+      "community": 5,
       "norm_label": "main"
     },
     {
@@ -504,7 +486,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L910",
       "id": "workflows_irc_master_workflow_connections_create_session_1_task",
-      "community": 24,
+      "community": 5,
       "norm_label": "create session 1 task"
     },
     {
@@ -513,7 +495,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L911",
       "id": "workflows_irc_master_workflow_create_session_1_task_main",
-      "community": 24,
+      "community": 5,
       "norm_label": "main"
     },
     {
@@ -738,7 +720,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1070",
       "id": "workflows_irc_master_workflow_connections_parse_transcript_tasks_json",
-      "community": 16,
+      "community": 13,
       "norm_label": "parse transcript tasks json"
     },
     {
@@ -747,7 +729,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1071",
       "id": "workflows_irc_master_workflow_parse_transcript_tasks_json_main",
-      "community": 16,
+      "community": 13,
       "norm_label": "main"
     },
     {
@@ -900,7 +882,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1169",
       "id": "workflows_irc_master_workflow_connections_read_weekly_metrics_from_airtable",
-      "community": 16,
+      "community": 17,
       "norm_label": "read weekly metrics from airtable"
     },
     {
@@ -909,7 +891,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1170",
       "id": "workflows_irc_master_workflow_read_weekly_metrics_from_airtable_main",
-      "community": 16,
+      "community": 17,
       "norm_label": "main"
     },
     {
@@ -936,7 +918,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1191",
       "id": "workflows_irc_master_workflow_connections_ai_weekly_digest_generator",
-      "community": 18,
+      "community": 5,
       "norm_label": "ai weekly digest generator"
     },
     {
@@ -945,7 +927,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L1192",
       "id": "workflows_irc_master_workflow_ai_weekly_digest_generator_main",
-      "community": 18,
+      "community": 5,
       "norm_label": "main"
     },
     {
@@ -1525,6 +1507,114 @@
       "norm_label": "marketing"
     },
     {
+      "label": "agent_native_audit.md",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L1",
+      "id": "docs_agent_native_audit",
+      "community": 11,
+      "norm_label": "agent_native_audit.md"
+    },
+    {
+      "label": "Agent-Native Architecture Audit: IRC Workflow",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L1",
+      "id": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "community": 11,
+      "norm_label": "agent-native architecture audit: irc workflow"
+    },
+    {
+      "label": "1. Executive Summary",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L9",
+      "id": "docs_agent_native_audit_1_executive_summary",
+      "community": 11,
+      "norm_label": "1. executive summary"
+    },
+    {
+      "label": "2. Core Principles Scorecard",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L17",
+      "id": "docs_agent_native_audit_2_core_principles_scorecard",
+      "community": 11,
+      "norm_label": "2. core principles scorecard"
+    },
+    {
+      "label": "2.1 Parity (Score: 8/10)",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L19",
+      "id": "docs_agent_native_audit_2_1_parity_score_8_10",
+      "community": 11,
+      "norm_label": "2.1 parity (score: 8/10)"
+    },
+    {
+      "label": "2.2 Granularity & Primitives (Score: 9/10)",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L23",
+      "id": "docs_agent_native_audit_2_2_granularity_primitives_score_9_10",
+      "community": 11,
+      "norm_label": "2.2 granularity & primitives (score: 9/10)"
+    },
+    {
+      "label": "2.3 Composability & Emergent Capability (Score: 9/10)",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L32",
+      "id": "docs_agent_native_audit_2_3_composability_emergent_capability_score_9_10",
+      "community": 11,
+      "norm_label": "2.3 composability & emergent capability (score: 9/10)"
+    },
+    {
+      "label": "2.4 Accumulated Context / Memory (Score: 10/10)",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L36",
+      "id": "docs_agent_native_audit_2_4_accumulated_context_memory_score_10_10",
+      "community": 11,
+      "norm_label": "2.4 accumulated context / memory (score: 10/10)"
+    },
+    {
+      "label": "3. Tool & Workspace Design Analysis",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L42",
+      "id": "docs_agent_native_audit_3_tool_workspace_design_analysis",
+      "community": 11,
+      "norm_label": "3. tool & workspace design analysis"
+    },
+    {
+      "label": "3.1 The Shared Workspace Pattern",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L44",
+      "id": "docs_agent_native_audit_3_1_the_shared_workspace_pattern",
+      "community": 11,
+      "norm_label": "3.1 the shared workspace pattern"
+    },
+    {
+      "label": "3.2 Cardinal Sin Prevention Check",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L54",
+      "id": "docs_agent_native_audit_3_2_cardinal_sin_prevention_check",
+      "community": 11,
+      "norm_label": "3.2 cardinal sin prevention check"
+    },
+    {
+      "label": "4. Recommendations for Next-Stage Development",
+      "file_type": "document",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L60",
+      "id": "docs_agent_native_audit_4_recommendations_for_next_stage_development",
+      "community": 11,
+      "norm_label": "4. recommendations for next-stage development"
+    },
+    {
       "label": "2026-07-04-irc-workflow-scaling-requirements.md",
       "file_type": "document",
       "source_file": "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md",
@@ -1631,6 +1721,51 @@
       "id": "brainstorms_2026_07_04_irc_workflow_scaling_requirements_4_outstanding_decisions_next_steps",
       "community": 0,
       "norm_label": "4. outstanding decisions / next steps"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L12",
+      "community": 10,
+      "norm_label": "call_gemini()",
+      "id": "agents_academic_auditor_call_gemini"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L12",
+      "community": 10,
+      "norm_label": "call_gemini()",
+      "id": "agents_alignment_agent_call_gemini"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L14",
+      "community": 3,
+      "norm_label": "call_gemini()",
+      "id": "agents_coordinator_agent_call_gemini"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L12",
+      "community": 10,
+      "norm_label": "call_gemini()",
+      "id": "agents_mentor_auditor_call_gemini"
+    },
+    {
+      "label": "call_gemini()",
+      "file_type": "code",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L14",
+      "community": 10,
+      "norm_label": "call_gemini()",
+      "id": "agents_onboarding_agent_call_gemini"
     },
     {
       "label": "2. API Key Configuration",
@@ -1782,6 +1917,28 @@
       "target": "agents_academic_auditor_log_debug"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_academic_auditor",
+      "target": "agents_llm_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_academic_auditor",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -1802,6 +1959,17 @@
       "confidence_score": 1.0,
       "source": "agents_academic_auditor_audit_document",
       "target": "agents_academic_auditor_call_gemini"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/academic_auditor.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "agents_academic_auditor_audit_document",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1834,6 +2002,28 @@
       "target": "agents_alignment_agent_log_debug"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_alignment_agent",
+      "target": "agents_llm_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_alignment_agent",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -1854,6 +2044,17 @@
       "confidence_score": 1.0,
       "source": "agents_alignment_agent_check_alignment",
       "target": "agents_alignment_agent_call_gemini"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/alignment_agent.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "agents_alignment_agent_check_alignment",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1926,6 +2127,28 @@
       "target": "agents_coordinator_agent_log_debug"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_llm_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -1957,6 +2180,114 @@
       "confidence_score": 1.0,
       "source": "agents_coordinator_agent_generate_weekly_digest",
       "target": "agents_coordinator_agent_call_gemini"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/coordinator_agent.py",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "agents_coordinator_agent_generate_weekly_digest",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "agents_llm_client",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "agents_llm_client",
+      "target": "agents_llm_client_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor",
+      "target": "agents_llm_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent",
+      "target": "agents_llm_client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "agents_llm_client_call_llm",
+      "target": "agents_llm_client_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/mentor_auditor.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "agents_mentor_auditor_audit_mentor",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/onboarding_agent.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "agents_onboarding_agent_generate_baseline",
+      "target": "agents_llm_client_call_llm",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3144,9 +3475,9 @@
       "source_file": "AGENT_ONBOARDING.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agent_onboarding_ai_agent_workspace_onboarding_guide",
-      "target": "agent_onboarding_2_api_key_configuration_environment_inheritance",
-      "confidence_score": 1.0
+      "target": "agent_onboarding_2_api_key_configuration_environment_inheritance"
     },
     {
       "relation": "contains",
@@ -3194,9 +3525,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_1_project_academic_context",
-      "confidence_score": 1.0
+      "target": "claude_1_project_academic_context"
     },
     {
       "relation": "contains",
@@ -3214,9 +3545,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_2_portability_agent_onboarding",
-      "confidence_score": 1.0
+      "target": "claude_2_portability_agent_onboarding"
     },
     {
       "relation": "contains",
@@ -3244,9 +3575,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_3_development_execution_commands",
-      "confidence_score": 1.0
+      "target": "claude_3_development_execution_commands"
     },
     {
       "relation": "contains",
@@ -3264,9 +3595,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_4_multi_agent_specialist_architecture",
-      "confidence_score": 1.0
+      "target": "claude_4_multi_agent_specialist_architecture"
     },
     {
       "relation": "contains",
@@ -3274,9 +3605,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_5_folder_file_structure",
-      "confidence_score": 1.0
+      "target": "claude_5_folder_file_structure"
     },
     {
       "relation": "contains",
@@ -3294,9 +3625,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_claude_md_irc_workflow_memory_bank",
-      "target": "claude_6_key_design_decisions_rationale",
-      "confidence_score": 1.0
+      "target": "claude_6_key_design_decisions_rationale"
     },
     {
       "relation": "contains",
@@ -3304,9 +3635,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_3_development_execution_commands",
-      "target": "claude_direct_python_agent_commands",
-      "confidence_score": 1.0
+      "target": "claude_direct_python_agent_commands"
     },
     {
       "relation": "contains",
@@ -3314,9 +3645,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_3_development_execution_commands",
-      "target": "claude_starting_n8n_local_server",
-      "confidence_score": 1.0
+      "target": "claude_starting_n8n_local_server"
     },
     {
       "relation": "contains",
@@ -3324,9 +3655,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "confidence_score": 1.0
+      "target": "readme_india_research_corps_irc_student_tracking_onboarding_system"
     },
     {
       "relation": "contains",
@@ -3344,9 +3675,9 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_1_operational_context_rationale",
-      "confidence_score": 1.0
+      "target": "readme_1_operational_context_rationale"
     },
     {
       "relation": "contains",
@@ -3354,9 +3685,9 @@
       "source_file": "README.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_2_detailed_edge_case_operational_logic_rules",
-      "confidence_score": 1.0
+      "target": "readme_2_detailed_edge_case_operational_logic_rules"
     },
     {
       "relation": "contains",
@@ -3364,9 +3695,9 @@
       "source_file": "README.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_3_funding_impact_metrics_framework",
-      "confidence_score": 1.0
+      "target": "readme_3_funding_impact_metrics_framework"
     },
     {
       "relation": "contains",
@@ -3374,9 +3705,9 @@
       "source_file": "README.md",
       "source_location": "L71",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_4_master_google_sheet_schema",
-      "confidence_score": 1.0
+      "target": "readme_4_master_google_sheet_schema"
     },
     {
       "relation": "contains",
@@ -3384,9 +3715,9 @@
       "source_file": "README.md",
       "source_location": "L97",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_5_google_drive_folder_permission_hierarchy",
-      "confidence_score": 1.0
+      "target": "readme_5_google_drive_folder_permission_hierarchy"
     },
     {
       "relation": "contains",
@@ -3394,9 +3725,9 @@
       "source_file": "README.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_6_how_to_import_the_n8n_master_workflow",
-      "confidence_score": 1.0
+      "target": "readme_6_how_to_import_the_n8n_master_workflow"
     },
     {
       "relation": "contains",
@@ -3404,9 +3735,9 @@
       "source_file": "README.md",
       "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_7_graphify_database",
-      "confidence_score": 1.0
+      "target": "readme_7_graphify_database"
     },
     {
       "relation": "contains",
@@ -3414,9 +3745,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_1_operational_context_rationale",
-      "target": "readme_the_india_research_corps_irc_program",
-      "confidence_score": 1.0
+      "target": "readme_the_india_research_corps_irc_program"
     },
     {
       "relation": "contains",
@@ -3424,9 +3755,9 @@
       "source_file": "README.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_1_student_competency_growth_index",
-      "confidence_score": 1.0
+      "target": "readme_3_1_student_competency_growth_index"
     },
     {
       "relation": "contains",
@@ -3434,9 +3765,9 @@
       "source_file": "README.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_2_sponsor_alignment_index",
-      "confidence_score": 1.0
+      "target": "readme_3_2_sponsor_alignment_index"
     },
     {
       "relation": "contains",
@@ -3444,9 +3775,9 @@
       "source_file": "README.md",
       "source_location": "L66",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_3_cohort_success_velocity",
-      "confidence_score": 1.0
+      "target": "readme_3_3_cohort_success_velocity"
     },
     {
       "relation": "contains",
@@ -3454,9 +3785,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy",
-      "target": "strategy_india_research_corps_strategy",
-      "confidence_score": 1.0
+      "target": "strategy_india_research_corps_strategy"
     },
     {
       "relation": "contains",
@@ -3464,9 +3795,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_key_metrics",
-      "confidence_score": 1.0
+      "target": "strategy_key_metrics"
     },
     {
       "relation": "contains",
@@ -3474,9 +3805,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_marketing",
-      "confidence_score": 1.0
+      "target": "strategy_marketing"
     },
     {
       "relation": "contains",
@@ -3484,9 +3815,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_our_approach",
-      "confidence_score": 1.0
+      "target": "strategy_our_approach"
     },
     {
       "relation": "contains",
@@ -3494,9 +3825,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_target_problem",
-      "confidence_score": 1.0
+      "target": "strategy_target_problem"
     },
     {
       "relation": "contains",
@@ -3504,9 +3835,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_tracks",
-      "confidence_score": 1.0
+      "target": "strategy_tracks"
     },
     {
       "relation": "contains",
@@ -3514,9 +3845,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_india_research_corps_strategy",
-      "target": "strategy_who_it_s_for",
-      "confidence_score": 1.0
+      "target": "strategy_who_it_s_for"
     },
     {
       "relation": "contains",
@@ -3524,9 +3855,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_tracks",
-      "target": "strategy_cohort_dashboard_reporting",
-      "confidence_score": 1.0
+      "target": "strategy_cohort_dashboard_reporting"
     },
     {
       "relation": "contains",
@@ -3534,9 +3865,9 @@
       "source_file": "STRATEGY.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_tracks",
-      "target": "strategy_daily_monitor_auditing",
-      "confidence_score": 1.0
+      "target": "strategy_daily_monitor_auditing"
     },
     {
       "relation": "contains",
@@ -3544,8 +3875,118 @@
       "source_file": "STRATEGY.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "strategy_tracks",
-      "target": "strategy_onboarding_automation",
+      "target": "strategy_onboarding_automation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit",
+      "target": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "target": "docs_agent_native_audit_1_executive_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "target": "docs_agent_native_audit_2_core_principles_scorecard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "target": "docs_agent_native_audit_3_tool_workspace_design_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
+      "target": "docs_agent_native_audit_4_recommendations_for_next_stage_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_2_core_principles_scorecard",
+      "target": "docs_agent_native_audit_2_1_parity_score_8_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_2_core_principles_scorecard",
+      "target": "docs_agent_native_audit_2_2_granularity_primitives_score_9_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_2_core_principles_scorecard",
+      "target": "docs_agent_native_audit_2_3_composability_emergent_capability_score_9_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_2_core_principles_scorecard",
+      "target": "docs_agent_native_audit_2_4_accumulated_context_memory_score_10_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_3_tool_workspace_design_analysis",
+      "target": "docs_agent_native_audit_3_1_the_shared_workspace_pattern",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/agent_native_audit.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "docs_agent_native_audit_3_tool_workspace_design_analysis",
+      "target": "docs_agent_native_audit_3_2_cardinal_sin_prevention_check",
       "confidence_score": 1.0
     },
     {
@@ -3720,5 +4161,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e360f6794a0aa1b32d471c88fbed4405ee4e644d"
+  "built_at_commit": "7e47efb928feaaab6d39e425df7ab8b60a4a7c03"
 }

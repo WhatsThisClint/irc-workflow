@@ -1,27 +1,27 @@
 {
   "agents/academic_auditor.py": {
-    "mtime": 1783191797.4556963,
-    "ast_hash": "387ec3a894f4e987404cded8d54bb7da",
+    "mtime": 1783192428.1701634,
+    "ast_hash": "5cb4037336d0e98ecd35404927126227",
     "semantic_hash": ""
   },
   "agents/alignment_agent.py": {
-    "mtime": 1783191793.6718028,
-    "ast_hash": "57402a1821b320905f2d9a258db35118",
+    "mtime": 1783192439.9346287,
+    "ast_hash": "b0d768949cb561798faf826a2fd1088f",
     "semantic_hash": ""
   },
   "agents/coordinator_agent.py": {
-    "mtime": 1783191803.9208333,
-    "ast_hash": "376731c7f64e2a7ae6c18cd504cf3df7",
+    "mtime": 1783192471.1695216,
+    "ast_hash": "d43cf5b971b74c88f0915e480a0595de",
     "semantic_hash": ""
   },
   "agents/mentor_auditor.py": {
-    "mtime": 1783191473.474616,
-    "ast_hash": "999ae5f7f1e759c551f01fed2d79a165",
+    "mtime": 1783192434.9157996,
+    "ast_hash": "257ce8e3e83adeb5a0f214dbcd5ad57f",
     "semantic_hash": ""
   },
   "agents/onboarding_agent.py": {
-    "mtime": 1783191465.6953573,
-    "ast_hash": "c47dd07f41c75e4ff721593394920ab4",
+    "mtime": 1783192406.6418958,
+    "ast_hash": "aa8af23b772ec552c7819771b15c6519",
     "semantic_hash": ""
   },
   "agents/transcript_parser.py": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "irc_agent.py": {
-    "mtime": 1783191808.8309226,
-    "ast_hash": "47f92dbd88fdc221151484e90b821d7a",
+    "mtime": 1783192482.2043042,
+    "ast_hash": "a791d1bdcc94773c2d697064b57740e6",
     "semantic_hash": ""
   },
   "n8n/workflows/irc_master_workflow.json": {
@@ -77,6 +77,16 @@
   "STRATEGY.md": {
     "mtime": 1783192268.1894298,
     "ast_hash": "3c4c42538dcbbe5617df4592467706a9",
+    "semantic_hash": ""
+  },
+  "agents/llm_client.py": {
+    "mtime": 1783192416.3219376,
+    "ast_hash": "e0dca27d05bf4acce4526b5f03b2d84e",
+    "semantic_hash": ""
+  },
+  "docs/agent_native_audit.md": {
+    "mtime": 1783192349.5924623,
+    "ast_hash": "0d24edc1ef6d2fde3eaebb54e96636b9",
     "semantic_hash": ""
   }
 }
