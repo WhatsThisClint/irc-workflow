@@ -1,0 +1,12 @@
+{
+  "name": "irc-workflow-n8n",
+  "version": "1.0.0",
+  "description": "n8n instance for IRC Workflow automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "n8n start"
+  },
+  "devDependencies": {
+    "n8n": "^2.27.4"
+  }
+}

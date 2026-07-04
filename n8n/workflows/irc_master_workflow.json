@@ -1,0 +1,879 @@
+{
+  "name": "IRC Master Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 9 * * *"
+            }
+          ]
+        }
+      },
+      "id": "1f8e1fae-7832-4d2c-8ab5-d14c330f878f",
+      "name": "Schedule Trigger (Daily 9 AM)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": "MASTER_SPREADSHEET_ID_PLACEHOLDER",
+        "sheetName": "Sheet1",
+        "options": {}
+      },
+      "id": "2a9b2f3e-8c34-4a4b-9bf1-9dfc121f35f2",
+      "name": "Read Sheet for Onboarding",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "type": "string"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json[\"Google Drive Shared Folder Link\"] }}",
+              "operator": "isEmpty",
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3d9c8f3b-5e6a-4b7c-8d9e-1f2a3b4c5d6e",
+      "name": "Filter Unprocessed",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        500,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "name": "={{ $json[\"S.No\"] }} - {{ $json[\"Student Name\"] }} - IRC Workspace",
+        "parents": [
+          "IRC_ROOT_FOLDER_ID_PLACEHOLDER"
+        ],
+        "options": {}
+      },
+      "id": "4e7d9c8f-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+      "name": "Create Student Main Folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        700,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "name": "Shared Space",
+        "parents": [
+          "={{ $json[\"id\"] }}"
+        ],
+        "options": {}
+      },
+      "id": "5f6e7d8c-9b0a-1b2c-3d4e-5f6a7b8c9d0e",
+      "name": "Create Shared Space Folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        900,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "name": "Admin Only",
+        "parents": [
+          "={{ $json[\"id\"] }}"
+        ],
+        "options": {}
+      },
+      "id": "6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+      "name": "Create Admin Only Folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        900,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "name": "Transcripts",
+        "parents": [
+          "={{ $json[\"id\"] }}"
+        ],
+        "options": {}
+      },
+      "id": "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e",
+      "name": "Create Transcripts Folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1100,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "action": "copy",
+        "fileId": "INCEPTION_TEMPLATE_DOC_ID_PLACEHOLDER",
+        "parents": [
+          "={{ $node[\"Create Shared Space Folder\"].json[\"id\"] }}"
+        ],
+        "options": {
+          "name": "={{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }} - Inception Report"
+        }
+      },
+      "id": "8c9d0e1f-2a3b-4c5d-6e7f-8a9b0c1d2e3f",
+      "name": "Copy Inception Report Template",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1100,
+        -200
+      ]
+    },
+    {
+      "parameters": {
+        "action": "copy",
+        "fileId": "GANTT_TEMPLATE_SHEET_ID_PLACEHOLDER",
+        "parents": [
+          "={{ $node[\"Create Shared Space Folder\"].json[\"id\"] }}"
+        ],
+        "options": {
+          "name": "={{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }} - Gantt Chart"
+        }
+      },
+      "id": "9d0e1f2a-3b4c-5d6e-7f8a-9b0c1d2e3f4g",
+      "name": "Copy Gantt Chart Template",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1100,
+        -50
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python \"f:/Antigravity/IRC Workflow/irc_agent.py\" --action generate-baseline --student \"{{ $node[\\\"Filter Unprocessed\\\"].json[\\\"Student Name\\\"] }}\" --question \"{{ $node[\\\"Filter Unprocessed\\\"].json[\\\"Research Question\\\"] }}\" --problem \"{{ $node[\\\"Filter Unprocessed\\\"].json[\\\"Problem Statement\\\"] }}\" --degree-level \"{{ $node[\"Filter Unprocessed\"].json[\"Degree Level\"] }}\" --duration-months \"{{ $node[\"Filter Unprocessed\"].json[\"Total Duration\"] }}\""
+      },
+      "id": "0e1f2a3b-4c5d-6e7f-8a9b-0c1d2e3f4g5h",
+      "name": "AI Expert Report Generator",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "title": "={{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }} - Sample Inception Report",
+        "folderId": "={{ $node[\"Create Admin Only Folder\"].json[\"id\"] }}",
+        "content": "={{ $json[\"stdout\"] }}"
+      },
+      "id": "1f2a3b4c-5d6e-7f8a-9b0c-1d2e3f4g5h6i",
+      "name": "Create Sample Doc in Drive",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "action": "create",
+        "title": "={{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }} - Admin Cheat Sheet",
+        "folderId": "={{ $node[\"Create Admin Only Folder\"].json[\"id\"] }}",
+        "content": "# IRC Admin Cheat Sheet\n\nStudent: {{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }}\nResearch Question: {{ $node[\"Filter Unprocessed\"].json[\"Research Question\"] }}\n\n## Pre-Meeting Reflection Questions\n*   [AI will populate questions here based on weekly progress and transcript reviews]"
+      },
+      "id": "2f3a4b5c-6d7e-8f9a-0b1c-2d3e4f5g6h7i",
+      "name": "Create Admin Cheat Sheet Doc",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        250
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "projectSection",
+        "action": "create",
+        "projectId": "ASANA_PROJECT_ID_PLACEHOLDER",
+        "name": "={{ $node[\"Filter Unprocessed\"].json[\"Student Name\"] }}"
+      },
+      "id": "3f4a5b6c-7d8e-9f0a-1b2c-3d4e5f6g7h8i",
+      "name": "Create Asana Student Section",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "action": "create",
+        "name": "Session 1: Introduction & Literature Review",
+        "projects": [
+          "ASANA_PROJECT_ID_PLACEHOLDER"
+        ],
+        "notes": "Student must draft their thesis introduction and literature review scope.",
+        "additionalFields": {
+          "assignee": "STUDENT_ASANA_USER_ID_PLACEHOLDER",
+          "dueOn": "={{ $today.plus({days: 5}).toISODate() }}"
+        }
+      },
+      "id": "4f5a6b7c-8d9e-0f1a-2b3c-4d5e6f7g8h9i",
+      "name": "Create Session 1 Task",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        1900,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": "MASTER_SPREADSHEET_ID_PLACEHOLDER",
+        "sheetName": "Sheet1",
+        "rowId": "={{ $node[\"Filter Unprocessed\"].json[\"S.No\"] }}",
+        "columns": {
+          "Google Drive Shared Folder Link": "={{ $node[\"Create Shared Space Folder\"].json[\"webViewLink\"] }}",
+          "Google Drive Admin Folder Link": "={{ $node[\"Create Admin Only Folder\"].json[\"webViewLink\"] }}",
+          "Reflection Google Doc Link": "={{ $node[\"Copy Inception Report Template\"].json[\"webViewLink\"] }}",
+          "Current Project Phase": "Induction"
+        }
+      },
+      "id": "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+      "name": "Update Master Sheet Links",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [
+        2100,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
+            }
+          ]
+        }
+      },
+      "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "name": "Schedule Trigger (Daily 8 AM)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        100,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": "MASTER_SPREADSHEET_ID_PLACEHOLDER",
+        "sheetName": "Sheet1",
+        "options": {}
+      },
+      "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "name": "Read Sheet for Monitoring",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "type": "string"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json[\"Inception Gate Status\"] }}",
+              "operator": "notEquals",
+              "rightValue": "Fail"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "name": "Filter Active Students",
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2,
+      "position": [
+        500,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "action": "read",
+        "fileId": "={{ $json[\"Google Drive Shared Folder Link\"].split('id=')[1] || $json[\"Google Drive Shared Folder Link\"].split('/').pop() }}",
+        "options": {}
+      },
+      "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "name": "Read Student Gantt Chart",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python \"f:/Antigravity/IRC Workflow/irc_agent.py\" --action calculate-phase --cohort-start-date \"{{ $node[\\\"Filter Active Students\\\"].json[\\\"Inception Cohort Start Date\\\"] }}\" --duration-months \"{{ $node[\\\"Filter Active Students\\\"].json[\\\"Total Duration\\\"] }}\""
+      },
+      "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "name": "AI Dynamic Phase Calculator",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        900,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "documentId": "MASTER_SPREADSHEET_ID_PLACEHOLDER",
+        "sheetName": "Sheet1",
+        "rowId": "={{ $node[\"Filter Active Students\"].json[\"S.No\"] }}",
+        "columns": {
+          "Current Project Phase": "={{ $json[\"stdout\"].trim() }}"
+        }
+      },
+      "id": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+      "name": "Update Phase in Master Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.2,
+      "position": [
+        1100,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "type": "string"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $today.toISODate() }}",
+              "operator": "greaterThanOrEqual",
+              "rightValue": "={{ $node[\"Filter Active Students\"].json[\"Inception Presentation Date\"] }}"
+            },
+            {
+              "leftValue": "={{ $node[\"Filter Active Students\"].json[\"Inception Gate Status\"] }}",
+              "operator": "isEmpty",
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7f8a9b0c-1d2e-3f4a-5b6c-7d8e9f0a1b2c",
+      "name": "Presentation Gate Overdue?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "sendTo": "COORDINATOR_EMAIL_PLACEHOLDER",
+        "subject": "ACTION REQUIRED: Missing Inception Gate Status for {{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}",
+        "messageType": "html",
+        "message": "Hi,<br><br>The Inception Presentation Date ({{ $node[\"Filter Active Students\"].json[\"Inception Presentation Date\"] }}) has passed for student <b>{{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}</b>, but no status (Pass/Fail) has been logged in the Master Google Sheet.<br><br>Please update it to resume or halt automated tracking."
+      },
+      "id": "8f9a0b1c-2d3e-4f5g-6h7i-8j9k0l1m2n3o",
+      "name": "Gmail Gate Warning",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [
+        1500,
+        550
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "type": "string"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $node[\"Filter Active Students\"].json[\"Inception Gate Status\"] }}",
+              "operator": "equals",
+              "rightValue": "Pass"
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9a0b1c2d-3e4f-5g6h-7i8j-9k0l1m2n3o4p",
+      "name": "Is Gate Status == Pass?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "calendarId": "primary",
+        "start": "={{ $today.plus({days: 7}).toISODate() }}T10:00:00",
+        "end": "={{ $today.plus({days: 7}).toISODate() }}T10:30:00",
+        "additionalFields": {
+          "attendees": [
+            "COORDINATOR_EMAIL_PLACEHOLDER",
+            "={{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}@college.edu"
+          ],
+          "description": "Weekly progress review meeting between Coordinator and Student.",
+          "summary": "IRC Weekly Sync: Coordinator x {{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}"
+        }
+      },
+      "id": "0b1c2d3e-4f5g-6h7i-8j9k-0l1m2n3o4p5q",
+      "name": "Create Weekly Calendar Sync",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 2,
+      "position": [
+        1750,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "calendarId": "primary",
+        "start": "={{ $today.plus({days: 14}).toISODate() }}T11:00:00",
+        "end": "={{ $today.plus({days: 14}).toISODate() }}T12:00:00",
+        "additionalFields": {
+          "attendees": [
+            "COORDINATOR_EMAIL_PLACEHOLDER",
+            "={{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}@college.edu",
+            "mentor_placeholder@welllabs.org"
+          ],
+          "description": "Bi-weekly technical review with Mentor, Coordinator, and Student.",
+          "summary": "IRC Bi-Weekly Review: Mentor x {{ $node[\"Filter Active Students\"].json[\"Student Name\"] }}"
+        }
+      },
+      "id": "1c2d3e4f-5g6h-7i8j-9k0l-1m2n3o4p5q6r",
+      "name": "Create Alternate Bi-Weekly Mentor Sync",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 2,
+      "position": [
+        1750,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "action": "list",
+        "folderId": "TRANSCRIPTS_FOLDER_ID_PLACEHOLDER",
+        "options": {}
+      },
+      "id": "2c3d4e5f-6g7h-8i9j-0k1l-2m3n4o5p6q7r",
+      "name": "List New Transcripts",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1950,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "command": "python \"f:/Antigravity/IRC Workflow/irc_agent.py\" --action parse-transcript --transcript-file \"{{ $json[\"path\"] }}\""
+      },
+      "id": "3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8s",
+      "name": "AI Transcript Task Extractor",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        2150,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "task",
+        "action": "create",
+        "name": "={{ $json[\"task_name\"] }}",
+        "projects": [
+          "ASANA_PROJECT_ID_PLACEHOLDER"
+        ],
+        "notes": "Extract from Transcript: {{ $json[\"details\"] }}",
+        "additionalFields": {
+          "assignee": "={{ $json[\"assignee_id\"] }}",
+          "dueOn": "={{ $json[\"due_date\"] }}"
+        }
+      },
+      "id": "4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8s9t",
+      "name": "Sync Action Items to Asana",
+      "type": "n8n-nodes-base.asana",
+      "typeVersion": 1,
+      "position": [
+        2350,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "return JSON.parse($input.item.json.stdout).tasks;"
+      },
+      "id": "code-node-parse-tasks-json",
+      "name": "Parse Transcript Tasks JSON",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2250,
+        700
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger (Daily 9 AM)": {
+      "main": [
+        [
+          {
+            "node": "Read Sheet for Onboarding",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Sheet for Onboarding": {
+      "main": [
+        [
+          {
+            "node": "Filter Unprocessed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Unprocessed": {
+      "main": [
+        [
+          {
+            "node": "Create Student Main Folder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Student Main Folder": {
+      "main": [
+        [
+          {
+            "node": "Create Shared Space Folder",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Admin Only Folder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Shared Space Folder": {
+      "main": [
+        [
+          {
+            "node": "Copy Inception Report Template",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Copy Gantt Chart Template",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Admin Only Folder": {
+      "main": [
+        [
+          {
+            "node": "Create Transcripts Folder",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "AI Expert Report Generator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Expert Report Generator": {
+      "main": [
+        [
+          {
+            "node": "Create Sample Doc in Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Sample Doc in Drive": {
+      "main": [
+        [
+          {
+            "node": "Create Admin Cheat Sheet Doc",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Admin Cheat Sheet Doc": {
+      "main": [
+        [
+          {
+            "node": "Create Asana Student Section",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Asana Student Section": {
+      "main": [
+        [
+          {
+            "node": "Create Session 1 Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Session 1 Task": {
+      "main": [
+        [
+          {
+            "node": "Update Master Sheet Links",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger (Daily 8 AM)": {
+      "main": [
+        [
+          {
+            "node": "Read Sheet for Monitoring",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Sheet for Monitoring": {
+      "main": [
+        [
+          {
+            "node": "Filter Active Students",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Active Students": {
+      "main": [
+        [
+          {
+            "node": "Read Student Gantt Chart",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Student Gantt Chart": {
+      "main": [
+        [
+          {
+            "node": "AI Dynamic Phase Calculator",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Dynamic Phase Calculator": {
+      "main": [
+        [
+          {
+            "node": "Update Phase in Master Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Phase in Master Sheet": {
+      "main": [
+        [
+          {
+            "node": "Presentation Gate Overdue?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Presentation Gate Overdue?": {
+      "main": [
+        [
+          {
+            "node": "Gmail Gate Warning",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Is Gate Status == Pass?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Gate Status == Pass?": {
+      "main": [
+        [
+          {
+            "node": "Create Weekly Calendar Sync",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Alternate Bi-Weekly Mentor Sync",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Weekly Calendar Sync": {
+      "main": [
+        [
+          {
+            "node": "List New Transcripts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Alternate Bi-Weekly Mentor Sync": {
+      "main": [
+        [
+          {
+            "node": "List New Transcripts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List New Transcripts": {
+      "main": [
+        [
+          {
+            "node": "AI Transcript Task Extractor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Transcript Task Extractor": {
+      "main": [
+        [
+          {
+            "node": "Parse Transcript Tasks JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Transcript Tasks JSON": {
+      "main": [
+        [
+          {
+            "node": "Sync Action Items to Asana",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionTimeout": 3600
+  },
+  "active": false
+}
