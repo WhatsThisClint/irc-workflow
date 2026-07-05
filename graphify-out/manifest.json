@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1783191986.310269,
-    "ast_hash": "ba72d1766a262d0f97c17afe1c937c0a",
+    "mtime": 1783213998.258433,
+    "ast_hash": "a1bb9d92a5221d72e9970894b8bde943",
     "semantic_hash": ""
   },
   "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md": {
@@ -87,6 +87,26 @@
   "docs/agent_native_audit.md": {
     "mtime": 1783192349.5924623,
     "ast_hash": "0d24edc1ef6d2fde3eaebb54e96636b9",
+    "semantic_hash": ""
+  },
+  "docs/ACADEMIC_METRICS_SPEC.md": {
+    "mtime": 1783213981.2704568,
+    "ast_hash": "12ae99c59d9ec5f269b63d02d42b7f7e",
+    "semantic_hash": ""
+  },
+  "docs/ARCHITECTURAL_OVERVIEW.md": {
+    "mtime": 1783213976.3844264,
+    "ast_hash": "0f90fe4458e0c4d6188b5099d4f3ce5b",
+    "semantic_hash": ""
+  },
+  "docs/EDGE_CASE_PLAYBOOK.md": {
+    "mtime": 1783213987.8462057,
+    "ast_hash": "53cfbef7ebd48bd3d05eadc9f501842e",
+    "semantic_hash": ""
+  },
+  "docs/OPERATIONS_MANUAL.md": {
+    "mtime": 1783213993.230804,
+    "ast_hash": "109b9a2e3fea873b9c95d4714588962e",
     "semantic_hash": ""
   }
 }

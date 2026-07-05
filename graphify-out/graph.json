@@ -63,7 +63,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L1",
       "id": "agents_coordinator_agent",
-      "community": 3,
+      "community": 10,
       "norm_label": "coordinator_agent.py"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L7",
       "id": "agents_coordinator_agent_log_debug",
-      "community": 3,
+      "community": 10,
       "norm_label": "log_debug()"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L11",
       "id": "agents_coordinator_agent_extract_coordinator_feedback",
-      "community": 3,
+      "community": 10,
       "norm_label": "extract_coordinator_feedback()"
     },
     {
@@ -90,7 +90,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L27",
       "id": "agents_coordinator_agent_calculate_phase",
-      "community": 3,
+      "community": 10,
       "norm_label": "calculate_phase()"
     },
     {
@@ -99,7 +99,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L78",
       "id": "agents_coordinator_agent_compile_cheat_sheet",
-      "community": 3,
+      "community": 10,
       "norm_label": "compile_cheat_sheet()"
     },
     {
@@ -108,7 +108,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L110",
       "id": "agents_coordinator_agent_draft_nudge_email",
-      "community": 3,
+      "community": 10,
       "norm_label": "draft_nudge_email()"
     },
     {
@@ -117,7 +117,7 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L134",
       "id": "agents_coordinator_agent_generate_weekly_digest",
-      "community": 3,
+      "community": 10,
       "norm_label": "generate_weekly_digest()"
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L866",
       "id": "workflows_irc_master_workflow_connections_ai_expert_report_generator",
-      "community": 5,
+      "community": 49,
       "norm_label": "ai expert report generator"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L867",
       "id": "workflows_irc_master_workflow_ai_expert_report_generator_main",
-      "community": 5,
+      "community": 49,
       "norm_label": "main"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L992",
       "id": "workflows_irc_master_workflow_connections_presentation_gate_overdue",
-      "community": 37,
+      "community": 5,
       "norm_label": "presentation gate overdue?"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "n8n/workflows/irc_master_workflow.json",
       "source_location": "L993",
       "id": "workflows_irc_master_workflow_presentation_gate_overdue_main",
-      "community": 37,
+      "community": 5,
       "norm_label": "main"
     },
     {
@@ -1296,116 +1296,71 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme",
-      "community": 6,
+      "community": 37,
       "norm_label": "readme.md"
     },
     {
-      "label": "India Research Corps (IRC) Student Tracking & Onboarding System",
+      "label": "India Research Corps (IRC) Workflow Automation System",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "id": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "community": 6,
-      "norm_label": "india research corps (irc) student tracking & onboarding system"
+      "id": "readme_india_research_corps_irc_workflow_automation_system",
+      "community": 37,
+      "norm_label": "india research corps (irc) workflow automation system"
     },
     {
-      "label": "1. Operational Context & Rationale",
+      "label": "\ud83d\uddfa\ufe0f Documentation Index",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L7",
-      "id": "readme_1_operational_context_rationale",
-      "community": 6,
-      "norm_label": "1. operational context & rationale"
+      "id": "readme_documentation_index",
+      "community": 37,
+      "norm_label": "\ud83d\uddfa\ufe0f documentation index"
     },
     {
-      "label": "The India Research Corps (IRC) Program",
+      "label": "\u26a1 Quick Start",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L9",
-      "id": "readme_the_india_research_corps_irc_program",
-      "community": 6,
-      "norm_label": "the india research corps (irc) program"
+      "source_location": "L24",
+      "id": "readme_quick_start",
+      "community": 37,
+      "norm_label": "\u26a1 quick start"
     },
     {
-      "label": "2. Detailed Edge-Case & Operational Logic Rules",
+      "label": "1. Initialize the Workspace",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L22",
-      "id": "readme_2_detailed_edge_case_operational_logic_rules",
-      "community": 6,
-      "norm_label": "2. detailed edge-case & operational logic rules"
+      "source_location": "L26",
+      "id": "readme_1_initialize_the_workspace",
+      "community": 37,
+      "norm_label": "1. initialize the workspace"
     },
     {
-      "label": "3. Funding & Impact Metrics Framework",
+      "label": "2. Start the Local n8n Server",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
-      "id": "readme_3_funding_impact_metrics_framework",
-      "community": 6,
-      "norm_label": "3. funding & impact metrics framework"
+      "source_location": "L32",
+      "id": "readme_2_start_the_local_n8n_server",
+      "community": 37,
+      "norm_label": "2. start the local n8n server"
     },
     {
-      "label": "3.1 Student Competency Growth Index",
+      "label": "3. Verify Local CLI Agents",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L54",
-      "id": "readme_3_1_student_competency_growth_index",
-      "community": 6,
-      "norm_label": "3.1 student competency growth index"
+      "source_location": "L38",
+      "id": "readme_3_verify_local_cli_agents",
+      "community": 37,
+      "norm_label": "3. verify local cli agents"
     },
     {
-      "label": "3.2 Sponsor Alignment Index",
+      "label": "\ud83e\udde0 Graphify Code Graph",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L61",
-      "id": "readme_3_2_sponsor_alignment_index",
-      "community": 6,
-      "norm_label": "3.2 sponsor alignment index"
-    },
-    {
-      "label": "3.3 Cohort Success Velocity",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L66",
-      "id": "readme_3_3_cohort_success_velocity",
-      "community": 6,
-      "norm_label": "3.3 cohort success velocity"
-    },
-    {
-      "label": "4. Master Google Sheet Schema",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L71",
-      "id": "readme_4_master_google_sheet_schema",
-      "community": 6,
-      "norm_label": "4. master google sheet schema"
-    },
-    {
-      "label": "5. Google Drive Folder & Permission Hierarchy",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L97",
-      "id": "readme_5_google_drive_folder_permission_hierarchy",
-      "community": 6,
-      "norm_label": "5. google drive folder & permission hierarchy"
-    },
-    {
-      "label": "6. How to Import the n8n Master Workflow",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L115",
-      "id": "readme_6_how_to_import_the_n8n_master_workflow",
-      "community": 6,
-      "norm_label": "6. how to import the n8n master workflow"
-    },
-    {
-      "label": "7. Graphify Database",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": "L127",
-      "id": "readme_7_graphify_database",
-      "community": 6,
-      "norm_label": "7. graphify database"
+      "source_location": "L47",
+      "id": "readme_graphify_code_graph",
+      "community": 37,
+      "norm_label": "\ud83e\udde0 graphify code graph"
     },
     {
       "label": "STRATEGY.md",
@@ -1505,6 +1460,546 @@
       "id": "strategy_marketing",
       "community": 30,
       "norm_label": "marketing"
+    },
+    {
+      "label": "ACADEMIC_METRICS_SPEC.md",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L1",
+      "id": "docs_academic_metrics_spec",
+      "community": 48,
+      "norm_label": "academic_metrics_spec.md"
+    },
+    {
+      "label": "Academic Metrics & Rubric Specifications",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L1",
+      "id": "docs_academic_metrics_spec_academic_metrics_rubric_specifications",
+      "community": 48,
+      "norm_label": "academic metrics & rubric specifications"
+    },
+    {
+      "label": "1. The Core Academic Triad",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L7",
+      "id": "docs_academic_metrics_spec_1_the_core_academic_triad",
+      "community": 48,
+      "norm_label": "1. the core academic triad"
+    },
+    {
+      "label": "1.1 Scientific Methodology (1-10)",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L11",
+      "id": "docs_academic_metrics_spec_1_1_scientific_methodology_1_10",
+      "community": 48,
+      "norm_label": "1.1 scientific methodology (1-10)"
+    },
+    {
+      "label": "1.2 Data Triangulation (1-10)",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L19",
+      "id": "docs_academic_metrics_spec_1_2_data_triangulation_1_10",
+      "community": 48,
+      "norm_label": "1.2 data triangulation (1-10)"
+    },
+    {
+      "label": "1.3 Academic Writing Clarity (1-10)",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L27",
+      "id": "docs_academic_metrics_spec_1_3_academic_writing_clarity_1_10",
+      "community": 48,
+      "norm_label": "1.3 academic writing clarity (1-10)"
+    },
+    {
+      "label": "2. Sponsor Alignment Index (SAI)",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L37",
+      "id": "docs_academic_metrics_spec_2_sponsor_alignment_index_sai",
+      "community": 48,
+      "norm_label": "2. sponsor alignment index (sai)"
+    },
+    {
+      "label": "2.1 Evaluation Dual Checks",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L41",
+      "id": "docs_academic_metrics_spec_2_1_evaluation_dual_checks",
+      "community": 48,
+      "norm_label": "2.1 evaluation dual checks"
+    },
+    {
+      "label": "3. Proportional Rigor Adjustments",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L48",
+      "id": "docs_academic_metrics_spec_3_proportional_rigor_adjustments",
+      "community": 48,
+      "norm_label": "3. proportional rigor adjustments"
+    },
+    {
+      "label": "3.1 Degree Level",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L52",
+      "id": "docs_academic_metrics_spec_3_1_degree_level",
+      "community": 48,
+      "norm_label": "3.1 degree level"
+    },
+    {
+      "label": "3.2 Program Duration",
+      "file_type": "document",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L57",
+      "id": "docs_academic_metrics_spec_3_2_program_duration",
+      "community": 48,
+      "norm_label": "3.2 program duration"
+    },
+    {
+      "label": "ARCHITECTURAL_OVERVIEW.md",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L1",
+      "id": "docs_architectural_overview",
+      "community": 18,
+      "norm_label": "architectural_overview.md"
+    },
+    {
+      "label": "System & Agent Architecture Overview",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L1",
+      "id": "docs_architectural_overview_system_agent_architecture_overview",
+      "community": 18,
+      "norm_label": "system & agent architecture overview"
+    },
+    {
+      "label": "1. System Topology",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L7",
+      "id": "docs_architectural_overview_1_system_topology",
+      "community": 18,
+      "norm_label": "1. system topology"
+    },
+    {
+      "label": "2. Component Directory",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L34",
+      "id": "docs_architectural_overview_2_component_directory",
+      "community": 18,
+      "norm_label": "2. component directory"
+    },
+    {
+      "label": "2.1 The CLI Router: `irc_agent.py`",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L36",
+      "id": "docs_architectural_overview_2_1_the_cli_router_irc_agent_py",
+      "community": 18,
+      "norm_label": "2.1 the cli router: `irc_agent.py`"
+    },
+    {
+      "label": "2.2 Sub-Agents (`agents/` Package)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L39",
+      "id": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "community": 18,
+      "norm_label": "2.2 sub-agents (`agents/` package)"
+    },
+    {
+      "label": "`onboarding_agent.py` (Expert Baseline Generator)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L41",
+      "id": "docs_architectural_overview_onboarding_agent_py_expert_baseline_generator",
+      "community": 18,
+      "norm_label": "`onboarding_agent.py` (expert baseline generator)"
+    },
+    {
+      "label": "`academic_auditor.py` (Progress Auditor)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L44",
+      "id": "docs_architectural_overview_academic_auditor_py_progress_auditor",
+      "community": 18,
+      "norm_label": "`academic_auditor.py` (progress auditor)"
+    },
+    {
+      "label": "`mentor_auditor.py` (Mentor Responsiveness Evaluator)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L47",
+      "id": "docs_architectural_overview_mentor_auditor_py_mentor_responsiveness_evaluator",
+      "community": 18,
+      "norm_label": "`mentor_auditor.py` (mentor responsiveness evaluator)"
+    },
+    {
+      "label": "`alignment_agent.py` (Sponsor Alignment Analyst)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L50",
+      "id": "docs_architectural_overview_alignment_agent_py_sponsor_alignment_analyst",
+      "community": 18,
+      "norm_label": "`alignment_agent.py` (sponsor alignment analyst)"
+    },
+    {
+      "label": "`transcript_parser.py` (Transcript Task Extractor)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L53",
+      "id": "docs_architectural_overview_transcript_parser_py_transcript_task_extractor",
+      "community": 18,
+      "norm_label": "`transcript_parser.py` (transcript task extractor)"
+    },
+    {
+      "label": "`coordinator_agent.py` (State Coordinator & Digest Compiler)",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L56",
+      "id": "docs_architectural_overview_coordinator_agent_py_state_coordinator_digest_compiler",
+      "community": 18,
+      "norm_label": "`coordinator_agent.py` (state coordinator & digest compiler)"
+    },
+    {
+      "label": "3. Centralized LLM Client: `llm_client.py`",
+      "file_type": "document",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L61",
+      "id": "docs_architectural_overview_3_centralized_llm_client_llm_client_py",
+      "community": 18,
+      "norm_label": "3. centralized llm client: `llm_client.py`"
+    },
+    {
+      "label": "EDGE_CASE_PLAYBOOK.md",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L1",
+      "id": "docs_edge_case_playbook",
+      "community": 3,
+      "norm_label": "edge_case_playbook.md"
+    },
+    {
+      "label": "Operational Edge Case Playbook",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L1",
+      "id": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "community": 3,
+      "norm_label": "operational edge case playbook"
+    },
+    {
+      "label": "1. Onboarding & Drive Structure Rules",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L7",
+      "id": "docs_edge_case_playbook_1_onboarding_drive_structure_rules",
+      "community": 3,
+      "norm_label": "1. onboarding & drive structure rules"
+    },
+    {
+      "label": "Rule 1: Unique Workspace Folder Naming",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L9",
+      "id": "docs_edge_case_playbook_rule_1_unique_workspace_folder_naming",
+      "community": 3,
+      "norm_label": "rule 1: unique workspace folder naming"
+    },
+    {
+      "label": "Rule 2: Inception Gate Rejection (Fail Transition)",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L14",
+      "id": "docs_edge_case_playbook_rule_2_inception_gate_rejection_fail_transition",
+      "community": 3,
+      "norm_label": "rule 2: inception gate rejection (fail transition)"
+    },
+    {
+      "label": "2. Calendar, Transcript, & Meeting Rules",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L24",
+      "id": "docs_edge_case_playbook_2_calendar_transcript_meeting_rules",
+      "community": 3,
+      "norm_label": "2. calendar, transcript, & meeting rules"
+    },
+    {
+      "label": "Rule 3: Missing Meeting Transcripts",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L26",
+      "id": "docs_edge_case_playbook_rule_3_missing_meeting_transcripts",
+      "community": 3,
+      "norm_label": "rule 3: missing meeting transcripts"
+    },
+    {
+      "label": "Rule 4: Calendar Sync Filter",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L31",
+      "id": "docs_edge_case_playbook_rule_4_calendar_sync_filter",
+      "community": 3,
+      "norm_label": "rule 4: calendar sync filter"
+    },
+    {
+      "label": "Rule 5: Transcript Format Validation",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L36",
+      "id": "docs_edge_case_playbook_rule_5_transcript_format_validation",
+      "community": 3,
+      "norm_label": "rule 5: transcript format validation"
+    },
+    {
+      "label": "3. Document Auditing & Feedback Memory Rules",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L43",
+      "id": "docs_edge_case_playbook_3_document_auditing_feedback_memory_rules",
+      "community": 3,
+      "norm_label": "3. document auditing & feedback memory rules"
+    },
+    {
+      "label": "Rule 6: Google Doc Edit Conflicts",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L45",
+      "id": "docs_edge_case_playbook_rule_6_google_doc_edit_conflicts",
+      "community": 3,
+      "norm_label": "rule 6: google doc edit conflicts"
+    },
+    {
+      "label": "Rule 7: Mentor Comment Retrieval",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L50",
+      "id": "docs_edge_case_playbook_rule_7_mentor_comment_retrieval",
+      "community": 3,
+      "norm_label": "rule 7: mentor comment retrieval"
+    },
+    {
+      "label": "Rule 8: Coordinator Persistent Memory Consolidation",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L55",
+      "id": "docs_edge_case_playbook_rule_8_coordinator_persistent_memory_consolidation",
+      "community": 3,
+      "norm_label": "rule 8: coordinator persistent memory consolidation"
+    },
+    {
+      "label": "4. Timeline, Scheduling, & Escalation Rules",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L62",
+      "id": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "community": 3,
+      "norm_label": "4. timeline, scheduling, & escalation rules"
+    },
+    {
+      "label": "Rule 9: Asana Due Date Cascades",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L64",
+      "id": "docs_edge_case_playbook_rule_9_asana_due_date_cascades",
+      "community": 3,
+      "norm_label": "rule 9: asana due date cascades"
+    },
+    {
+      "label": "Rule 10: Cumulative Delay Escalations",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L69",
+      "id": "docs_edge_case_playbook_rule_10_cumulative_delay_escalations",
+      "community": 3,
+      "norm_label": "rule 10: cumulative delay escalations"
+    },
+    {
+      "label": "Rule 11: Gantt Chart Parsing Fallback",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L74",
+      "id": "docs_edge_case_playbook_rule_11_gantt_chart_parsing_fallback",
+      "community": 3,
+      "norm_label": "rule 11: gantt chart parsing fallback"
+    },
+    {
+      "label": "Rule 12: Asana Board Clutter Prevention",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L79",
+      "id": "docs_edge_case_playbook_rule_12_asana_board_clutter_prevention",
+      "community": 3,
+      "norm_label": "rule 12: asana board clutter prevention"
+    },
+    {
+      "label": "Rule 13: Transition De-duplication",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L84",
+      "id": "docs_edge_case_playbook_rule_13_transition_de_duplication",
+      "community": 3,
+      "norm_label": "rule 13: transition de-duplication"
+    },
+    {
+      "label": "5. Reporting & Archive Rules",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L91",
+      "id": "docs_edge_case_playbook_5_reporting_archive_rules",
+      "community": 3,
+      "norm_label": "5. reporting & archive rules"
+    },
+    {
+      "label": "Rule 14: Daily Admin Summary Email",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L93",
+      "id": "docs_edge_case_playbook_rule_14_daily_admin_summary_email",
+      "community": 3,
+      "norm_label": "rule 14: daily admin summary email"
+    },
+    {
+      "label": "Rule 15: Database Size Pruning & CSV Archiving",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L98",
+      "id": "docs_edge_case_playbook_rule_15_database_size_pruning_csv_archiving",
+      "community": 3,
+      "norm_label": "rule 15: database size pruning & csv archiving"
+    },
+    {
+      "label": "Rule 16: Weekly Director Digest",
+      "file_type": "document",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L103",
+      "id": "docs_edge_case_playbook_rule_16_weekly_director_digest",
+      "community": 3,
+      "norm_label": "rule 16: weekly director digest"
+    },
+    {
+      "label": "OPERATIONS_MANUAL.md",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L1",
+      "id": "docs_operations_manual",
+      "community": 24,
+      "norm_label": "operations_manual.md"
+    },
+    {
+      "label": "System Operations & Databases Manual",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L1",
+      "id": "docs_operations_manual_system_operations_databases_manual",
+      "community": 24,
+      "norm_label": "system operations & databases manual"
+    },
+    {
+      "label": "1. Developer Setup & Portability",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L7",
+      "id": "docs_operations_manual_1_developer_setup_portability",
+      "community": 24,
+      "norm_label": "1. developer setup & portability"
+    },
+    {
+      "label": "1.1 Local n8n Portability",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L9",
+      "id": "docs_operations_manual_1_1_local_n8n_portability",
+      "community": 24,
+      "norm_label": "1.1 local n8n portability"
+    },
+    {
+      "label": "1.2 Zero-Touch Agent Diagnostics",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L17",
+      "id": "docs_operations_manual_1_2_zero_touch_agent_diagnostics",
+      "community": 24,
+      "norm_label": "1.2 zero-touch agent diagnostics"
+    },
+    {
+      "label": "2. Airtable Database Layout",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L25",
+      "id": "docs_operations_manual_2_airtable_database_layout",
+      "community": 24,
+      "norm_label": "2. airtable database layout"
+    },
+    {
+      "label": "Table A: `Students`",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L29",
+      "id": "docs_operations_manual_table_a_students",
+      "community": 24,
+      "norm_label": "table a: `students`"
+    },
+    {
+      "label": "Table B: `Competency Logs`",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L41",
+      "id": "docs_operations_manual_table_b_competency_logs",
+      "community": 24,
+      "norm_label": "table b: `competency logs`"
+    },
+    {
+      "label": "Table C: `Daily Snapshots / Metrics Table`",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L52",
+      "id": "docs_operations_manual_table_c_daily_snapshots_metrics_table",
+      "community": 24,
+      "norm_label": "table c: `daily snapshots / metrics table`"
+    },
+    {
+      "label": "3. Manual Run & Troubleshooting Commands",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L66",
+      "id": "docs_operations_manual_3_manual_run_troubleshooting_commands",
+      "community": 24,
+      "norm_label": "3. manual run & troubleshooting commands"
+    },
+    {
+      "label": "3.1 Run Document Audit Manually",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L70",
+      "id": "docs_operations_manual_3_1_run_document_audit_manually",
+      "community": 24,
+      "norm_label": "3.1 run document audit manually"
+    },
+    {
+      "label": "3.2 Run Weekly Digest Manually",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L77",
+      "id": "docs_operations_manual_3_2_run_weekly_digest_manually",
+      "community": 24,
+      "norm_label": "3.2 run weekly digest manually"
+    },
+    {
+      "label": "3.3 Diagnostics",
+      "file_type": "document",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L83",
+      "id": "docs_operations_manual_3_3_diagnostics",
+      "community": 24,
+      "norm_label": "3.3 diagnostics"
     },
     {
       "label": "agent_native_audit.md",
@@ -1723,6 +2218,114 @@
       "norm_label": "4. outstanding decisions / next steps"
     },
     {
+      "label": "India Research Corps (IRC) Student Tracking & Onboarding System",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "community": 6,
+      "norm_label": "india research corps (irc) student tracking & onboarding system",
+      "id": "readme_india_research_corps_irc_student_tracking_onboarding_system"
+    },
+    {
+      "label": "1. Operational Context & Rationale",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "community": 6,
+      "norm_label": "1. operational context & rationale",
+      "id": "readme_1_operational_context_rationale"
+    },
+    {
+      "label": "The India Research Corps (IRC) Program",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "community": 6,
+      "norm_label": "the india research corps (irc) program",
+      "id": "readme_the_india_research_corps_irc_program"
+    },
+    {
+      "label": "2. Detailed Edge-Case & Operational Logic Rules",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L22",
+      "community": 6,
+      "norm_label": "2. detailed edge-case & operational logic rules",
+      "id": "readme_2_detailed_edge_case_operational_logic_rules"
+    },
+    {
+      "label": "3. Funding & Impact Metrics Framework",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "community": 6,
+      "norm_label": "3. funding & impact metrics framework",
+      "id": "readme_3_funding_impact_metrics_framework"
+    },
+    {
+      "label": "3.1 Student Competency Growth Index",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "community": 6,
+      "norm_label": "3.1 student competency growth index",
+      "id": "readme_3_1_student_competency_growth_index"
+    },
+    {
+      "label": "3.2 Sponsor Alignment Index",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "community": 6,
+      "norm_label": "3.2 sponsor alignment index",
+      "id": "readme_3_2_sponsor_alignment_index"
+    },
+    {
+      "label": "3.3 Cohort Success Velocity",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "community": 6,
+      "norm_label": "3.3 cohort success velocity",
+      "id": "readme_3_3_cohort_success_velocity"
+    },
+    {
+      "label": "4. Master Google Sheet Schema",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "community": 6,
+      "norm_label": "4. master google sheet schema",
+      "id": "readme_4_master_google_sheet_schema"
+    },
+    {
+      "label": "5. Google Drive Folder & Permission Hierarchy",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "community": 6,
+      "norm_label": "5. google drive folder & permission hierarchy",
+      "id": "readme_5_google_drive_folder_permission_hierarchy"
+    },
+    {
+      "label": "6. How to Import the n8n Master Workflow",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "community": 6,
+      "norm_label": "6. how to import the n8n master workflow",
+      "id": "readme_6_how_to_import_the_n8n_master_workflow"
+    },
+    {
+      "label": "7. Graphify Database",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "community": 6,
+      "norm_label": "7. graphify database",
+      "id": "readme_7_graphify_database"
+    },
+    {
       "label": "call_gemini()",
       "file_type": "code",
       "source_file": "agents/academic_auditor.py",
@@ -1745,7 +2348,7 @@
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L14",
-      "community": 3,
+      "community": 10,
       "norm_label": "call_gemini()",
       "id": "agents_coordinator_agent_call_gemini"
     },
@@ -1844,7 +2447,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L1",
-      "community": 6,
+      "community": 37,
       "norm_label": "irc student onboarding & progress tracking system",
       "id": "readme_irc_student_onboarding_progress_tracking_system"
     },
@@ -1853,7 +2456,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L7",
-      "community": 6,
+      "community": 37,
       "norm_label": "1. master google sheet schema",
       "id": "readme_1_master_google_sheet_schema"
     },
@@ -1862,7 +2465,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L35",
-      "community": 6,
+      "community": 37,
       "norm_label": "2. google drive folder & permission hierarchy",
       "id": "readme_2_google_drive_folder_permission_hierarchy"
     },
@@ -1871,7 +2474,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L54",
-      "community": 6,
+      "community": 37,
       "norm_label": "3. asana cohort board structure",
       "id": "readme_3_asana_cohort_board_structure"
     },
@@ -1880,7 +2483,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L72",
-      "community": 6,
+      "community": 37,
       "norm_label": "4. how to import the n8n workflow",
       "id": "readme_4_how_to_import_the_n8n_workflow"
     }
@@ -1923,9 +2526,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor",
-      "target": "agents_llm_client",
-      "confidence_score": 1.0
+      "target": "agents_llm_client"
     },
     {
       "relation": "imports",
@@ -1934,9 +2537,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "calls",
@@ -1967,9 +2570,9 @@
       "source_file": "agents/academic_auditor.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_academic_auditor_audit_document",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "contains",
@@ -2008,9 +2611,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent",
-      "target": "agents_llm_client",
-      "confidence_score": 1.0
+      "target": "agents_llm_client"
     },
     {
       "relation": "imports",
@@ -2019,9 +2622,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "calls",
@@ -2052,9 +2655,9 @@
       "source_file": "agents/alignment_agent.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_alignment_agent_check_alignment",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "contains",
@@ -2133,9 +2736,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_llm_client",
-      "confidence_score": 1.0
+      "target": "agents_llm_client"
     },
     {
       "relation": "imports",
@@ -2144,9 +2747,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "calls",
@@ -2188,9 +2791,9 @@
       "source_file": "agents/coordinator_agent.py",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_coordinator_agent_generate_weekly_digest",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "contains",
@@ -2198,9 +2801,9 @@
       "source_file": "agents/llm_client.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_llm_client",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "contains",
@@ -2208,9 +2811,9 @@
       "source_file": "agents/llm_client.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_llm_client",
-      "target": "agents_llm_client_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_log_debug"
     },
     {
       "relation": "imports_from",
@@ -2219,9 +2822,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor",
-      "target": "agents_llm_client",
-      "confidence_score": 1.0
+      "target": "agents_llm_client"
     },
     {
       "relation": "imports_from",
@@ -2230,9 +2833,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent",
-      "target": "agents_llm_client",
-      "confidence_score": 1.0
+      "target": "agents_llm_client"
     },
     {
       "relation": "calls",
@@ -2241,9 +2844,9 @@
       "source_file": "agents/llm_client.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_llm_client_call_llm",
-      "target": "agents_llm_client_log_debug",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_log_debug"
     },
     {
       "relation": "imports",
@@ -2252,9 +2855,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "calls",
@@ -2263,9 +2866,9 @@
       "source_file": "agents/mentor_auditor.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_mentor_auditor_audit_mentor",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "imports",
@@ -2274,9 +2877,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "calls",
@@ -2285,9 +2888,9 @@
       "source_file": "agents/onboarding_agent.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_onboarding_agent_generate_baseline",
-      "target": "agents_llm_client_call_llm",
-      "confidence_score": 1.0
+      "target": "agents_llm_client_call_llm"
     },
     {
       "relation": "contains",
@@ -3665,6 +4268,16 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "source": "readme",
+      "target": "readme_india_research_corps_irc_workflow_automation_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
       "confidence_score": 1.0,
       "source": "readme",
       "target": "readme_irc_student_onboarding_progress_tracking_system"
@@ -3675,109 +4288,59 @@
       "source_file": "README.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_1_operational_context_rationale"
+      "source": "readme_india_research_corps_irc_workflow_automation_system",
+      "target": "readme_documentation_index",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L22",
+      "source_location": "L47",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_2_detailed_edge_case_operational_logic_rules"
+      "source": "readme_india_research_corps_irc_workflow_automation_system",
+      "target": "readme_graphify_code_graph",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L24",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_3_funding_impact_metrics_framework"
+      "source": "readme_india_research_corps_irc_workflow_automation_system",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L71",
+      "source_location": "L26",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_4_master_google_sheet_schema"
+      "source": "readme_quick_start",
+      "target": "readme_1_initialize_the_workspace",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L97",
+      "source_location": "L32",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_5_google_drive_folder_permission_hierarchy"
+      "source": "readme_quick_start",
+      "target": "readme_2_start_the_local_n8n_server",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L115",
+      "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_6_how_to_import_the_n8n_master_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
-      "target": "readme_7_graphify_database"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_1_operational_context_rationale",
-      "target": "readme_the_india_research_corps_irc_program"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_1_student_competency_growth_index"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_2_sponsor_alignment_index"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "README.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "readme_3_funding_impact_metrics_framework",
-      "target": "readme_3_3_cohort_success_velocity"
+      "source": "readme_quick_start",
+      "target": "readme_3_verify_local_cli_agents",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3882,12 +4445,572 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec",
+      "target": "docs_academic_metrics_spec_academic_metrics_rubric_specifications",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_academic_metrics_rubric_specifications",
+      "target": "docs_academic_metrics_spec_1_the_core_academic_triad",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_academic_metrics_rubric_specifications",
+      "target": "docs_academic_metrics_spec_2_sponsor_alignment_index_sai",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_academic_metrics_rubric_specifications",
+      "target": "docs_academic_metrics_spec_3_proportional_rigor_adjustments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_1_the_core_academic_triad",
+      "target": "docs_academic_metrics_spec_1_1_scientific_methodology_1_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_1_the_core_academic_triad",
+      "target": "docs_academic_metrics_spec_1_2_data_triangulation_1_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_1_the_core_academic_triad",
+      "target": "docs_academic_metrics_spec_1_3_academic_writing_clarity_1_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_2_sponsor_alignment_index_sai",
+      "target": "docs_academic_metrics_spec_2_1_evaluation_dual_checks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_3_proportional_rigor_adjustments",
+      "target": "docs_academic_metrics_spec_3_1_degree_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ACADEMIC_METRICS_SPEC.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "docs_academic_metrics_spec_3_proportional_rigor_adjustments",
+      "target": "docs_academic_metrics_spec_3_2_program_duration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_architectural_overview",
+      "target": "docs_architectural_overview_system_agent_architecture_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_system_agent_architecture_overview",
+      "target": "docs_architectural_overview_1_system_topology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_system_agent_architecture_overview",
+      "target": "docs_architectural_overview_2_component_directory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_system_agent_architecture_overview",
+      "target": "docs_architectural_overview_3_centralized_llm_client_llm_client_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_component_directory",
+      "target": "docs_architectural_overview_2_1_the_cli_router_irc_agent_py",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_component_directory",
+      "target": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_academic_auditor_py_progress_auditor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_alignment_agent_py_sponsor_alignment_analyst",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_coordinator_agent_py_state_coordinator_digest_compiler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_mentor_auditor_py_mentor_responsiveness_evaluator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_onboarding_agent_py_expert_baseline_generator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/ARCHITECTURAL_OVERVIEW.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "docs_architectural_overview_2_2_sub_agents_agents_package",
+      "target": "docs_architectural_overview_transcript_parser_py_transcript_task_extractor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook",
+      "target": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "target": "docs_edge_case_playbook_1_onboarding_drive_structure_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "target": "docs_edge_case_playbook_2_calendar_transcript_meeting_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "target": "docs_edge_case_playbook_3_document_auditing_feedback_memory_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "target": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_operational_edge_case_playbook",
+      "target": "docs_edge_case_playbook_5_reporting_archive_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_1_onboarding_drive_structure_rules",
+      "target": "docs_edge_case_playbook_rule_1_unique_workspace_folder_naming",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_1_onboarding_drive_structure_rules",
+      "target": "docs_edge_case_playbook_rule_2_inception_gate_rejection_fail_transition",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_2_calendar_transcript_meeting_rules",
+      "target": "docs_edge_case_playbook_rule_3_missing_meeting_transcripts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_2_calendar_transcript_meeting_rules",
+      "target": "docs_edge_case_playbook_rule_4_calendar_sync_filter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_2_calendar_transcript_meeting_rules",
+      "target": "docs_edge_case_playbook_rule_5_transcript_format_validation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_3_document_auditing_feedback_memory_rules",
+      "target": "docs_edge_case_playbook_rule_6_google_doc_edit_conflicts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_3_document_auditing_feedback_memory_rules",
+      "target": "docs_edge_case_playbook_rule_7_mentor_comment_retrieval",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_3_document_auditing_feedback_memory_rules",
+      "target": "docs_edge_case_playbook_rule_8_coordinator_persistent_memory_consolidation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "target": "docs_edge_case_playbook_rule_10_cumulative_delay_escalations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "target": "docs_edge_case_playbook_rule_11_gantt_chart_parsing_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "target": "docs_edge_case_playbook_rule_12_asana_board_clutter_prevention",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "target": "docs_edge_case_playbook_rule_13_transition_de_duplication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_4_timeline_scheduling_escalation_rules",
+      "target": "docs_edge_case_playbook_rule_9_asana_due_date_cascades",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L93",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_5_reporting_archive_rules",
+      "target": "docs_edge_case_playbook_rule_14_daily_admin_summary_email",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_5_reporting_archive_rules",
+      "target": "docs_edge_case_playbook_rule_15_database_size_pruning_csv_archiving",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/EDGE_CASE_PLAYBOOK.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "docs_edge_case_playbook_5_reporting_archive_rules",
+      "target": "docs_edge_case_playbook_rule_16_weekly_director_digest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_operations_manual",
+      "target": "docs_operations_manual_system_operations_databases_manual",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_operations_manual_system_operations_databases_manual",
+      "target": "docs_operations_manual_1_developer_setup_portability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "docs_operations_manual_system_operations_databases_manual",
+      "target": "docs_operations_manual_2_airtable_database_layout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "docs_operations_manual_system_operations_databases_manual",
+      "target": "docs_operations_manual_3_manual_run_troubleshooting_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_operations_manual_1_developer_setup_portability",
+      "target": "docs_operations_manual_1_1_local_n8n_portability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "docs_operations_manual_1_developer_setup_portability",
+      "target": "docs_operations_manual_1_2_zero_touch_agent_diagnostics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_operations_manual_2_airtable_database_layout",
+      "target": "docs_operations_manual_table_a_students",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "docs_operations_manual_2_airtable_database_layout",
+      "target": "docs_operations_manual_table_b_competency_logs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "docs_operations_manual_2_airtable_database_layout",
+      "target": "docs_operations_manual_table_c_daily_snapshots_metrics_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "docs_operations_manual_3_manual_run_troubleshooting_commands",
+      "target": "docs_operations_manual_3_1_run_document_audit_manually",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "docs_operations_manual_3_manual_run_troubleshooting_commands",
+      "target": "docs_operations_manual_3_2_run_weekly_digest_manually",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/OPERATIONS_MANUAL.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "docs_operations_manual_3_manual_run_troubleshooting_commands",
+      "target": "docs_operations_manual_3_3_diagnostics",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit",
-      "target": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow"
     },
     {
       "relation": "contains",
@@ -3895,9 +5018,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
-      "target": "docs_agent_native_audit_1_executive_summary",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_1_executive_summary"
     },
     {
       "relation": "contains",
@@ -3905,9 +5028,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
-      "target": "docs_agent_native_audit_2_core_principles_scorecard",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_2_core_principles_scorecard"
     },
     {
       "relation": "contains",
@@ -3915,9 +5038,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
-      "target": "docs_agent_native_audit_3_tool_workspace_design_analysis",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_3_tool_workspace_design_analysis"
     },
     {
       "relation": "contains",
@@ -3925,9 +5048,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_agent_native_architecture_audit_irc_workflow",
-      "target": "docs_agent_native_audit_4_recommendations_for_next_stage_development",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_4_recommendations_for_next_stage_development"
     },
     {
       "relation": "contains",
@@ -3935,9 +5058,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_2_core_principles_scorecard",
-      "target": "docs_agent_native_audit_2_1_parity_score_8_10",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_2_1_parity_score_8_10"
     },
     {
       "relation": "contains",
@@ -3945,9 +5068,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_2_core_principles_scorecard",
-      "target": "docs_agent_native_audit_2_2_granularity_primitives_score_9_10",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_2_2_granularity_primitives_score_9_10"
     },
     {
       "relation": "contains",
@@ -3955,9 +5078,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_2_core_principles_scorecard",
-      "target": "docs_agent_native_audit_2_3_composability_emergent_capability_score_9_10",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_2_3_composability_emergent_capability_score_9_10"
     },
     {
       "relation": "contains",
@@ -3965,9 +5088,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_2_core_principles_scorecard",
-      "target": "docs_agent_native_audit_2_4_accumulated_context_memory_score_10_10",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_2_4_accumulated_context_memory_score_10_10"
     },
     {
       "relation": "contains",
@@ -3975,9 +5098,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L44",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_3_tool_workspace_design_analysis",
-      "target": "docs_agent_native_audit_3_1_the_shared_workspace_pattern",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_3_1_the_shared_workspace_pattern"
     },
     {
       "relation": "contains",
@@ -3985,9 +5108,9 @@
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_agent_native_audit_3_tool_workspace_design_analysis",
-      "target": "docs_agent_native_audit_3_2_cardinal_sin_prevention_check",
-      "confidence_score": 1.0
+      "target": "docs_agent_native_audit_3_2_cardinal_sin_prevention_check"
     },
     {
       "relation": "contains",
@@ -4102,6 +5225,116 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_1_operational_context_rationale"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_2_detailed_edge_case_operational_logic_rules"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_3_funding_impact_metrics_framework"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_4_master_google_sheet_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_5_google_drive_folder_permission_hierarchy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_6_how_to_import_the_n8n_master_workflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_india_research_corps_irc_student_tracking_onboarding_system",
+      "target": "readme_7_graphify_database"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_1_operational_context_rationale",
+      "target": "readme_the_india_research_corps_irc_program"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_1_student_competency_growth_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_2_sponsor_alignment_index"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_3_funding_impact_metrics_framework",
+      "target": "readme_3_3_cohort_success_velocity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "CLAUDE.md",
       "source_location": "L34",
       "weight": 1.0,
@@ -4161,5 +5394,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7e47efb928feaaab6d39e425df7ab8b60a4a7c03"
+  "built_at_commit": "ee909e35b3bd2ccfc84d6aec8793c3ab856ed96f"
 }
