@@ -14,8 +14,9 @@ python setup_workspace.py
 
 ---
 
-## 2. API Key Configuration & Environment Inheritance
-To run the Gemini model queries, the Python sub-agents require access to `GEMINI_API_KEY`.
+## 2. API Key Configuration & setup wizard
+*   **Interactive Setup Wizard**: Running `python setup_workspace.py` automatically launches the interactive `configure_workspace.py` script. This wizard guides you or the user to enter local variables (coordinator email, Google Drive root folder) and select/store LLM API keys in a local `.env` file.
+*   **IDE MCP Connectors (Codex / Claude Desktop)**: If you are running as an agent in a client app (like Codex, Claude Desktop, or Claude Code), you can interact directly with Gmail and Google Drive using native MCP server plugins (Gmail MCP, Google Drive MCP). The setup wizard will detect these tools and configure you to use them for interactive tasks, while maintaining local `.env` values as fallbacks for background n8n runs.
 *   **Zero-Input Key Inheritance**: Since you (the agent) are running inside a shell that is already authenticated, **you must start the n8n server using your own command execution tool** (e.g. `run_command` or similar). 
 *   **Why this works**: By starting the n8n background task directly from your agentic environment, the spawned n8n process (and any command-line sub-processes it triggers daily) will **inherit your shell's environment variables** (including `GEMINI_API_KEY` or other authorization tokens). This completely eliminates the need for the user to manually configure or type API keys.
 
