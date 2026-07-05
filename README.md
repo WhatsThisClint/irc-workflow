@@ -139,3 +139,5 @@ All documentation is structured into specialized guides in this workspace:
 6.  **[Induction Modules Curriculum Reference](docs/INDUCTION_MODULES_REFERENCE.md)**: The six training modules (Methodology, Data Collection, etc.).
 7.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**: Bootstrap instructions for incoming AI coding agents.
 8.  **[GitHub Sharing & Workspace Onboarding Guide](docs/SHARING_GUIDE.md)**: Instructions on sharing, link-sharing workarounds, and MCP plugin authorization.
+9.  **[IRC Comprehensive Workflow & Node Reference Manual](docs/COMPREHENSIVE_WORKFLOW_MANUAL.md)**: An exhaustive database schema reference, sub-agent logic guide, and syllabus rubrics mapping.
+
