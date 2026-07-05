@@ -108,5 +108,15 @@
     "mtime": 1783213993.230804,
     "ast_hash": "109b9a2e3fea873b9c95d4714588962e",
     "semantic_hash": ""
+  },
+  ".agents/AGENTS.md": {
+    "mtime": 1783214097.724406,
+    "ast_hash": "e800173b7816ea9e25be3835c626025e",
+    "semantic_hash": ""
+  },
+  "TRIGGER_BOARD.md": {
+    "mtime": 1783214086.213717,
+    "ast_hash": "1d816f1b7cfe09c9dd12a208b21d1d5f",
+    "semantic_hash": ""
   }
 }

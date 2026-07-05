@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 22 files · ~13,399 words
+- 24 files · ~14,098 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 276 nodes · 287 edges · 50 communities (18 shown, 32 thin omitted)
+- 291 nodes · 300 edges · 51 communities (19 shown, 32 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ee909e35`
+- Built from commit: `96aef73a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -65,6 +65,7 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
+- [[_COMMUNITY_Community 50|Community 50]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `connections` - 36 edges
@@ -74,9 +75,9 @@
 5. `AI Agent Workspace Onboarding Guide` - 7 edges
 6. `India Research Corps Strategy` - 7 edges
 7. `2.2 Sub-Agents (`agents/` Package)` - 7 edges
-8. `Operational Edge Case Playbook` - 6 edges
-9. `4. Timeline, Scheduling, & Escalation Rules` - 6 edges
-10. `Agent-Native Architecture Audit: IRC Workflow` - 5 edges
+8. `1. Verbal Prompt Interception` - 6 edges
+9. `Operational Edge Case Playbook` - 6 edges
+10. `4. Timeline, Scheduling, & Escalation Rules` - 6 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `audit_document()` --calls--> `call_llm()`  [EXTRACTED]
@@ -93,7 +94,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (50 total, 32 thin omitted)
+## Communities (51 total, 32 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -117,11 +118,11 @@ Nodes (7): 1. Automated Setup & Diagnostics, 2. API Key Configuration, 2. API Ke
 
 ### Community 5 - "Community 5"
 Cohesion: 0.22
-Nodes (9): main, main, connections, AI Dynamic Phase Calculator, AI Weekly Digest Generator, Create Session 1 Task, Presentation Gate Overdue?, main (+1 more)
+Nodes (9): main, main, main, connections, AI Document Auditor, AI Dynamic Phase Calculator, AI Weekly Digest Generator, Create Session 1 Task (+1 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.17
-Nodes (12): 1. Operational Context & Rationale, 2. Detailed Edge-Case & Operational Logic Rules, 3.1 Student Competency Growth Index, 3.2 Sponsor Alignment Index, 3.3 Cohort Success Velocity, 3. Funding & Impact Metrics Framework, 4. Master Google Sheet Schema, 5. Google Drive Folder & Permission Hierarchy (+4 more)
+Cohesion: 0.22
+Nodes (8): 1.1 Trigger: Onboarding a Student, 1.2 Trigger: Running Student Audits, 1.3 Trigger: Checking Sponsor Alignment, 1.4 Trigger: Compiling Weekly Digest, 1.5 Trigger: Verifying Setup & Diagnostics, 1. Verbal Prompt Interception, 2. Path Environment Guard, Workspace Rules: AI Agent Trigger Mappings
 
 ### Community 7 - "Community 7"
 Cohesion: 0.33
@@ -147,6 +148,10 @@ Nodes (11): 1. Executive Summary, 2.1 Parity (Score: 8/10), 2.2 Granularity & Pr
 Cohesion: 0.83
 Nodes (3): call_gemini(), log_debug(), parse_transcript()
 
+### Community 16 - "Community 16"
+Cohesion: 0.33
+Nodes (5): Example 1: Onboarding, Example 2: Daily Check, ⚡ Examples of Interactions, IRC Agent Trigger Board, 🗺️ Verbal Trigger Mappings
+
 ### Community 18 - "Community 18"
 Cohesion: 0.15
 Nodes (12): 1. System Topology, 2.1 The CLI Router: `irc_agent.py`, 2.2 Sub-Agents (`agents/` Package), 2. Component Directory, 3. Centralized LLM Client: `llm_client.py`, `academic_auditor.py` (Progress Auditor), `alignment_agent.py` (Sponsor Alignment Analyst), `coordinator_agent.py` (State Coordinator & Digest Compiler) (+4 more)
@@ -160,28 +165,30 @@ Cohesion: 0.18
 Nodes (10): Cohort Dashboard & Reporting, Daily Monitor & Auditing, India Research Corps Strategy, Key metrics, Marketing, Onboarding Automation, Our approach, Target problem (+2 more)
 
 ### Community 37 - "Community 37"
-Cohesion: 0.15
-Nodes (12): 1. Initialize the Workspace, 1. Master Google Sheet Schema, 2. Google Drive Folder & Permission Hierarchy, 2. Start the Local n8n Server, 3. Asana Cohort Board Structure, 3. Verify Local CLI Agents, 4. How to Import the n8n Workflow, 🗺️ Documentation Index (+4 more)
+Cohesion: 0.08
+Nodes (24): 1. Initialize the Workspace, 1. Master Google Sheet Schema, 1. Operational Context & Rationale, 2. Detailed Edge-Case & Operational Logic Rules, 2. Google Drive Folder & Permission Hierarchy, 2. Start the Local n8n Server, 3.1 Student Competency Growth Index, 3.2 Sponsor Alignment Index (+16 more)
 
 ### Community 48 - "Community 48"
 Cohesion: 0.18
 Nodes (10): 1.1 Scientific Methodology (1-10), 1.2 Data Triangulation (1-10), 1.3 Academic Writing Clarity (1-10), 1. The Core Academic Triad, 2.1 Evaluation Dual Checks, 2. Sponsor Alignment Index (SAI), 3.1 Degree Level, 3.2 Program Duration (+2 more)
 
 ## Knowledge Gaps
-- **145 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+140 more)
+- **154 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+149 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 16`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`?**
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **What connects `name`, `nodes`, `main` to the rest of the system?**
-  _148 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
 - **Should `Community 10` be split into smaller, more focused modules?**
   _Cohesion score 0.13675213675213677 - nodes in this community are weakly interconnected._
+- **Should `Community 37` be split into smaller, more focused modules?**
+  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
