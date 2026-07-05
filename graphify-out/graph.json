@@ -133,16 +133,25 @@
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/llm_client.py",
-      "source_location": "L9",
+      "source_location": "L11",
       "id": "agents_llm_client_log_debug",
       "community": 10,
       "norm_label": "log_debug()"
     },
     {
+      "label": "send_request_with_retry()",
+      "file_type": "code",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L14",
+      "id": "agents_llm_client_send_request_with_retry",
+      "community": 10,
+      "norm_label": "send_request_with_retry()"
+    },
+    {
       "label": "call_llm()",
       "file_type": "code",
       "source_file": "agents/llm_client.py",
-      "source_location": "L12",
+      "source_location": "L28",
       "id": "agents_llm_client_call_llm",
       "community": 10,
       "norm_label": "call_llm()"
@@ -1255,6 +1264,879 @@
       "norm_label": "2. path environment guard"
     },
     {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L1",
+      "id": "inception_report_creation_skill",
+      "community": 53,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Inception Report Creation",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L6",
+      "id": "inception_report_creation_skill_inception_report_creation",
+      "community": 53,
+      "norm_label": "inception report creation"
+    },
+    {
+      "label": "Input",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L10",
+      "id": "inception_report_creation_skill_input",
+      "community": 53,
+      "norm_label": "input"
+    },
+    {
+      "label": "Workflow",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L21",
+      "id": "inception_report_creation_skill_workflow",
+      "community": 53,
+      "norm_label": "workflow"
+    },
+    {
+      "label": "Step 1: Identify the discipline and unit of analysis",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L23",
+      "id": "inception_report_creation_skill_step_1_identify_the_discipline_and_unit_of_analysis",
+      "community": 53,
+      "norm_label": "step 1: identify the discipline and unit of analysis"
+    },
+    {
+      "label": "Step 2: Build the conceptual model",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L26",
+      "id": "inception_report_creation_skill_step_2_build_the_conceptual_model",
+      "community": 53,
+      "norm_label": "step 2: build the conceptual model"
+    },
+    {
+      "label": "Step 3: Construct the literature framing",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L29",
+      "id": "inception_report_creation_skill_step_3_construct_the_literature_framing",
+      "community": 53,
+      "norm_label": "step 3: construct the literature framing"
+    },
+    {
+      "label": "Step 4: Design the study",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L32",
+      "id": "inception_report_creation_skill_step_4_design_the_study",
+      "community": 53,
+      "norm_label": "step 4: design the study"
+    },
+    {
+      "label": "Step 5: Build the work plan",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L35",
+      "id": "inception_report_creation_skill_step_5_build_the_work_plan",
+      "community": 53,
+      "norm_label": "step 5: build the work plan"
+    },
+    {
+      "label": "Step 6: Draft the data-collection instrument",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L38",
+      "id": "inception_report_creation_skill_step_6_draft_the_data_collection_instrument",
+      "community": 53,
+      "norm_label": "step 6: draft the data-collection instrument"
+    },
+    {
+      "label": "Step 7: Assemble the report",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L41",
+      "id": "inception_report_creation_skill_step_7_assemble_the_report",
+      "community": 53,
+      "norm_label": "step 7: assemble the report"
+    },
+    {
+      "label": "Step 8: Close with plain-language framing",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L44",
+      "id": "inception_report_creation_skill_step_8_close_with_plain_language_framing",
+      "community": 53,
+      "norm_label": "step 8: close with plain-language framing"
+    },
+    {
+      "label": "Output order",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L49",
+      "id": "inception_report_creation_skill_output_order",
+      "community": 53,
+      "norm_label": "output order"
+    },
+    {
+      "label": "Consistency check before finalizing",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L56",
+      "id": "inception_report_creation_skill_consistency_check_before_finalizing",
+      "community": 53,
+      "norm_label": "consistency check before finalizing"
+    },
+    {
+      "label": "conceptual_model_construction.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L1",
+      "id": "references_conceptual_model_construction",
+      "community": 57,
+      "norm_label": "conceptual_model_construction.md"
+    },
+    {
+      "label": "Conceptual Model Construction",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L1",
+      "id": "references_conceptual_model_construction_conceptual_model_construction",
+      "community": 57,
+      "norm_label": "conceptual model construction"
+    },
+    {
+      "label": "Step 1: Extract or assign the core constructs",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L5",
+      "id": "references_conceptual_model_construction_step_1_extract_or_assign_the_core_constructs",
+      "community": 57,
+      "norm_label": "step 1: extract or assign the core constructs"
+    },
+    {
+      "label": "Step 2: Classify variables",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L8",
+      "id": "references_conceptual_model_construction_step_2_classify_variables",
+      "community": 57,
+      "norm_label": "step 2: classify variables"
+    },
+    {
+      "label": "Step 3: State the hypothesized relationship explicitly",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L17",
+      "id": "references_conceptual_model_construction_step_3_state_the_hypothesized_relationship_explicitly",
+      "community": 57,
+      "norm_label": "step 3: state the hypothesized relationship explicitly"
+    },
+    {
+      "label": "Step 4: Ground every link in theory or name it as an assumption",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L27",
+      "id": "references_conceptual_model_construction_step_4_ground_every_link_in_theory_or_name_it_as_an_assumption",
+      "community": 57,
+      "norm_label": "step 4: ground every link in theory or name it as an assumption"
+    },
+    {
+      "label": "Step 5: Watch for the common failure modes proactively",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L30",
+      "id": "references_conceptual_model_construction_step_5_watch_for_the_common_failure_modes_proactively",
+      "community": 57,
+      "norm_label": "step 5: watch for the common failure modes proactively"
+    },
+    {
+      "label": "discipline_identification.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L1",
+      "id": "references_discipline_identification",
+      "community": 61,
+      "norm_label": "discipline_identification.md"
+    },
+    {
+      "label": "Discipline Identification \u2014 Construction Method",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L1",
+      "id": "references_discipline_identification_discipline_identification_construction_method",
+      "community": 61,
+      "norm_label": "discipline identification \u2014 construction method"
+    },
+    {
+      "label": "Step 1: Read the question for its phenomenon type",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L5",
+      "id": "references_discipline_identification_step_1_read_the_question_for_its_phenomenon_type",
+      "community": 61,
+      "norm_label": "step 1: read the question for its phenomenon type"
+    },
+    {
+      "label": "Step 2: Name the discipline specifically",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L11",
+      "id": "references_discipline_identification_step_2_name_the_discipline_specifically",
+      "community": 61,
+      "norm_label": "step 2: name the discipline specifically"
+    },
+    {
+      "label": "Step 3: Note what that discipline will hold the report to",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L14",
+      "id": "references_discipline_identification_step_3_note_what_that_discipline_will_hold_the_report_to",
+      "community": 61,
+      "norm_label": "step 3: note what that discipline will hold the report to"
+    },
+    {
+      "label": "Step 4: Flag interdisciplinary integration risk early",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L17",
+      "id": "references_discipline_identification_step_4_flag_interdisciplinary_integration_risk_early",
+      "community": 61,
+      "norm_label": "step 4: flag interdisciplinary integration risk early"
+    },
+    {
+      "label": "eli5_8020_framing.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L1",
+      "id": "references_eli5_8020_framing",
+      "community": 62,
+      "norm_label": "eli5_8020_framing.md"
+    },
+    {
+      "label": "ELI5 + 80/20 Framing \u2014 Construction Method",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L1",
+      "id": "references_eli5_8020_framing_eli5_80_20_framing_construction_method",
+      "community": 62,
+      "norm_label": "eli5 + 80/20 framing \u2014 construction method"
+    },
+    {
+      "label": "1. First-principles restatement",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L5",
+      "id": "references_eli5_8020_framing_1_first_principles_restatement",
+      "community": 62,
+      "norm_label": "1. first-principles restatement"
+    },
+    {
+      "label": "2. The 80/20 design choice",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L8",
+      "id": "references_eli5_8020_framing_2_the_80_20_design_choice",
+      "community": 62,
+      "norm_label": "2. the 80/20 design choice"
+    },
+    {
+      "label": "Output form",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L16",
+      "id": "references_eli5_8020_framing_output_form",
+      "community": 62,
+      "norm_label": "output form"
+    },
+    {
+      "label": "instrument_drafting.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L1",
+      "id": "references_instrument_drafting",
+      "community": 63,
+      "norm_label": "instrument_drafting.md"
+    },
+    {
+      "label": "Instrument Drafting",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L1",
+      "id": "references_instrument_drafting_instrument_drafting",
+      "community": 63,
+      "norm_label": "instrument drafting"
+    },
+    {
+      "label": "For interview/survey-based studies",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L5",
+      "id": "references_instrument_drafting_for_interview_survey_based_studies",
+      "community": 63,
+      "norm_label": "for interview/survey-based studies"
+    },
+    {
+      "label": "For remote-sensing/quantitative studies",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L11",
+      "id": "references_instrument_drafting_for_remote_sensing_quantitative_studies",
+      "community": 63,
+      "norm_label": "for remote-sensing/quantitative studies"
+    },
+    {
+      "label": "Always",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L14",
+      "id": "references_instrument_drafting_always",
+      "community": 63,
+      "norm_label": "always"
+    },
+    {
+      "label": "lit_review_construction.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L1",
+      "id": "references_lit_review_construction",
+      "community": 66,
+      "norm_label": "lit_review_construction.md"
+    },
+    {
+      "label": "Literature Review Construction \u2014 Argument Mode",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L1",
+      "id": "references_lit_review_construction_literature_review_construction_argument_mode",
+      "community": 66,
+      "norm_label": "literature review construction \u2014 argument mode"
+    },
+    {
+      "label": "What to produce",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L5",
+      "id": "references_lit_review_construction_what_to_produce",
+      "community": 66,
+      "norm_label": "what to produce"
+    },
+    {
+      "label": "Output form",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L12",
+      "id": "references_lit_review_construction_output_form",
+      "community": 66,
+      "norm_label": "output form"
+    },
+    {
+      "label": "report_template.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/report_template.md",
+      "source_location": "L1",
+      "id": "agents_skills_inception_report_creation_references_report_template_md_references_report_template",
+      "community": 68,
+      "norm_label": "report_template.md"
+    },
+    {
+      "label": "Inception Report Output Template",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/report_template.md",
+      "source_location": "L1",
+      "id": "references_report_template_inception_report_output_template",
+      "community": 68,
+      "norm_label": "inception report output template"
+    },
+    {
+      "label": "study_design_construction.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L1",
+      "id": "references_study_design_construction",
+      "community": 65,
+      "norm_label": "study_design_construction.md"
+    },
+    {
+      "label": "Study Design Construction",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L1",
+      "id": "references_study_design_construction_study_design_construction",
+      "community": 65,
+      "norm_label": "study design construction"
+    },
+    {
+      "label": "For institutional/social-science questions (e.g. WUC comparisons)",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L5",
+      "id": "references_study_design_construction_for_institutional_social_science_questions_e_g_wuc_comparisons",
+      "community": 65,
+      "norm_label": "for institutional/social-science questions (e.g. wuc comparisons)"
+    },
+    {
+      "label": "For biophysical/remote-sensing questions (e.g. NDVI source attribution)",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L12",
+      "id": "references_study_design_construction_for_biophysical_remote_sensing_questions_e_g_ndvi_source_attribution",
+      "community": 65,
+      "norm_label": "for biophysical/remote-sensing questions (e.g. ndvi source attribution)"
+    },
+    {
+      "label": "General",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L18",
+      "id": "references_study_design_construction_general",
+      "community": 65,
+      "norm_label": "general"
+    },
+    {
+      "label": "work_plan_construction.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L1",
+      "id": "references_work_plan_construction",
+      "community": 67,
+      "norm_label": "work_plan_construction.md"
+    },
+    {
+      "label": "Work Plan Construction",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L1",
+      "id": "references_work_plan_construction_work_plan_construction",
+      "community": 67,
+      "norm_label": "work plan construction"
+    },
+    {
+      "label": "Standard phase skeleton (adapt names/count of months to the specific study)",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L5",
+      "id": "references_work_plan_construction_standard_phase_skeleton_adapt_names_count_of_months_to_the_specific_study",
+      "community": 67,
+      "norm_label": "standard phase skeleton (adapt names/count of months to the specific study)"
+    },
+    {
+      "label": "Output form",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L13",
+      "id": "references_work_plan_construction_output_form",
+      "community": 67,
+      "norm_label": "output form"
+    },
+    {
+      "label": "SKILL.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L1",
+      "id": "inception_report_review_skill",
+      "community": 54,
+      "norm_label": "skill.md"
+    },
+    {
+      "label": "Inception Report Review",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L6",
+      "id": "inception_report_review_skill_inception_report_review",
+      "community": 54,
+      "norm_label": "inception report review"
+    },
+    {
+      "label": "Mode Selection",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L10",
+      "id": "inception_report_review_skill_mode_selection",
+      "community": 54,
+      "norm_label": "mode selection"
+    },
+    {
+      "label": "Mode A: Discipline / Methodology Recommendation",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L22",
+      "id": "inception_report_review_skill_mode_a_discipline_methodology_recommendation",
+      "community": 54,
+      "norm_label": "mode a: discipline / methodology recommendation"
+    },
+    {
+      "label": "Mode B: Inception Report Review",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L36",
+      "id": "inception_report_review_skill_mode_b_inception_report_review",
+      "community": 54,
+      "norm_label": "mode b: inception report review"
+    },
+    {
+      "label": "Step 1: Read the whole report first",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L40",
+      "id": "inception_report_review_skill_step_1_read_the_whole_report_first",
+      "community": 54,
+      "norm_label": "step 1: read the whole report first"
+    },
+    {
+      "label": "Step 2: Run the five-part analysis",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L43",
+      "id": "inception_report_review_skill_step_2_run_the_five_part_analysis",
+      "community": 54,
+      "norm_label": "step 2: run the five-part analysis"
+    },
+    {
+      "label": "Step 3: Summarize",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L57",
+      "id": "inception_report_review_skill_step_3_summarize",
+      "community": 54,
+      "norm_label": "step 3: summarize"
+    },
+    {
+      "label": "Step 4: ELI5 + Accountability Questions (always include, after the summary)",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L64",
+      "id": "inception_report_review_skill_step_4_eli5_accountability_questions_always_include_after_the_summary",
+      "community": 54,
+      "norm_label": "step 4: eli5 + accountability questions (always include, after the summary)"
+    },
+    {
+      "label": "Output format",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L75",
+      "id": "inception_report_review_skill_output_format",
+      "community": 54,
+      "norm_label": "output format"
+    },
+    {
+      "label": "Tone",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L78",
+      "id": "inception_report_review_skill_tone",
+      "community": 54,
+      "norm_label": "tone"
+    },
+    {
+      "label": "conceptual_model_review.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L1",
+      "id": "references_conceptual_model_review",
+      "community": 59,
+      "norm_label": "conceptual_model_review.md"
+    },
+    {
+      "label": "Conceptual Model Review",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L1",
+      "id": "references_conceptual_model_review_conceptual_model_review",
+      "community": 59,
+      "norm_label": "conceptual model review"
+    },
+    {
+      "label": "What to extract from the report",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L3",
+      "id": "references_conceptual_model_review_what_to_extract_from_the_report",
+      "community": 59,
+      "norm_label": "what to extract from the report"
+    },
+    {
+      "label": "Common gaps to check for",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L13",
+      "id": "references_conceptual_model_review_common_gaps_to_check_for",
+      "community": 59,
+      "norm_label": "common gaps to check for"
+    },
+    {
+      "label": "Justification check",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L20",
+      "id": "references_conceptual_model_review_justification_check",
+      "community": 59,
+      "norm_label": "justification check"
+    },
+    {
+      "label": "Output format for this section",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L26",
+      "id": "references_conceptual_model_review_output_format_for_this_section",
+      "community": 59,
+      "norm_label": "output format for this section"
+    },
+    {
+      "label": "disciplinary_lenses.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L1",
+      "id": "references_disciplinary_lenses",
+      "community": 60,
+      "norm_label": "disciplinary_lenses.md"
+    },
+    {
+      "label": "Disciplinary Lens \u2014 Identification Method",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L1",
+      "id": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "community": 60,
+      "norm_label": "disciplinary lens \u2014 identification method"
+    },
+    {
+      "label": "Step 1: Identify the discipline(s) from the report's own content",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L5",
+      "id": "references_disciplinary_lenses_step_1_identify_the_discipline_s_from_the_report_s_own_content",
+      "community": 60,
+      "norm_label": "step 1: identify the discipline(s) from the report's own content"
+    },
+    {
+      "label": "Step 2: Construct the lens for that discipline",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L14",
+      "id": "references_disciplinary_lenses_step_2_construct_the_lens_for_that_discipline",
+      "community": 60,
+      "norm_label": "step 2: construct the lens for that discipline"
+    },
+    {
+      "label": "Step 3: Handle interdisciplinary or unfamiliar work",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L21",
+      "id": "references_disciplinary_lenses_step_3_handle_interdisciplinary_or_unfamiliar_work",
+      "community": 60,
+      "norm_label": "step 3: handle interdisciplinary or unfamiliar work"
+    },
+    {
+      "label": "Worked examples (illustrative, not exhaustive)",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L25",
+      "id": "references_disciplinary_lenses_worked_examples_illustrative_not_exhaustive",
+      "community": 60,
+      "norm_label": "worked examples (illustrative, not exhaustive)"
+    },
+    {
+      "label": "eli5_accountability.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L1",
+      "id": "references_eli5_accountability",
+      "community": 58,
+      "norm_label": "eli5_accountability.md"
+    },
+    {
+      "label": "ELI5 + Accountability Questions \u2014 Method",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L1",
+      "id": "references_eli5_accountability_eli5_accountability_questions_method",
+      "community": 58,
+      "norm_label": "eli5 + accountability questions \u2014 method"
+    },
+    {
+      "label": "1. Apply the 80/20 principle",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L5",
+      "id": "references_eli5_accountability_1_apply_the_80_20_principle",
+      "community": 58,
+      "norm_label": "1. apply the 80/20 principle"
+    },
+    {
+      "label": "2. Apply first principles",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L14",
+      "id": "references_eli5_accountability_2_apply_first_principles",
+      "community": 58,
+      "norm_label": "2. apply first principles"
+    },
+    {
+      "label": "3. Write the ELI5 explanation",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L17",
+      "id": "references_eli5_accountability_3_write_the_eli5_explanation",
+      "community": 58,
+      "norm_label": "3. write the eli5 explanation"
+    },
+    {
+      "label": "4. Generate accountability questions",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L23",
+      "id": "references_eli5_accountability_4_generate_accountability_questions",
+      "community": 58,
+      "norm_label": "4. generate accountability questions"
+    },
+    {
+      "label": "Output shape",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L30",
+      "id": "references_eli5_accountability_output_shape",
+      "community": 58,
+      "norm_label": "output shape"
+    },
+    {
+      "label": "lit_review_critique.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L1",
+      "id": "references_lit_review_critique",
+      "community": 64,
+      "norm_label": "lit_review_critique.md"
+    },
+    {
+      "label": "Literature Review as Argument \u2014 Critique Guide",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L1",
+      "id": "references_lit_review_critique_literature_review_as_argument_critique_guide",
+      "community": 64,
+      "norm_label": "literature review as argument \u2014 critique guide"
+    },
+    {
+      "label": "Summary-mode vs. argument-mode",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L3",
+      "id": "references_lit_review_critique_summary_mode_vs_argument_mode",
+      "community": 64,
+      "norm_label": "summary-mode vs. argument-mode"
+    },
+    {
+      "label": "What argument-mode requires, checked one by one",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L10",
+      "id": "references_lit_review_critique_what_argument_mode_requires_checked_one_by_one",
+      "community": 64,
+      "norm_label": "what argument-mode requires, checked one by one"
+    },
+    {
+      "label": "Anticipated critique \u2014 what to generate",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L17",
+      "id": "references_lit_review_critique_anticipated_critique_what_to_generate",
+      "community": 64,
+      "norm_label": "anticipated critique \u2014 what to generate"
+    },
+    {
+      "label": "report_template.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/report_template.md",
+      "source_location": "L1",
+      "id": "agents_skills_inception_report_review_references_report_template_md_references_report_template",
+      "community": 69,
+      "norm_label": "report_template.md"
+    },
+    {
+      "label": "Inception Report Review \u2014 Output Template",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/report_template.md",
+      "source_location": "L1",
+      "id": "references_report_template_inception_report_review_output_template",
+      "community": 69,
+      "norm_label": "inception report review \u2014 output template"
+    },
+    {
+      "label": "scientific_tenets.md",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L1",
+      "id": "references_scientific_tenets",
+      "community": 56,
+      "norm_label": "scientific_tenets.md"
+    },
+    {
+      "label": "Scientific Tenets \u2014 Diagnostic Questions",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L1",
+      "id": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "community": 56,
+      "norm_label": "scientific tenets \u2014 diagnostic questions"
+    },
+    {
+      "label": "1. Objectivity",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L5",
+      "id": "references_scientific_tenets_1_objectivity",
+      "community": 56,
+      "norm_label": "1. objectivity"
+    },
+    {
+      "label": "2. Validity",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L11",
+      "id": "references_scientific_tenets_2_validity",
+      "community": 56,
+      "norm_label": "2. validity"
+    },
+    {
+      "label": "3. Reliability",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L17",
+      "id": "references_scientific_tenets_3_reliability",
+      "community": 56,
+      "norm_label": "3. reliability"
+    },
+    {
+      "label": "4. Transparency",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L22",
+      "id": "references_scientific_tenets_4_transparency",
+      "community": 56,
+      "norm_label": "4. transparency"
+    },
+    {
+      "label": "5. Replicability",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L28",
+      "id": "references_scientific_tenets_5_replicability",
+      "community": 56,
+      "norm_label": "5. replicability"
+    },
+    {
+      "label": "Common failure pattern to flag",
+      "file_type": "document",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L33",
+      "id": "references_scientific_tenets_common_failure_pattern_to_flag",
+      "community": 56,
+      "norm_label": "common failure pattern to flag"
+    },
+    {
       "label": "AGENT_ONBOARDING.md",
       "file_type": "document",
       "source_file": "AGENT_ONBOARDING.md",
@@ -1438,7 +2320,7 @@
       "label": "\u26a1 Quick Start",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L27",
+      "source_location": "L30",
       "id": "readme_quick_start",
       "community": 37,
       "norm_label": "\u26a1 quick start"
@@ -1447,7 +2329,7 @@
       "label": "1. Initialize the Workspace",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L29",
+      "source_location": "L32",
       "id": "readme_1_initialize_the_workspace",
       "community": 37,
       "norm_label": "1. initialize the workspace"
@@ -1456,7 +2338,7 @@
       "label": "2. Start the Local n8n Server",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L35",
+      "source_location": "L38",
       "id": "readme_2_start_the_local_n8n_server",
       "community": 37,
       "norm_label": "2. start the local n8n server"
@@ -1465,7 +2347,7 @@
       "label": "3. Verify Local CLI Agents",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L41",
+      "source_location": "L44",
       "id": "readme_3_verify_local_cli_agents",
       "community": 37,
       "norm_label": "3. verify local cli agents"
@@ -1474,7 +2356,7 @@
       "label": "\ud83e\udde0 Graphify Code Graph",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L53",
       "id": "readme_graphify_code_graph",
       "community": 37,
       "norm_label": "\ud83e\udde0 graphify code graph"
@@ -2054,6 +2936,87 @@
       "id": "docs_edge_case_playbook_rule_16_weekly_director_digest",
       "community": 3,
       "norm_label": "rule 16: weekly director digest"
+    },
+    {
+      "label": "INDUCTION_MODULES_REFERENCE.md",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L1",
+      "id": "docs_induction_modules_reference",
+      "community": 55,
+      "norm_label": "induction_modules_reference.md"
+    },
+    {
+      "label": "India Research Corps (IRC) Induction Modules Reference",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L1",
+      "id": "docs_induction_modules_reference_india_research_corps_irc_induction_modules_reference",
+      "community": 55,
+      "norm_label": "india research corps (irc) induction modules reference"
+    },
+    {
+      "label": "\ud83d\uddfa\ufe0f Syllabus Module Index",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L7",
+      "id": "docs_induction_modules_reference_syllabus_module_index",
+      "community": 55,
+      "norm_label": "\ud83d\uddfa\ufe0f syllabus module index"
+    },
+    {
+      "label": "1. Module One: The Scientific Method & Core Tenets",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L9",
+      "id": "docs_induction_modules_reference_1_module_one_the_scientific_method_core_tenets",
+      "community": 55,
+      "norm_label": "1. module one: the scientific method & core tenets"
+    },
+    {
+      "label": "2. Module Two: Building a Conceptual Model",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L19",
+      "id": "docs_induction_modules_reference_2_module_two_building_a_conceptual_model",
+      "community": 55,
+      "norm_label": "2. module two: building a conceptual model"
+    },
+    {
+      "label": "3. Module Three: Defining Your Research Scope",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L29",
+      "id": "docs_induction_modules_reference_3_module_three_defining_your_research_scope",
+      "community": 55,
+      "norm_label": "3. module three: defining your research scope"
+    },
+    {
+      "label": "4. Module Four: Deciding on the Right Research Methodology",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L34",
+      "id": "docs_induction_modules_reference_4_module_four_deciding_on_the_right_research_methodology",
+      "community": 55,
+      "norm_label": "4. module four: deciding on the right research methodology"
+    },
+    {
+      "label": "5. Module Five: Data Collection & Fieldwork",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L42",
+      "id": "docs_induction_modules_reference_5_module_five_data_collection_fieldwork",
+      "community": 55,
+      "norm_label": "5. module five: data collection & fieldwork"
+    },
+    {
+      "label": "6. Module Six: Analyzing Data & Reporting Findings",
+      "file_type": "document",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L48",
+      "id": "docs_induction_modules_reference_6_module_six_analyzing_data_reporting_findings",
+      "community": 55,
+      "norm_label": "6. module six: analyzing data & reporting findings"
     },
     {
       "label": "OPERATIONS_MANUAL.md",
@@ -3041,6 +4004,16 @@
       "target": "agents_llm_client_log_debug"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "agents_llm_client",
+      "target": "agents_llm_client_send_request_with_retry",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -3072,6 +4045,28 @@
       "confidence_score": 1.0,
       "source": "agents_llm_client_call_llm",
       "target": "agents_llm_client_log_debug"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "agents_llm_client_send_request_with_retry",
+      "target": "agents_llm_client_log_debug",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "agents/llm_client.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "agents_llm_client_call_llm",
+      "target": "agents_llm_client_send_request_with_retry",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports",
@@ -4223,9 +5218,9 @@
       "source_file": "test_integration.py",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_integration",
-      "target": "test_integration_log",
-      "confidence_score": 1.0
+      "target": "test_integration_log"
     },
     {
       "relation": "contains",
@@ -4233,9 +5228,9 @@
       "source_file": "test_integration.py",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_integration",
-      "target": "test_integration_main",
-      "confidence_score": 1.0
+      "target": "test_integration_main"
     },
     {
       "relation": "calls",
@@ -4244,9 +5239,9 @@
       "source_file": "test_integration.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "test_integration_main",
-      "target": "test_integration_log",
-      "confidence_score": 1.0
+      "target": "test_integration_log"
     },
     {
       "relation": "contains",
@@ -4457,6 +5452,816 @@
       "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
       "target": "agents_agents_1_6_trigger_master_morning_sync_do_everything"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill",
+      "target": "inception_report_creation_skill_inception_report_creation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_inception_report_creation",
+      "target": "inception_report_creation_skill_consistency_check_before_finalizing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_inception_report_creation",
+      "target": "inception_report_creation_skill_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_inception_report_creation",
+      "target": "inception_report_creation_skill_output_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_inception_report_creation",
+      "target": "inception_report_creation_skill_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_1_identify_the_discipline_and_unit_of_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_2_build_the_conceptual_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_3_construct_the_literature_framing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_4_design_the_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_5_build_the_work_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_6_draft_the_data_collection_instrument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_7_assemble_the_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/SKILL.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "inception_report_creation_skill_workflow",
+      "target": "inception_report_creation_skill_step_8_close_with_plain_language_framing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_conceptual_model_construction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_step_1_extract_or_assign_the_core_constructs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_step_2_classify_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_step_3_state_the_hypothesized_relationship_explicitly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_step_4_ground_every_link_in_theory_or_name_it_as_an_assumption",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/conceptual_model_construction.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "references_conceptual_model_construction_conceptual_model_construction",
+      "target": "references_conceptual_model_construction_step_5_watch_for_the_common_failure_modes_proactively",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_discipline_identification",
+      "target": "references_discipline_identification_discipline_identification_construction_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_discipline_identification_discipline_identification_construction_method",
+      "target": "references_discipline_identification_step_1_read_the_question_for_its_phenomenon_type",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "references_discipline_identification_discipline_identification_construction_method",
+      "target": "references_discipline_identification_step_2_name_the_discipline_specifically",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "references_discipline_identification_discipline_identification_construction_method",
+      "target": "references_discipline_identification_step_3_note_what_that_discipline_will_hold_the_report_to",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/discipline_identification.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "references_discipline_identification_discipline_identification_construction_method",
+      "target": "references_discipline_identification_step_4_flag_interdisciplinary_integration_risk_early",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_eli5_8020_framing",
+      "target": "references_eli5_8020_framing_eli5_80_20_framing_construction_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_eli5_8020_framing_eli5_80_20_framing_construction_method",
+      "target": "references_eli5_8020_framing_1_first_principles_restatement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "references_eli5_8020_framing_eli5_80_20_framing_construction_method",
+      "target": "references_eli5_8020_framing_2_the_80_20_design_choice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/eli5_8020_framing.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "references_eli5_8020_framing_eli5_80_20_framing_construction_method",
+      "target": "references_eli5_8020_framing_output_form",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_instrument_drafting",
+      "target": "references_instrument_drafting_instrument_drafting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "references_instrument_drafting_instrument_drafting",
+      "target": "references_instrument_drafting_always",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_instrument_drafting_instrument_drafting",
+      "target": "references_instrument_drafting_for_interview_survey_based_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/instrument_drafting.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "references_instrument_drafting_instrument_drafting",
+      "target": "references_instrument_drafting_for_remote_sensing_quantitative_studies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_lit_review_construction",
+      "target": "references_lit_review_construction_literature_review_construction_argument_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "references_lit_review_construction_literature_review_construction_argument_mode",
+      "target": "references_lit_review_construction_output_form",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/lit_review_construction.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_lit_review_construction_literature_review_construction_argument_mode",
+      "target": "references_lit_review_construction_what_to_produce",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/report_template.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_skills_inception_report_creation_references_report_template_md_references_report_template",
+      "target": "references_report_template_inception_report_output_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_study_design_construction",
+      "target": "references_study_design_construction_study_design_construction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "references_study_design_construction_study_design_construction",
+      "target": "references_study_design_construction_for_biophysical_remote_sensing_questions_e_g_ndvi_source_attribution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_study_design_construction_study_design_construction",
+      "target": "references_study_design_construction_for_institutional_social_science_questions_e_g_wuc_comparisons",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/study_design_construction.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "references_study_design_construction_study_design_construction",
+      "target": "references_study_design_construction_general",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_work_plan_construction",
+      "target": "references_work_plan_construction_work_plan_construction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "references_work_plan_construction_work_plan_construction",
+      "target": "references_work_plan_construction_output_form",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-creation/references/work_plan_construction.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_work_plan_construction_work_plan_construction",
+      "target": "references_work_plan_construction_standard_phase_skeleton_adapt_names_count_of_months_to_the_specific_study",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "inception_report_review_skill",
+      "target": "inception_report_review_skill_inception_report_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_inception_report_review",
+      "target": "inception_report_review_skill_mode_a_discipline_methodology_recommendation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_inception_report_review",
+      "target": "inception_report_review_skill_mode_b_inception_report_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_inception_report_review",
+      "target": "inception_report_review_skill_mode_selection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_output_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_step_1_read_the_whole_report_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_step_2_run_the_five_part_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_step_3_summarize",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_step_4_eli5_accountability_questions_always_include_after_the_summary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/SKILL.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "inception_report_review_skill_mode_b_inception_report_review",
+      "target": "inception_report_review_skill_tone",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_conceptual_model_review",
+      "target": "references_conceptual_model_review_conceptual_model_review",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "references_conceptual_model_review_conceptual_model_review",
+      "target": "references_conceptual_model_review_common_gaps_to_check_for",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "references_conceptual_model_review_conceptual_model_review",
+      "target": "references_conceptual_model_review_justification_check",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "references_conceptual_model_review_conceptual_model_review",
+      "target": "references_conceptual_model_review_output_format_for_this_section",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/conceptual_model_review.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "references_conceptual_model_review_conceptual_model_review",
+      "target": "references_conceptual_model_review_what_to_extract_from_the_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_disciplinary_lenses",
+      "target": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "target": "references_disciplinary_lenses_step_1_identify_the_discipline_s_from_the_report_s_own_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "target": "references_disciplinary_lenses_step_2_construct_the_lens_for_that_discipline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "target": "references_disciplinary_lenses_step_3_handle_interdisciplinary_or_unfamiliar_work",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/disciplinary_lenses.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "references_disciplinary_lenses_disciplinary_lens_identification_method",
+      "target": "references_disciplinary_lenses_worked_examples_illustrative_not_exhaustive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_eli5_accountability",
+      "target": "references_eli5_accountability_eli5_accountability_questions_method",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_eli5_accountability_eli5_accountability_questions_method",
+      "target": "references_eli5_accountability_1_apply_the_80_20_principle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "references_eli5_accountability_eli5_accountability_questions_method",
+      "target": "references_eli5_accountability_2_apply_first_principles",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "references_eli5_accountability_eli5_accountability_questions_method",
+      "target": "references_eli5_accountability_3_write_the_eli5_explanation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "references_eli5_accountability_eli5_accountability_questions_method",
+      "target": "references_eli5_accountability_4_generate_accountability_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/eli5_accountability.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "references_eli5_accountability_eli5_accountability_questions_method",
+      "target": "references_eli5_accountability_output_shape",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_lit_review_critique",
+      "target": "references_lit_review_critique_literature_review_as_argument_critique_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "references_lit_review_critique_literature_review_as_argument_critique_guide",
+      "target": "references_lit_review_critique_anticipated_critique_what_to_generate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "references_lit_review_critique_literature_review_as_argument_critique_guide",
+      "target": "references_lit_review_critique_summary_mode_vs_argument_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/lit_review_critique.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "references_lit_review_critique_literature_review_as_argument_critique_guide",
+      "target": "references_lit_review_critique_what_argument_mode_requires_checked_one_by_one",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/report_template.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "agents_skills_inception_report_review_references_report_template_md_references_report_template",
+      "target": "references_report_template_inception_report_review_output_template",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "references_scientific_tenets",
+      "target": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_1_objectivity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_2_validity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_3_reliability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_4_transparency",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_5_replicability",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/skills/inception-report-review/references/scientific_tenets.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "references_scientific_tenets_scientific_tenets_diagnostic_questions",
+      "target": "references_scientific_tenets_common_failure_pattern_to_flag",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -5351,6 +7156,86 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference",
+      "target": "docs_induction_modules_reference_india_research_corps_irc_induction_modules_reference",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_india_research_corps_irc_induction_modules_reference",
+      "target": "docs_induction_modules_reference_syllabus_module_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_1_module_one_the_scientific_method_core_tenets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_2_module_two_building_a_conceptual_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_3_module_three_defining_your_research_scope",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_4_module_four_deciding_on_the_right_research_methodology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_5_module_five_data_collection_fieldwork",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/INDUCTION_MODULES_REFERENCE.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "docs_induction_modules_reference_syllabus_module_index",
+      "target": "docs_induction_modules_reference_6_module_six_analyzing_data_reporting_findings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/OPERATIONS_MANUAL.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -5900,5 +7785,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "72df523e2a3ef34f6e8c1df0798cd8d80684c40b"
+  "built_at_commit": "4ddb76af5fa2817cefd1adbaec4d4b3019187986"
 }

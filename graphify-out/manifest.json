@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1783214273.3537295,
-    "ast_hash": "fd577abdd2db63917942b2e9a4b4f0ab",
+    "mtime": 1783260958.7454798,
+    "ast_hash": "52011130087ce6ecf82cd5b6bc25b789",
     "semantic_hash": ""
   },
   "docs/brainstorms/2026-07-04-irc-workflow-scaling-requirements.md": {
@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "agents/llm_client.py": {
-    "mtime": 1783192416.3219376,
-    "ast_hash": "e0dca27d05bf4acce4526b5f03b2d84e",
+    "mtime": 1783261006.219497,
+    "ast_hash": "360f468dd4f7a6973ed83646f2dc008c",
     "semantic_hash": ""
   },
   "docs/agent_native_audit.md": {
@@ -125,8 +125,98 @@
     "semantic_hash": ""
   },
   "test_integration.py": {
-    "mtime": 1783228232.7035928,
-    "ast_hash": "0bf50d405e79cc98545254030808ebf5",
+    "mtime": 1783261040.1025288,
+    "ast_hash": "99cff5200c3a9b1f2f3679cbc14a90fa",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/SKILL.md": {
+    "mtime": 1783260947.3821597,
+    "ast_hash": "65af8f81e5c892ecbcc2096f4ba40b64",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/conceptual_model_construction.md": {
+    "mtime": 1783260947.3851666,
+    "ast_hash": "4edea50092b351dc247517742a0b36b0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/discipline_identification.md": {
+    "mtime": 1783260947.3831673,
+    "ast_hash": "89602ddef5e6753c9449183d604a560c",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/eli5_8020_framing.md": {
+    "mtime": 1783260947.3851666,
+    "ast_hash": "4785b3687fac38403b24334b8ce842cc",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/instrument_drafting.md": {
+    "mtime": 1783260947.3851666,
+    "ast_hash": "6fc3c01693da9f5ff0b96c40cadac38b",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/lit_review_construction.md": {
+    "mtime": 1783260947.3831673,
+    "ast_hash": "3655f73dc62107f1f7d45edd398df284",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/report_template.md": {
+    "mtime": 1783260947.3841667,
+    "ast_hash": "36d22799870ab47be14be7e5411a77cd",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/study_design_construction.md": {
+    "mtime": 1783260947.3841667,
+    "ast_hash": "bf402ffd3520c7a01f4f21c0ce58a720",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-creation/references/work_plan_construction.md": {
+    "mtime": 1783260947.3841667,
+    "ast_hash": "a839031d21d16b90802a8477f50475b0",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/SKILL.md": {
+    "mtime": 1783260947.3871665,
+    "ast_hash": "2a51c5d168163a747d98d5354f507239",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/conceptual_model_review.md": {
+    "mtime": 1783260947.391202,
+    "ast_hash": "168c71a1b6c27fea5d9867c1271c5561",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/disciplinary_lenses.md": {
+    "mtime": 1783260947.3891692,
+    "ast_hash": "7480d398515fc4dfe3d10e78f066d513",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/eli5_accountability.md": {
+    "mtime": 1783260947.3871665,
+    "ast_hash": "e1e1f28136bd324fcb19a6f0863613a2",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/lit_review_critique.md": {
+    "mtime": 1783260947.3891692,
+    "ast_hash": "49177fdf5b9a97730ae7bd86b92c0bd4",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/report_template.md": {
+    "mtime": 1783260947.3901703,
+    "ast_hash": "8ff063c14c3278a7bad0364d4dd34e29",
+    "semantic_hash": ""
+  },
+  ".agents/skills/inception-report-review/references/scientific_tenets.md": {
+    "mtime": 1783260947.3881679,
+    "ast_hash": "2e285e4213b1675f4608af2e46a29a1c",
+    "semantic_hash": ""
+  },
+  "docs/INDUCTION_MODULES_REFERENCE.md": {
+    "mtime": 1783260953.1529286,
+    "ast_hash": "09ef7059be518248bb00d12252ba113e",
+    "semantic_hash": ""
+  },
+  "IRC _ Induction Module Deck Sept 2025.pdf": {
+    "mtime": 1783260848.242949,
+    "ast_hash": "78c9b40d8ca41acdc38a8737c6668b1f",
     "semantic_hash": ""
   }
 }

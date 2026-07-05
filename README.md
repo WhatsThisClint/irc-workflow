@@ -18,8 +18,11 @@ To make this workspace fully self-contained and accessible to developers and AI 
     *   Get step-by-step setup guides, SQLite portability data, Airtable database schemas, and manual CLI troubleshooting procedures.
 5.  **[Trigger Board & Semantic Intent Guide](docs/TRIGGER_BOARD_GUIDE.md)**
     *   Find trigger keywords, natural phrasing examples, and custom agent rules.
-6.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**
+6.  **[Induction Modules Curriculum Reference](docs/INDUCTION_MODULES_REFERENCE.md)**
+    *   Review core scientific tenets, conceptual model variables, and methodologies taught to students.
+7.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**
     *   The bootstrap specification file designed specifically for incoming AI coding agents to set up the repository automatically.
+
 
 
 ---

@@ -2,6 +2,8 @@ import os
 import sys
 import json
 import urllib.request
+import urllib.error
+import time
 
 sys.stdout.reconfigure(encoding='utf-8')
 sys.stderr.reconfigure(encoding='utf-8')
@@ -9,13 +11,26 @@ sys.stderr.reconfigure(encoding='utf-8')
 def log_debug(msg):
     print(f"[DEBUG] [LLMClient] {msg}", file=sys.stderr)
 
+def send_request_with_retry(req, timeout=60, retries=4):
+    delay = 3
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                return response.read().decode("utf-8")
+        except urllib.error.HTTPError as e:
+            if e.code in [429, 500, 502, 503] and attempt < retries - 1:
+                log_debug(f"HTTP {e.code} error on attempt {attempt+1}/{retries}. Retrying in {delay} seconds...")
+                time.sleep(delay)
+                delay *= 2
+            else:
+                raise e
+
 def call_llm(prompt, json_mode=False):
     provider = os.environ.get("LLM_PROVIDER")
     gemini_key = os.environ.get("GEMINI_API_KEY")
     anthropic_key = os.environ.get("ANTHROPIC_API_KEY")
     openai_key = os.environ.get("OPENAI_API_KEY")
     
-    # Auto-detection logic if provider not explicitly set
     if not provider:
         if gemini_key:
             provider = "gemini"
@@ -43,10 +58,10 @@ def call_llm(prompt, json_mode=False):
             payload["generationConfig"] = {"responseMimeType": "application/json"}
         
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=60) as response:
-            res_data = json.loads(response.read().decode("utf-8"))
-            return res_data["candidates"][0]["content"]["parts"][0]["text"]
-            
+        res_text = send_request_with_retry(req, timeout=60)
+        res_data = json.loads(res_text)
+        return res_data["candidates"][0]["content"]["parts"][0]["text"]
+        
     elif provider == "anthropic":
         if not anthropic_key:
             raise ValueError("ANTHROPIC_API_KEY is not set.")
@@ -70,10 +85,10 @@ def call_llm(prompt, json_mode=False):
         }
         
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=60) as response:
-            res_data = json.loads(response.read().decode("utf-8"))
-            return res_data["content"][0]["text"]
-            
+        res_text = send_request_with_retry(req, timeout=60)
+        res_data = json.loads(res_text)
+        return res_data["content"][0]["text"]
+        
     elif provider == "openai":
         if not openai_key:
             raise ValueError("OPENAI_API_KEY is not set.")
@@ -92,10 +107,9 @@ def call_llm(prompt, json_mode=False):
             payload["response_format"] = {"type": "json_object"}
             
         req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
-        with urllib.request.urlopen(req, timeout=60) as response:
-            res_data = json.loads(response.read().decode("utf-8"))
-            return res_data["choices"][0]["message"]["content"]
-
-            
+        res_text = send_request_with_retry(req, timeout=60)
+        res_data = json.loads(res_text)
+        return res_data["choices"][0]["message"]["content"]
+        
     else:
         raise ValueError(f"Unknown LLM provider: {provider}")
