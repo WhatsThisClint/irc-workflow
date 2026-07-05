@@ -1,7 +1,7 @@
 {
   "agents/academic_auditor.py": {
-    "mtime": 1783228289.1878304,
-    "ast_hash": "7aa3f443fc961c4ac9245cc49edfaa2b",
+    "mtime": 1783261549.9443986,
+    "ast_hash": "82648a137d5b0c0ae4ee59876a4d7b41",
     "semantic_hash": ""
   },
   "agents/alignment_agent.py": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "irc_agent.py": {
-    "mtime": 1783192631.9156756,
-    "ast_hash": "2a9ae403c40cbfc1f25da6f8b1e397a3",
+    "mtime": 1783261536.405419,
+    "ast_hash": "a3b598d78b68d19b161de02c5acb74a1",
     "semantic_hash": ""
   },
   "n8n/workflows/irc_master_workflow.json": {
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "setup_workspace.py": {
-    "mtime": 1783214320.348029,
-    "ast_hash": "246bd5183c8241312591a9e836f83415",
+    "mtime": 1783261516.9266846,
+    "ast_hash": "3c3206d41777d6b4169afce0a1103bd1",
     "semantic_hash": ""
   },
   "test_workflow_mock.py": {
@@ -125,8 +125,8 @@
     "semantic_hash": ""
   },
   "test_integration.py": {
-    "mtime": 1783261040.1025288,
-    "ast_hash": "99cff5200c3a9b1f2f3679cbc14a90fa",
+    "mtime": 1783261638.6793232,
+    "ast_hash": "4e5c62c6024856df5c8a81aa364bfa2d",
     "semantic_hash": ""
   },
   ".agents/skills/inception-report-creation/SKILL.md": {
@@ -217,6 +217,26 @@
   "IRC _ Induction Module Deck Sept 2025.pdf": {
     "mtime": 1783260848.242949,
     "ast_hash": "78c9b40d8ca41acdc38a8737c6668b1f",
+    "semantic_hash": ""
+  },
+  "docs/brainstorms/2026-07-05-workspace-configuration-and-resources-prd.md": {
+    "mtime": 1783261421.7925615,
+    "ast_hash": "14932dbf050708ad80cfef77a0a41c65",
+    "semantic_hash": ""
+  },
+  "agents/ingest_resources.py": {
+    "mtime": 1783261525.3409948,
+    "ast_hash": "f42ec32c0c06e78e48a28448ec712073",
+    "semantic_hash": ""
+  },
+  "configure_workspace.py": {
+    "mtime": 1783261513.778787,
+    "ast_hash": "91484947d61ed56c3b25b6cd0d317bc9",
+    "semantic_hash": ""
+  },
+  "docs/resources/session_rubrics.json": {
+    "mtime": 1783261663.5675645,
+    "ast_hash": "b49bdc3b1cb05586eea9e58cbff757fa",
     "semantic_hash": ""
   }
 }

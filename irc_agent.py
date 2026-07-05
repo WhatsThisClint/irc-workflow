@@ -25,7 +25,7 @@ def run_agent_script(script_path, args_list):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="IRC AI Workflow Agent Router")
-    parser.add_argument("--action", required=True, choices=["generate-baseline", "audit-doc", "parse-transcript", "calculate-phase", "check-alignment", "compile-weekly-digest"])
+    parser.add_argument("--action", required=True, choices=["generate-baseline", "audit-doc", "parse-transcript", "calculate-phase", "check-alignment", "compile-weekly-digest", "ingest-resources"])
     parser.add_argument("--student", help="Student name")
     parser.add_argument("--question", help="Research question")
     parser.add_argument("--problem", help="Problem statement")
@@ -38,6 +38,7 @@ if __name__ == "__main__":
     parser.add_argument("--cohort-start-date", help="Cohort start date YYYY-MM-DD")
     parser.add_argument("--sponsor-problem", help="Sponsor's problem statement for alignment check")
     parser.add_argument("--weekly-metrics-file", help="Path to weekly metrics JSON file")
+    parser.add_argument("--resources-dir", help="Path to resources directory for ingestion")
     
     args = parser.parse_args()
     log_debug(f"Routing action: {args.action}")
@@ -99,6 +100,15 @@ if __name__ == "__main__":
             print(output)
         except Exception as e:
             print(json.dumps({"error": str(e)}))
+            sys.exit(1)
+            
+    elif args.action == "ingest-resources":
+        try:
+            ingest_script = "agents/ingest_resources.py"
+            output = run_agent_script(ingest_script, [args.resources_dir])
+            print(output)
+        except Exception as e:
+            print(json.dumps({"status": "failed", "error": str(e)}))
             sys.exit(1)
             
     elif args.action == "audit-doc":

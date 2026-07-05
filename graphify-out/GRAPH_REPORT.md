@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 43 files · ~23,574 words
+- 47 files · ~25,297 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 408 nodes · 407 edges · 70 communities (35 shown, 35 thin omitted)
+- 433 nodes · 441 edges · 73 communities (38 shown, 35 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4ddb76af`
+- Built from commit: `f1e0523c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -85,10 +85,13 @@
 - [[_COMMUNITY_Community 67|Community 67]]
 - [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Community 69|Community 69]]
+- [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `connections` - 36 edges
-2. `call_llm()` - 13 edges
+2. `call_llm()` - 15 edges
 3. `CLAUDE.md (IRC Workflow Memory Bank)` - 12 edges
 4. `Workflow` - 9 edges
 5. `India Research Corps (IRC) Student Tracking & Onboarding System` - 8 edges
@@ -105,15 +108,15 @@
   agents/alignment_agent.py → agents/llm_client.py
 - `generate_weekly_digest()` --calls--> `call_llm()`  [EXTRACTED]
   agents/coordinator_agent.py → agents/llm_client.py
+- `classify_and_extract_rubrics()` --calls--> `call_llm()`  [EXTRACTED]
+  agents/ingest_resources.py → agents/llm_client.py
 - `audit_mentor()` --calls--> `call_llm()`  [EXTRACTED]
   agents/mentor_auditor.py → agents/llm_client.py
-- `generate_baseline()` --calls--> `call_llm()`  [EXTRACTED]
-  agents/onboarding_agent.py → agents/llm_client.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (70 total, 35 thin omitted)
+## Communities (73 total, 35 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -156,8 +159,8 @@ Cohesion: 0.70
 Nodes (4): check_command(), log(), main(), run_cmd()
 
 ### Community 10 - "Community 10"
-Cohesion: 0.13
-Nodes (19): audit_document(), call_gemini(), log_debug(), call_gemini(), check_alignment(), log_debug(), calculate_phase(), call_gemini() (+11 more)
+Cohesion: 0.12
+Nodes (24): audit_document(), call_gemini(), detect_session_number(), log_debug(), call_gemini(), check_alignment(), log_debug(), calculate_phase() (+16 more)
 
 ### Community 11 - "Community 11"
 Cohesion: 0.17
@@ -174,6 +177,10 @@ Nodes (5): Example 1: Onboarding, Example 2: Daily Check, ⚡ Examples of Intera
 ### Community 18 - "Community 18"
 Cohesion: 0.15
 Nodes (12): 1. System Topology, 2.1 The CLI Router: `irc_agent.py`, 2.2 Sub-Agents (`agents/` Package), 2. Component Directory, 3. Centralized LLM Client: `llm_client.py`, `academic_auditor.py` (Progress Auditor), `alignment_agent.py` (Sponsor Alignment Analyst), `coordinator_agent.py` (State Coordinator & Digest Compiler) (+4 more)
+
+### Community 20 - "Community 20"
+Cohesion: 0.22
+Nodes (8): 1. Overview, 2. User Experience & User Stories, 3.1 Interactive Workspace Setup Wizard (`configure_workspace.py`), 3.2 Adaptive Ingestion Engine (`ingest_resources.py`), 3.3 Session-Aware Academic Auditor Upgrade, 3. Product Features & Requirements, 4. Scope Boundaries & Exclusions, PRD: Zero-Friction Workspace Configuration & Dynamic Resource Ingestion
 
 ### Community 24 - "Community 24"
 Cohesion: 0.15
@@ -255,24 +262,32 @@ Nodes (3): Literature Review Construction — Argument Mode, Output form, What t
 Cohesion: 0.50
 Nodes (3): Output form, Standard phase skeleton (adapt names/count of months to the specific study), Work Plan Construction
 
+### Community 70 - "Community 70"
+Cohesion: 0.80
+Nodes (4): check_mcp_plugins(), get_input(), log(), main()
+
+### Community 71 - "Community 71"
+Cohesion: 0.40
+Nodes (4): 1, core_concepts, grading_rubrics, module_name
+
 ## Knowledge Gaps
-- **223 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+218 more)
+- **232 isolated node(s):** `module_name`, `core_concepts`, `grading_rubrics`, `name`, `nodes` (+227 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **What connects `name`, `nodes`, `main` to the rest of the system?**
-  _226 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`, `Community 72`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
+- **What connects `module_name`, `core_concepts`, `grading_rubrics` to the rest of the system?**
+  _235 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
   _Cohesion score 0.08695652173913043 - nodes in this community are weakly interconnected._
 - **Should `Community 10` be split into smaller, more focused modules?**
-  _Cohesion score 0.1349206349206349 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11586452762923351 - nodes in this community are weakly interconnected._
 - **Should `Community 37` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `Community 53` be split into smaller, more focused modules?**

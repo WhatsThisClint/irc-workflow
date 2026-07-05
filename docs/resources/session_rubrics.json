@@ -1,0 +1,15 @@
+{
+  "1": {
+    "module_name": "Scientific Method & Research Questions",
+    "core_concepts": [
+      "Falsifiable research questions",
+      "Hypothesis testing frameworks",
+      "Peer review principles"
+    ],
+    "grading_rubrics": [
+      "Must clearly define the primary research question.",
+      "Must state at least two testable hypotheses.",
+      "Must explain alignment with WELL Labs research domains."
+    ]
+  }
+}

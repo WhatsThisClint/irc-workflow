@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import subprocess
+import shutil
 
 def log(msg):
     print(f"\n[TEST] {msg}")
@@ -11,16 +12,50 @@ def main():
     temp_dir = os.path.join(workspace, "docs", "temp")
     os.makedirs(temp_dir, exist_ok=True)
     
-    report_file = os.path.join(temp_dir, "test_student_report.txt")
+    # Use session1 in filename to trigger dynamic rubric loading
+    report_file = os.path.join(temp_dir, "session1_student_report.txt")
     baseline_file = os.path.join(temp_dir, "test_baseline.txt")
     cheat_sheet_file = os.path.join(temp_dir, "cheat_sheet.md")
     memory_file = os.path.join(temp_dir, "memory.json")
     metrics_file = os.path.join(temp_dir, "test_weekly_metrics.json")
+    mock_resources_dir = os.path.join(temp_dir, "mock_resources")
     
     try:
-        # 1. Write Mock Student Report & Baseline
+        # 1. Run Setup Wizard in Silent Mode
+        log("Testing configure_workspace.py Setup Wizard...")
+        cmd_config = [sys.executable, os.path.join(workspace, "configure_workspace.py"), "--silent"]
+        res_config = subprocess.run(cmd_config, capture_output=True, text=True, encoding="utf-8")
+        assert res_config.returncode == 0, "Configuration wizard failed in silent mode"
+        print("Setup Wizard test passed.")
+
+        # 2. Run Resource Ingestion Engine on Mock Resources
+        log("Testing Resource Ingestion Engine...")
+        os.makedirs(mock_resources_dir, exist_ok=True)
+        mock_resource_file = os.path.join(mock_resources_dir, "session1_slides_transcript.txt")
+        with open(mock_resource_file, "w", encoding="utf-8") as f:
+            f.write("IRC Induction Training - Session 1 - The Scientific Method and Research Questions\n"
+                    "Core concept: formulating falsifiable research questions.\n"
+                    "Rubric criteria: must define primary research question, and list testable hypotheses.")
+        
+        env = os.environ.copy()
+        env["PYTHONPATH"] = workspace
+        
+        cmd_ingest = [
+            sys.executable,
+            os.path.join(workspace, "irc_agent.py"),
+            "--action", "ingest-resources",
+            "--resources-dir", mock_resources_dir
+        ]
+        res_ingest = subprocess.run(cmd_ingest, capture_output=True, text=True, encoding="utf-8", env=env)
+        print(f"Ingestion Exit Code: {res_ingest.returncode}")
+        
+        # Ingestion may be rate limited or succeed. Ensure it does not crash.
+        assert res_ingest.returncode == 0 or "429" in res_ingest.stdout or "429" in res_ingest.stderr, "Resource Ingestion crashed"
+        print("Resource Ingestion Engine test completed.")
+
+        # 3. Write Mock Student Report & Baseline
         log("Preparing mock student report and baseline files...")
-        student_report_content = """# Inception Report Draft - Rahul
+        student_report_content = """# Session 1 Reflection - Rahul
 ## Methodology Design
 I plan to survey 80 households in Anekal taluk.
 I will measure static water levels in 15 borewells bi-weekly using a water level dip meter.
@@ -48,7 +83,7 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
         with open(cheat_sheet_file, "w", encoding="utf-8") as f:
             f.write(cheat_sheet_content)
 
-        # 2. Run Onboarding & Document Audit (Full Pipeline)
+        # 4. Run Onboarding & Document Audit (Full Pipeline)
         log("Executing Full Document Audit Pipeline (audit-doc)...")
         cmd_audit = [
             sys.executable,
@@ -61,9 +96,6 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
             "--duration-months", "8",
             "--sponsor-problem", "Determining water table recharge bottlenecks and designing rainwater harvesting systems for peri-urban borewells."
         ]
-        
-        env = os.environ.copy()
-        env["PYTHONPATH"] = workspace
         
         res_audit = subprocess.run(cmd_audit, capture_output=True, text=True, encoding="utf-8", env=env)
         print(f"Exit Code: {res_audit.returncode}")
@@ -87,7 +119,7 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
                 assert "scientific_methodology" in audit_data, "Methodology score missing"
                 assert "cheat_sheet" in audit_data, "Compiled cheat sheet missing"
                 
-                # 3. Verify Persistent Memory & Compression
+                # 5. Verify Persistent Memory & Compression
                 log("Verifying memory tracking and accumulation...")
                 assert os.path.exists(memory_file), "Memory file memory.json was not created"
                 with open(memory_file, "r", encoding="utf-8") as f:
@@ -98,7 +130,7 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
             else:
                 log(f"WARNING: Sub-agent report compiled fallback state: {audit_data.get('error')}")
         
-        # 4. Test Weekly Digest Compilation
+        # 6. Test Weekly Digest Compilation
         log("Executing Weekly Director Digest Compile...")
         mock_weekly_snapshots = [
             {
@@ -142,7 +174,6 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
             print("Weekly digest verified successfully.")
             
         log("ALL TEST CASES PASSED OR SAFELY BYPASSED DUE TO API RATE LIMITS!")
-
         
     finally:
         # Cleanup temp files
@@ -153,6 +184,11 @@ Our goal is to identify if the current monsoon recharge is lagging behind househ
                     os.remove(temp_file)
                 except Exception as e:
                     print(f"Error removing {temp_file}: {e}")
+        if os.path.exists(mock_resources_dir):
+            try:
+                shutil.rmtree(mock_resources_dir)
+            except Exception as e:
+                print(f"Error removing {mock_resources_dir}: {e}")
         
 if __name__ == "__main__":
     main()

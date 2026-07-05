@@ -115,6 +115,14 @@ def main():
     else:
         log("Verified: Ponytail CLI is active and available.")
 
+    # 9. Invoke Workspace Configuration Wizard
+    log("Invoking Workspace Configuration Wizard...")
+    config_script = os.path.join(workspace_dir, "configure_workspace.py")
+    if os.path.exists(config_script):
+        cmd_args = [sys.executable, config_script]
+        if "--silent" in sys.argv:
+            cmd_args.append("--silent")
+        subprocess.run(cmd_args)
 
     log("\n[SUCCESS] Setup complete! The workspace is fully ready for AI execution.")
     log("To launch the local n8n instance, run:")
