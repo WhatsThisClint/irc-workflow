@@ -22,6 +22,9 @@ To make this workspace fully self-contained and accessible to developers and AI 
     *   Review core scientific tenets, conceptual model variables, and methodologies taught to students.
 7.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**
     *   The bootstrap specification file designed specifically for incoming AI coding agents to set up the repository automatically.
+8.  **[GitHub Sharing & Workspace Onboarding Guide](docs/SHARING_GUIDE.md)**
+    *   Instructions on how to share the private repository, use link-sharing workarounds, and configure native MCP connectors.
+
 
 
 
