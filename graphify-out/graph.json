@@ -1210,10 +1210,19 @@
       "norm_label": "1.5 trigger: verifying setup & diagnostics"
     },
     {
+      "label": "1.6 Trigger: Master Morning Sync (Do Everything)",
+      "file_type": "document",
+      "source_file": ".agents/AGENTS.md",
+      "source_location": "L60",
+      "id": "agents_agents_1_6_trigger_master_morning_sync_do_everything",
+      "community": 6,
+      "norm_label": "1.6 trigger: master morning sync (do everything)"
+    },
+    {
       "label": "2. Path Environment Guard",
       "file_type": "document",
       "source_file": ".agents/AGENTS.md",
-      "source_location": "L62",
+      "source_location": "L71",
       "id": "agents_agents_2_path_environment_guard",
       "community": 6,
       "norm_label": "2. path environment guard"
@@ -1573,7 +1582,7 @@
       "label": "\u26a1 Examples of Interactions",
       "file_type": "document",
       "source_file": "TRIGGER_BOARD.md",
-      "source_location": "L23",
+      "source_location": "L25",
       "id": "trigger_board_examples_of_interactions",
       "community": 16,
       "norm_label": "\u26a1 examples of interactions"
@@ -1582,7 +1591,7 @@
       "label": "Example 1: Onboarding",
       "file_type": "document",
       "source_file": "TRIGGER_BOARD.md",
-      "source_location": "L25",
+      "source_location": "L27",
       "id": "trigger_board_example_1_onboarding",
       "community": 16,
       "norm_label": "example 1: onboarding"
@@ -1591,7 +1600,7 @@
       "label": "Example 2: Daily Check",
       "file_type": "document",
       "source_file": "TRIGGER_BOARD.md",
-      "source_location": "L29",
+      "source_location": "L31",
       "id": "trigger_board_example_2_daily_check",
       "community": 16,
       "norm_label": "example 2: daily check"
@@ -4183,9 +4192,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents",
-      "target": "agents_agents_workspace_rules_ai_agent_trigger_mappings",
-      "confidence_score": 1.0
+      "target": "agents_agents_workspace_rules_ai_agent_trigger_mappings"
     },
     {
       "relation": "contains",
@@ -4193,9 +4202,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_workspace_rules_ai_agent_trigger_mappings",
-      "target": "agents_agents_1_verbal_prompt_interception",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_verbal_prompt_interception"
     },
     {
       "relation": "contains",
@@ -4203,9 +4212,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_workspace_rules_ai_agent_trigger_mappings",
-      "target": "agents_agents_2_path_environment_guard",
-      "confidence_score": 1.0
+      "target": "agents_agents_2_path_environment_guard"
     },
     {
       "relation": "contains",
@@ -4213,9 +4222,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
-      "target": "agents_agents_1_1_trigger_onboarding_a_student",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_1_trigger_onboarding_a_student"
     },
     {
       "relation": "contains",
@@ -4223,9 +4232,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
-      "target": "agents_agents_1_2_trigger_running_student_audits",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_2_trigger_running_student_audits"
     },
     {
       "relation": "contains",
@@ -4233,9 +4242,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
-      "target": "agents_agents_1_3_trigger_checking_sponsor_alignment",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_3_trigger_checking_sponsor_alignment"
     },
     {
       "relation": "contains",
@@ -4243,9 +4252,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
-      "target": "agents_agents_1_4_trigger_compiling_weekly_digest",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_4_trigger_compiling_weekly_digest"
     },
     {
       "relation": "contains",
@@ -4253,8 +4262,18 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception",
-      "target": "agents_agents_1_5_trigger_verifying_setup_diagnostics",
+      "target": "agents_agents_1_5_trigger_verifying_setup_diagnostics"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/AGENTS.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "agents_agents_1_verbal_prompt_interception",
+      "target": "agents_agents_1_6_trigger_master_morning_sync_do_everything",
       "confidence_score": 1.0
     },
     {
@@ -4663,9 +4682,9 @@
       "source_file": "TRIGGER_BOARD.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "trigger_board",
-      "target": "trigger_board_irc_agent_trigger_board",
-      "confidence_score": 1.0
+      "target": "trigger_board_irc_agent_trigger_board"
     },
     {
       "relation": "contains",
@@ -4673,9 +4692,9 @@
       "source_file": "TRIGGER_BOARD.md",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "trigger_board_irc_agent_trigger_board",
-      "target": "trigger_board_examples_of_interactions",
-      "confidence_score": 1.0
+      "target": "trigger_board_examples_of_interactions"
     },
     {
       "relation": "contains",
@@ -4683,9 +4702,9 @@
       "source_file": "TRIGGER_BOARD.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "trigger_board_irc_agent_trigger_board",
-      "target": "trigger_board_verbal_trigger_mappings",
-      "confidence_score": 1.0
+      "target": "trigger_board_verbal_trigger_mappings"
     },
     {
       "relation": "contains",
@@ -4693,9 +4712,9 @@
       "source_file": "TRIGGER_BOARD.md",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "trigger_board_examples_of_interactions",
-      "target": "trigger_board_example_1_onboarding",
-      "confidence_score": 1.0
+      "target": "trigger_board_example_1_onboarding"
     },
     {
       "relation": "contains",
@@ -4703,9 +4722,9 @@
       "source_file": "TRIGGER_BOARD.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "trigger_board_examples_of_interactions",
-      "target": "trigger_board_example_2_daily_check",
-      "confidence_score": 1.0
+      "target": "trigger_board_example_2_daily_check"
     },
     {
       "relation": "contains",
@@ -5659,5 +5678,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "96aef73a5c168105317ca9279a20424c4b118670"
+  "built_at_commit": "a5f2a054f51799c5b00afed870c8fdd3bce16ada"
 }

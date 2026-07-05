@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 24 files · ~14,098 words
+- 24 files · ~14,224 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 291 nodes · 300 edges · 51 communities (19 shown, 32 thin omitted)
+- 292 nodes · 301 edges · 51 communities (19 shown, 32 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `96aef73a`
+- Built from commit: `a5f2a054`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -72,10 +72,10 @@
 2. `call_llm()` - 12 edges
 3. `CLAUDE.md (IRC Workflow Memory Bank)` - 12 edges
 4. `India Research Corps (IRC) Student Tracking & Onboarding System` - 8 edges
-5. `AI Agent Workspace Onboarding Guide` - 7 edges
-6. `India Research Corps Strategy` - 7 edges
-7. `2.2 Sub-Agents (`agents/` Package)` - 7 edges
-8. `1. Verbal Prompt Interception` - 6 edges
+5. `1. Verbal Prompt Interception` - 7 edges
+6. `AI Agent Workspace Onboarding Guide` - 7 edges
+7. `India Research Corps Strategy` - 7 edges
+8. `2.2 Sub-Agents (`agents/` Package)` - 7 edges
 9. `Operational Edge Case Playbook` - 6 edges
 10. `4. Timeline, Scheduling, & Escalation Rules` - 6 edges
 
@@ -121,8 +121,8 @@ Cohesion: 0.22
 Nodes (9): main, main, main, connections, AI Document Auditor, AI Dynamic Phase Calculator, AI Weekly Digest Generator, Create Session 1 Task (+1 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.22
-Nodes (8): 1.1 Trigger: Onboarding a Student, 1.2 Trigger: Running Student Audits, 1.3 Trigger: Checking Sponsor Alignment, 1.4 Trigger: Compiling Weekly Digest, 1.5 Trigger: Verifying Setup & Diagnostics, 1. Verbal Prompt Interception, 2. Path Environment Guard, Workspace Rules: AI Agent Trigger Mappings
+Cohesion: 0.20
+Nodes (9): 1.1 Trigger: Onboarding a Student, 1.2 Trigger: Running Student Audits, 1.3 Trigger: Checking Sponsor Alignment, 1.4 Trigger: Compiling Weekly Digest, 1.5 Trigger: Verifying Setup & Diagnostics, 1.6 Trigger: Master Morning Sync (Do Everything), 1. Verbal Prompt Interception, 2. Path Environment Guard (+1 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.33
@@ -173,7 +173,7 @@ Cohesion: 0.18
 Nodes (10): 1.1 Scientific Methodology (1-10), 1.2 Data Triangulation (1-10), 1.3 Academic Writing Clarity (1-10), 1. The Core Academic Triad, 2.1 Evaluation Dual Checks, 2. Sponsor Alignment Index (SAI), 3.1 Degree Level, 3.2 Program Duration (+2 more)
 
 ## Knowledge Gaps
-- **154 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+149 more)
+- **155 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+150 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -181,9 +181,9 @@ Nodes (10): 1.1 Scientific Methodology (1-10), 1.2 Data Triangulation (1-10), 1.
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`?**
-  _High betweenness centrality (0.067) - this node is a cross-community bridge._
+  _High betweenness centrality (0.066) - this node is a cross-community bridge._
 - **What connects `name`, `nodes`, `main` to the rest of the system?**
-  _157 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _158 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**

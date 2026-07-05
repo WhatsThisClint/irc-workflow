@@ -57,7 +57,16 @@ If the user types any of the following verbal triggers in the chat interface, yo
        python setup_workspace.py
        ```
 
+### 1.6 Trigger: Master Morning Sync (Do Everything)
+*   **Prompt Patterns**: `run morning checks`, `do everything`, `morning sync`, `check cohort updates`, `/morning-sync`
+*   **Action**:
+    1. Start the n8n background task if not running.
+    2. Check the active student profiles registered in `docs/temp/` or query local logs.
+    3. Run `python irc_agent.py --action audit-doc` for each student found to update metrics, check alignment, extract feedback, and update cheat sheets.
+    4. Compile the overall logs and render an "Executive Cohort Dashboard" summarizing each student's current phase, delays, academic scores, and warning status.
+
 ---
+
 
 ## 2. Path Environment Guard
 Whenever you execute any Python agent scripts:
