@@ -4,9 +4,10 @@ This file defines the interactive behavioral rules for AI coding agents (Antigra
 
 ---
 
-## 1. Verbal Prompt Interception
+## 1. Verbal Prompt Interception & Semantic Intent Matching
 
-If the user types any of the following verbal triggers in the chat interface, you must immediately execute the corresponding shell commands on their behalf. Do not ask for further confirmation—simply identify the required arguments, run the command using your terminal tool, and present the structured result.
+*   **Semantic Intent Rule**: Prioritize intent matching over exact phrase matching. If a user or assistant makes a request that semantically maps to any of the actions listed below (e.g., "grade the draft for Priya Sen" maps to Auditing, or "sync the cohort logs" maps to Morning Sync), translate it to the appropriate CLI execution immediately. Do not block or ask for confirmation—identify the necessary arguments, run the script using your command tool, and display the result.
+
 
 ### 1.1 Trigger: Onboarding a Student
 *   **Prompt Patterns**: `onboard student [Name]`, `start onboarding for [Name]`, `/onboard [Name]`
