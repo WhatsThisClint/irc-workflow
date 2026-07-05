@@ -90,6 +90,31 @@ def main():
         sys.exit(1)
     else:
         log("All critical workflow files and sub-agents verified successfully.")
+        
+    # 7. Check and Install Graphify CLI
+    if not check_command("graphify"):
+        log("Graphify CLI not found. Attempting global npm installation...")
+        installed, _, err = run_cmd("npm install -g @compound-engineering/graphify")
+        if installed:
+            log("Successfully installed Graphify CLI globally.")
+        else:
+            log(f"WARNING: Global Graphify installation failed: {err}")
+            log("--> You may need to run 'npm install -g @compound-engineering/graphify' manually or install the Graphify MCP plugin.")
+    else:
+        log("Verified: Graphify CLI is active and available.")
+
+    # 8. Check and Install Ponytail CLI
+    if not check_command("ponytail"):
+        log("Ponytail CLI not found. Attempting global npm installation...")
+        installed, _, err = run_cmd("npm install -g @compound-engineering/ponytail")
+        if installed:
+            log("Successfully installed Ponytail CLI globally.")
+        else:
+            log(f"WARNING: Global Ponytail installation failed: {err}")
+            log("--> You may need to install the Ponytail MCP plugin inside your IDE.")
+    else:
+        log("Verified: Ponytail CLI is active and available.")
+
 
     log("\n[SUCCESS] Setup complete! The workspace is fully ready for AI execution.")
     log("To launch the local n8n instance, run:")
