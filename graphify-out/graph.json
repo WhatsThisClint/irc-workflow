@@ -16,7 +16,7 @@
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/academic_auditor.py",
-      "source_location": "L5",
+      "source_location": "L7",
       "id": "agents_academic_auditor_log_debug",
       "community": 10,
       "norm_label": "log_debug()"
@@ -25,7 +25,7 @@
       "label": "audit_document()",
       "file_type": "code",
       "source_file": "agents/academic_auditor.py",
-      "source_location": "L8",
+      "source_location": "L10",
       "id": "agents_academic_auditor_audit_document",
       "community": 10,
       "norm_label": "audit_document()"
@@ -70,7 +70,7 @@
       "label": "log_debug()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L7",
+      "source_location": "L9",
       "id": "agents_coordinator_agent_log_debug",
       "community": 10,
       "norm_label": "log_debug()"
@@ -79,7 +79,7 @@
       "label": "extract_coordinator_feedback()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L11",
+      "source_location": "L13",
       "id": "agents_coordinator_agent_extract_coordinator_feedback",
       "community": 10,
       "norm_label": "extract_coordinator_feedback()"
@@ -88,7 +88,7 @@
       "label": "calculate_phase()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "id": "agents_coordinator_agent_calculate_phase",
       "community": 10,
       "norm_label": "calculate_phase()"
@@ -97,7 +97,7 @@
       "label": "compile_cheat_sheet()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L78",
+      "source_location": "L80",
       "id": "agents_coordinator_agent_compile_cheat_sheet",
       "community": 10,
       "norm_label": "compile_cheat_sheet()"
@@ -106,7 +106,7 @@
       "label": "draft_nudge_email()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L110",
+      "source_location": "L112",
       "id": "agents_coordinator_agent_draft_nudge_email",
       "community": 10,
       "norm_label": "draft_nudge_email()"
@@ -115,7 +115,7 @@
       "label": "generate_weekly_digest()",
       "file_type": "code",
       "source_file": "agents/coordinator_agent.py",
-      "source_location": "L134",
+      "source_location": "L136",
       "id": "agents_coordinator_agent_generate_weekly_digest",
       "community": 10,
       "norm_label": "generate_weekly_digest()"
@@ -1081,6 +1081,33 @@
       "source_location": "L19",
       "id": "setup_workspace_main",
       "community": 9,
+      "norm_label": "main()"
+    },
+    {
+      "label": "test_integration.py",
+      "file_type": "code",
+      "source_file": "test_integration.py",
+      "source_location": "L1",
+      "id": "test_integration",
+      "community": 52,
+      "norm_label": "test_integration.py"
+    },
+    {
+      "label": "log()",
+      "file_type": "code",
+      "source_file": "test_integration.py",
+      "source_location": "L6",
+      "id": "test_integration_log",
+      "community": 52,
+      "norm_label": "log()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "test_integration.py",
+      "source_location": "L9",
+      "id": "test_integration_main",
+      "community": 52,
       "norm_label": "main()"
     },
     {
@@ -4193,6 +4220,37 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "test_integration.py",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "test_integration",
+      "target": "test_integration_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_integration.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "test_integration",
+      "target": "test_integration_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_integration.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "test_integration_main",
+      "target": "test_integration_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "test_workflow_mock.py",
       "source_location": "L10",
       "weight": 1.0,
@@ -5416,9 +5474,9 @@
       "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_trigger_board_guide",
-      "target": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
-      "confidence_score": 1.0
+      "target": "docs_trigger_board_guide_trigger_board_semantic_intent_guide"
     },
     {
       "relation": "contains",
@@ -5426,9 +5484,9 @@
       "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
-      "target": "docs_trigger_board_guide_1_how_it_works_under_the_hood",
-      "confidence_score": 1.0
+      "target": "docs_trigger_board_guide_1_how_it_works_under_the_hood"
     },
     {
       "relation": "contains",
@@ -5436,9 +5494,9 @@
       "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
-      "target": "docs_trigger_board_guide_2_natural_phrasing_dictionary",
-      "confidence_score": 1.0
+      "target": "docs_trigger_board_guide_2_natural_phrasing_dictionary"
     },
     {
       "relation": "contains",
@@ -5446,9 +5504,9 @@
       "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
-      "target": "docs_trigger_board_guide_3_developer_guidelines_for_extending_triggers",
-      "confidence_score": 1.0
+      "target": "docs_trigger_board_guide_3_developer_guidelines_for_extending_triggers"
     },
     {
       "relation": "contains",
@@ -5842,5 +5900,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "00cd06aafeabf5de66782ac5bcb9270ccc7a92d7"
+  "built_at_commit": "72df523e2a3ef34f6e8c1df0798cd8d80684c40b"
 }

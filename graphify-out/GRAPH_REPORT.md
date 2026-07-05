@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 25 files · ~14,689 words
+- 26 files · ~15,343 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 298 nodes · 312 edges · 52 communities (20 shown, 32 thin omitted)
+- 301 nodes · 315 edges · 53 communities (20 shown, 33 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `00cd06aa`
+- Built from commit: `72df523e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -67,6 +67,7 @@
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
 - [[_COMMUNITY_Community 51|Community 51]]
+- [[_COMMUNITY_Community 52|Community 52]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `connections` - 36 edges
@@ -95,7 +96,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 32 thin omitted)
+## Communities (53 total, 33 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -180,13 +181,13 @@ Nodes (4): 1. How It Works under the Hood, 2. Natural Phrasing Dictionary, 3. De
 ## Knowledge Gaps
 - **152 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+147 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`?**
-  _High betweenness centrality (0.064) - this node is a cross-community bridge._
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **What connects `name`, `nodes`, `main` to the rest of the system?**
   _155 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**

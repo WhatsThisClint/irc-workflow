@@ -1,6 +1,8 @@
+import os
 import sys
 import json
 from agents.llm_client import call_llm
+
 
 def log_debug(msg):
     print(f"[DEBUG] [AcademicAuditor] {msg}", file=sys.stderr)

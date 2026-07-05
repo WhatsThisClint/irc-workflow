@@ -1,7 +1,7 @@
 {
   "agents/academic_auditor.py": {
-    "mtime": 1783192605.7562265,
-    "ast_hash": "20cbcb8e6db82686d8c112f22e23fcdc",
+    "mtime": 1783228289.1878304,
+    "ast_hash": "7aa3f443fc961c4ac9245cc49edfaa2b",
     "semantic_hash": ""
   },
   "agents/alignment_agent.py": {
@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "agents/coordinator_agent.py": {
-    "mtime": 1783192597.1994014,
-    "ast_hash": "2e84279f125c7d8e7c793e66b02061b3",
+    "mtime": 1783228263.707973,
+    "ast_hash": "f69adeddef7ec36df6c145d551e4094d",
     "semantic_hash": ""
   },
   "agents/mentor_auditor.py": {
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "setup_workspace.py": {
-    "mtime": 1783191922.8895926,
-    "ast_hash": "58ab9241ea7b986018042b382368c99c",
+    "mtime": 1783214320.348029,
+    "ast_hash": "246bd5183c8241312591a9e836f83415",
     "semantic_hash": ""
   },
   "test_workflow_mock.py": {
@@ -122,6 +122,11 @@
   "docs/TRIGGER_BOARD_GUIDE.md": {
     "mtime": 1783214268.4237804,
     "ast_hash": "cb1956f08e71e3700792c688fa24a19d",
+    "semantic_hash": ""
+  },
+  "test_integration.py": {
+    "mtime": 1783228232.7035928,
+    "ast_hash": "0bf50d405e79cc98545254030808ebf5",
     "semantic_hash": ""
   }
 }
