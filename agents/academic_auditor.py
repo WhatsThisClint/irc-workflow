@@ -62,11 +62,16 @@ if __name__ == "__main__":
         if memory_file and os.path.exists(memory_file):
             with open(memory_file, "r", encoding="utf-8") as f:
                 memory_data = json.load(f)
-                memory_text = memory_data.get("feedback", "")
+                memory_text = memory_data.get("consolidated_rules") or memory_data.get("feedback", "")
                 
-        output = audit_document(student_text, baseline_text, degree, duration, memory_text)
-        print(output)
+        output_str = audit_document(student_text, baseline_text, degree, duration, memory_text)
+        # Parse and inject status envelopes to make auditing robust
+        res = json.loads(output_str)
+        res["status"] = "success"
+        res["error"] = None
+        print(json.dumps(res))
     except Exception as e:
-        print(json.dumps({"error": str(e)}))
+        print(json.dumps({"status": "failed", "error": str(e), "critique": f"Academic Auditor Error: {str(e)}", "reflection_questions": [], "competency_scores": {"scientific_methodology": 5, "data_triangulation": 5, "academic_writing_clarity": 5}}))
         sys.exit(1)
+
 

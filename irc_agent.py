@@ -102,31 +102,31 @@ if __name__ == "__main__":
             sys.exit(1)
             
     elif args.action == "audit-doc":
-        dir_name = os.path.dirname(args.student_report_file) if args.student_report_file else "."
-        student_name = args.student if args.student else "Student"
-        memory_file = os.path.join(dir_name, f"memory.json")
-        cheat_sheet_file = os.path.join(dir_name, f"cheat_sheet.md")
-        
-        if not os.path.exists(cheat_sheet_file) and args.student_report_file:
-            try:
-                with open(cheat_sheet_file, "w", encoding="utf-8") as f:
-                    f.write(f"# IRC Admin Cheat Sheet: {student_name}\n\n## Coordinator Feedback/Corrections\n")
-            except Exception:
-                pass
-                
-        if os.path.exists(cheat_sheet_file):
-            try:
-                run_agent_script(coordinator_script, [
-                    "--action", "extract-feedback",
-                    "--cheat-sheet-file", cheat_sheet_file,
-                    "--memory-file", memory_file
-                ])
-            except Exception as e:
-                log_debug(f"Memory extraction warning: {e}")
-                
-        # 1. Spawn Academic Auditor
-        academic_output_file = os.path.join(dir_name, "academic_temp.json")
         try:
+            dir_name = os.path.dirname(args.student_report_file) if args.student_report_file else "."
+            student_name = args.student if args.student else "Student"
+            memory_file = os.path.join(dir_name, f"memory.json")
+            cheat_sheet_file = os.path.join(dir_name, f"cheat_sheet.md")
+            
+            if not os.path.exists(cheat_sheet_file) and args.student_report_file:
+                try:
+                    with open(cheat_sheet_file, "w", encoding="utf-8") as f:
+                        f.write(f"# IRC Admin Cheat Sheet: {student_name}\n\n## Coordinator Feedback/Corrections\n")
+                except Exception:
+                    pass
+                    
+            if os.path.exists(cheat_sheet_file):
+                try:
+                    run_agent_script(coordinator_script, [
+                        "--action", "extract-feedback",
+                        "--cheat-sheet-file", cheat_sheet_file,
+                        "--memory-file", memory_file
+                    ])
+                except Exception as e:
+                    log_debug(f"Memory extraction warning: {e}")
+                    
+            # 1. Spawn Academic Auditor
+            academic_output_file = os.path.join(dir_name, "academic_temp.json")
             academic_json = run_agent_script(academic_script, [
                 args.student_report_file,
                 args.baseline_report_file,
@@ -136,38 +136,30 @@ if __name__ == "__main__":
             ])
             with open(academic_output_file, "w", encoding="utf-8") as f:
                 f.write(academic_json)
-        except Exception as e:
-            print(json.dumps({"error": f"Academic Auditor failed: {str(e)}"}))
-            sys.exit(1)
-            
-        # 2. Spawn Mentor Auditor
-        mentor_output_file = os.path.join(dir_name, "mentor_temp.json")
-        try:
+                
+            # 2. Spawn Mentor Auditor
+            mentor_output_file = os.path.join(dir_name, "mentor_temp.json")
             mentor_json = run_agent_script(mentor_script, [
                 args.student_report_file,
                 args.student_report_file
             ])
             with open(mentor_output_file, "w", encoding="utf-8") as f:
                 f.write(mentor_json)
-        except Exception as e:
-            print(json.dumps({"error": f"Mentor Auditor failed: {str(e)}"}))
-            sys.exit(1)
-            
-        # 3. Optional: Spawn Sponsor Alignment Agent (only if problem statement is passed)
-        alignment_output_file = os.path.join(dir_name, "alignment_temp.json")
-        if args.sponsor_problem:
-            try:
-                alignment_json = run_agent_script(alignment_script, [
-                    args.student_report_file,
-                    args.sponsor_problem
-                ])
-                with open(alignment_output_file, "w", encoding="utf-8") as f:
-                    f.write(alignment_json)
-            except Exception as e:
-                log_debug(f"Sponsor Alignment check failed: {e}")
                 
-        # 4. Spawn Coordinator Agent to compile final report
-        try:
+            # 3. Optional: Spawn Sponsor Alignment Agent (only if problem statement is passed)
+            alignment_output_file = os.path.join(dir_name, "alignment_temp.json")
+            if args.sponsor_problem:
+                try:
+                    alignment_json = run_agent_script(alignment_script, [
+                        args.student_report_file,
+                        args.sponsor_problem
+                    ])
+                    with open(alignment_output_file, "w", encoding="utf-8") as f:
+                        f.write(alignment_json)
+                except Exception as e:
+                    log_debug(f"Sponsor Alignment check failed: {e}")
+                    
+            # 4. Spawn Coordinator Agent to compile final report
             compile_args = [
                 "--action", "compile-report",
                 "--student", student_name,
@@ -187,5 +179,25 @@ if __name__ == "__main__":
                     
             print(report_json)
         except Exception as e:
-            print(json.dumps({"error": f"Coordinator compilation failed: {str(e)}"}))
+            # Fallback cleanup
+            for temp_file in ["academic_temp.json", "mentor_temp.json", "alignment_temp.json"]:
+                p = os.path.join(dir_name if 'dir_name' in locals() else ".", temp_file)
+                if os.path.exists(p):
+                    try:
+                        os.remove(p)
+                    except:
+                        pass
+            print(json.dumps({
+                "status": "failed",
+                "error": str(e),
+                "cheat_sheet": f"ERROR: Failed to perform audit: {str(e)}",
+                "scientific_methodology": 5,
+                "data_triangulation": 5,
+                "academic_writing_clarity": 5,
+                "sponsor_alignment_index": 50,
+                "mentor_score": 5,
+                "nudge_subject": "IRC Progress Sync Alert",
+                "nudge_body": "Could not compile nudge due to an internal execution error."
+            }))
             sys.exit(1)
+

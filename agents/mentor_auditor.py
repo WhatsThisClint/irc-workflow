@@ -41,9 +41,13 @@ if __name__ == "__main__":
         with open(student_file, "r", encoding="utf-8") as f:
             student_text = f.read()
             
-        output = audit_mentor(comments_text, student_text)
-        print(output)
+        output_str = audit_mentor(comments_text, student_text)
+        res = json.loads(output_str)
+        res["status"] = "success"
+        res["error"] = None
+        print(json.dumps(res))
     except Exception as e:
-        print(json.dumps({"error": str(e)}))
+        print(json.dumps({"status": "failed", "error": str(e), "mentor_score": 5, "mentor_critique": f"Mentor Auditor failed: {str(e)}"}))
         sys.exit(1)
+
 

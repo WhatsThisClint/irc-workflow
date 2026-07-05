@@ -1,22 +1,22 @@
 {
   "agents/academic_auditor.py": {
-    "mtime": 1783192428.1701634,
-    "ast_hash": "5cb4037336d0e98ecd35404927126227",
+    "mtime": 1783192605.7562265,
+    "ast_hash": "20cbcb8e6db82686d8c112f22e23fcdc",
     "semantic_hash": ""
   },
   "agents/alignment_agent.py": {
-    "mtime": 1783192439.9346287,
-    "ast_hash": "b0d768949cb561798faf826a2fd1088f",
+    "mtime": 1783192615.3291323,
+    "ast_hash": "2fa5ba2d835fd24807e8732045df5325",
     "semantic_hash": ""
   },
   "agents/coordinator_agent.py": {
-    "mtime": 1783192471.1695216,
-    "ast_hash": "d43cf5b971b74c88f0915e480a0595de",
+    "mtime": 1783192597.1994014,
+    "ast_hash": "2e84279f125c7d8e7c793e66b02061b3",
     "semantic_hash": ""
   },
   "agents/mentor_auditor.py": {
-    "mtime": 1783192434.9157996,
-    "ast_hash": "257ce8e3e83adeb5a0f214dbcd5ad57f",
+    "mtime": 1783192620.7916121,
+    "ast_hash": "058087d11e216a8b6aa8a90b5a1addc3",
     "semantic_hash": ""
   },
   "agents/onboarding_agent.py": {
@@ -30,8 +30,8 @@
     "semantic_hash": ""
   },
   "irc_agent.py": {
-    "mtime": 1783192482.2043042,
-    "ast_hash": "a791d1bdcc94773c2d697064b57740e6",
+    "mtime": 1783192631.9156756,
+    "ast_hash": "2a9ae403c40cbfc1f25da6f8b1e397a3",
     "semantic_hash": ""
   },
   "n8n/workflows/irc_master_workflow.json": {

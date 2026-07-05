@@ -191,21 +191,73 @@ if __name__ == "__main__":
         
     elif args.action == "extract-feedback":
         if not args.cheat_sheet_file or not args.memory_file:
-            print(json.dumps({"error": "Missing parameters for extract-feedback."}))
+            print(json.dumps({"status": "failed", "error": "Missing parameters for extract-feedback."}))
             sys.exit(1)
         try:
             with open(args.cheat_sheet_file, "r", encoding="utf-8") as f:
                 content = f.read()
             feedback = extract_coordinator_feedback(content)
             
-            memory_data = {"feedback": feedback}
+            history = []
+            consolidated_rules = ""
+            if os.path.exists(args.memory_file):
+                try:
+                    with open(args.memory_file, "r", encoding="utf-8") as f:
+                        memory_data = json.load(f)
+                        if "history" in memory_data:
+                            history = memory_data.get("history", [])
+                            consolidated_rules = memory_data.get("consolidated_rules", "")
+                        elif "feedback" in memory_data:
+                            old_feedback = memory_data.get("feedback", "")
+                            if old_feedback:
+                                history = [old_feedback]
+                                consolidated_rules = old_feedback
+                except Exception as e:
+                    log_debug(f"Warning: Failed to load existing memory file: {e}")
+            
+            if feedback and (not history or history[-1] != feedback):
+                history.append(feedback)
+                log_debug(f"New feedback appended. History length: {len(history)}")
+                
+                total_len = sum(len(h) for h in history)
+                if total_len > 1500:
+                    log_debug(f"Feedback history exceeds 1500 characters. Compressing...")
+                    history_str = "\n---\n".join(history)
+                    prompt = f"""
+You are the Coordinator Agent.
+The Coordinator user has provided several rounds of corrections and feedback over successive student report iterations.
+Here is the accumulated feedback history for this student:
+{history_str}
+
+Consolidate this list into a clean, concise, non-overlapping, bulleted list of rules and principles that the AI Auditor must check in the student's work. Eliminate duplicates and resolve any contradictions in favor of the latest feedback.
+Output only the consolidated list. Do not include introductory or concluding remarks.
+"""
+                    try:
+                        consolidated_rules = call_llm(prompt)
+                        log_debug("Successfully compressed memory history.")
+                    except Exception as e:
+                        log_debug(f"Warning: Memory compression query failed: {e}. Falling back to raw concatenation.")
+                        consolidated_rules = "\n\n".join(history)
+                else:
+                    consolidated_rules = "\n\n".join(history)
+            elif not feedback and history:
+                pass
+            elif feedback:
+                if not consolidated_rules:
+                    consolidated_rules = feedback
+                    
+            memory_data = {
+                "history": history,
+                "consolidated_rules": consolidated_rules
+            }
             with open(args.memory_file, "w", encoding="utf-8") as f:
                 json.dump(memory_data, f, indent=2)
             log_debug(f"Extracted and saved feedback memory to {args.memory_file}")
-            print(json.dumps({"success": True, "feedback": feedback}))
+            print(json.dumps({"status": "success", "error": None, "feedback": feedback, "consolidated_rules": consolidated_rules}))
         except Exception as e:
-            print(json.dumps({"error": str(e)}))
+            print(json.dumps({"status": "failed", "error": str(e)}))
             sys.exit(1)
+
             
     elif args.action == "compile-report":
         academic_file = getattr(args, "academic_critique_file", None)
@@ -230,7 +282,7 @@ if __name__ == "__main__":
             if args.memory_file and os.path.exists(args.memory_file):
                 with open(args.memory_file, "r", encoding="utf-8") as f:
                     memory_data = json.load(f)
-                    feedback_memory = memory_data.get("feedback", "")
+                    feedback_memory = memory_data.get("consolidated_rules") or memory_data.get("feedback", "")
             
             critique = academic_data.get("critique", "")
             reflection_questions = academic_data.get("reflection_questions", [])
@@ -260,6 +312,8 @@ if __name__ == "__main__":
             nudge = draft_nudge_email(args.student, critique, mentor_score)
             
             output_report = {
+                "status": "success",
+                "error": None,
                 "cheat_sheet": cheat_sheet,
                 "scientific_methodology": methodology_score,
                 "data_triangulation": triangulation_score,
@@ -271,12 +325,12 @@ if __name__ == "__main__":
             }
             print(json.dumps(output_report))
         except Exception as e:
-            print(json.dumps({"error": f"Failed to compile report: {str(e)}"}))
+            print(json.dumps({"status": "failed", "error": f"Failed to compile report: {str(e)}"}))
             sys.exit(1)
             
     elif args.action == "compile-weekly-digest":
         if not args.weekly_metrics_file:
-            print(json.dumps({"error": "Missing --weekly-metrics-file parameter."}))
+            print(json.dumps({"status": "failed", "error": "Missing --weekly-metrics-file parameter."}))
             sys.exit(1)
         try:
             with open(args.weekly_metrics_file, "r", encoding="utf-8") as f:
@@ -284,6 +338,7 @@ if __name__ == "__main__":
             digest = generate_weekly_digest(weekly_data)
             print(digest)
         except Exception as e:
-            print(json.dumps({"error": str(e)}))
+            print(f"ERROR: Failed to compile weekly digest: {str(e)}")
             sys.exit(1)
+
 
