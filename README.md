@@ -1,3 +1,5 @@
+Yo! whats up AJ
+
 # India Research Corps (IRC) Workspace Automation System
 
 This repository contains the workflow models, multi-agent Python scripts, and database configurations that automate student onboarding, progress auditing, and funding metrics tracking for the **India Research Corps (IRC)** program at **WELL Labs, Bangalore**.
