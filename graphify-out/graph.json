@@ -1411,7 +1411,7 @@
       "label": "\u26a1 Quick Start",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L24",
+      "source_location": "L27",
       "id": "readme_quick_start",
       "community": 37,
       "norm_label": "\u26a1 quick start"
@@ -1420,7 +1420,7 @@
       "label": "1. Initialize the Workspace",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L26",
+      "source_location": "L29",
       "id": "readme_1_initialize_the_workspace",
       "community": 37,
       "norm_label": "1. initialize the workspace"
@@ -1429,7 +1429,7 @@
       "label": "2. Start the Local n8n Server",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L35",
       "id": "readme_2_start_the_local_n8n_server",
       "community": 37,
       "norm_label": "2. start the local n8n server"
@@ -1438,7 +1438,7 @@
       "label": "3. Verify Local CLI Agents",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L38",
+      "source_location": "L41",
       "id": "readme_3_verify_local_cli_agents",
       "community": 37,
       "norm_label": "3. verify local cli agents"
@@ -1447,7 +1447,7 @@
       "label": "\ud83e\udde0 Graphify Code Graph",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L47",
+      "source_location": "L50",
       "id": "readme_graphify_code_graph",
       "community": 37,
       "norm_label": "\ud83e\udde0 graphify code graph"
@@ -2144,6 +2144,51 @@
       "id": "docs_operations_manual_3_3_diagnostics",
       "community": 24,
       "norm_label": "3.3 diagnostics"
+    },
+    {
+      "label": "TRIGGER_BOARD_GUIDE.md",
+      "file_type": "document",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L1",
+      "id": "docs_trigger_board_guide",
+      "community": 51,
+      "norm_label": "trigger_board_guide.md"
+    },
+    {
+      "label": "Trigger Board & Semantic Intent Guide",
+      "file_type": "document",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L1",
+      "id": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
+      "community": 51,
+      "norm_label": "trigger board & semantic intent guide"
+    },
+    {
+      "label": "1. How It Works under the Hood",
+      "file_type": "document",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L7",
+      "id": "docs_trigger_board_guide_1_how_it_works_under_the_hood",
+      "community": 51,
+      "norm_label": "1. how it works under the hood"
+    },
+    {
+      "label": "2. Natural Phrasing Dictionary",
+      "file_type": "document",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L28",
+      "id": "docs_trigger_board_guide_2_natural_phrasing_dictionary",
+      "community": 51,
+      "norm_label": "2. natural phrasing dictionary"
+    },
+    {
+      "label": "3. Developer Guidelines for Extending Triggers",
+      "file_type": "document",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L42",
+      "id": "docs_trigger_board_guide_3_developer_guidelines_for_extending_triggers",
+      "community": 51,
+      "norm_label": "3. developer guidelines for extending triggers"
     },
     {
       "label": "agent_native_audit.md",
@@ -4221,9 +4266,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_workspace_rules_ai_agent_trigger_mappings",
-      "target": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching"
     },
     {
       "relation": "contains",
@@ -4241,9 +4286,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_1_trigger_onboarding_a_student",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_1_trigger_onboarding_a_student"
     },
     {
       "relation": "contains",
@@ -4251,9 +4296,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_2_trigger_running_student_audits",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_2_trigger_running_student_audits"
     },
     {
       "relation": "contains",
@@ -4261,9 +4306,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_3_trigger_checking_sponsor_alignment",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_3_trigger_checking_sponsor_alignment"
     },
     {
       "relation": "contains",
@@ -4271,9 +4316,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L43",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_4_trigger_compiling_weekly_digest",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_4_trigger_compiling_weekly_digest"
     },
     {
       "relation": "contains",
@@ -4281,9 +4326,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L53",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_5_trigger_verifying_setup_diagnostics",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_5_trigger_verifying_setup_diagnostics"
     },
     {
       "relation": "contains",
@@ -4291,9 +4336,9 @@
       "source_file": ".agents/AGENTS.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agents_1_verbal_prompt_interception_semantic_intent_matching",
-      "target": "agents_agents_1_6_trigger_master_morning_sync_do_everything",
-      "confidence_score": 1.0
+      "target": "agents_agents_1_6_trigger_master_morning_sync_do_everything"
     },
     {
       "relation": "contains",
@@ -5368,6 +5413,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_trigger_board_guide",
+      "target": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
+      "target": "docs_trigger_board_guide_1_how_it_works_under_the_hood",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
+      "target": "docs_trigger_board_guide_2_natural_phrasing_dictionary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/TRIGGER_BOARD_GUIDE.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "docs_trigger_board_guide_trigger_board_semantic_intent_guide",
+      "target": "docs_trigger_board_guide_3_developer_guidelines_for_extending_triggers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "docs/agent_native_audit.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -5757,5 +5842,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0c35f4f41df1a5b1dbefe624f4c5afb99ee17b57"
+  "built_at_commit": "00cd06aafeabf5de66782ac5bcb9270ccc7a92d7"
 }

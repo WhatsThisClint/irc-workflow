@@ -16,8 +16,11 @@ To make this workspace fully self-contained and accessible to developers and AI 
     *   Read the detailed rules and parameters governing the 16 custom workflow systems (inception gate fails, missing transcripts, due date cascades, and database pruning).
 4.  **[Operations & Databases Manual](docs/OPERATIONS_MANUAL.md)**
     *   Get step-by-step setup guides, SQLite portability data, Airtable database schemas, and manual CLI troubleshooting procedures.
-5.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**
+5.  **[Trigger Board & Semantic Intent Guide](docs/TRIGGER_BOARD_GUIDE.md)**
+    *   Find trigger keywords, natural phrasing examples, and custom agent rules.
+6.  **[AI Agent Onboarding Guide](AGENT_ONBOARDING.md)**
     *   The bootstrap specification file designed specifically for incoming AI coding agents to set up the repository automatically.
+
 
 ---
 

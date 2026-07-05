@@ -1,16 +1,16 @@
 # Graph Report - IRC Workflow  (2026-07-05)
 
 ## Corpus Check
-- 24 files · ~14,258 words
+- 25 files · ~14,689 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 293 nodes · 308 edges · 51 communities (19 shown, 32 thin omitted)
+- 298 nodes · 312 edges · 52 communities (20 shown, 32 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0c35f4f4`
+- Built from commit: `00cd06aa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -66,6 +66,7 @@
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 49|Community 49]]
 - [[_COMMUNITY_Community 50|Community 50]]
+- [[_COMMUNITY_Community 51|Community 51]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `connections` - 36 edges
@@ -94,7 +95,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (51 total, 32 thin omitted)
+## Communities (52 total, 32 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.17
@@ -172,8 +173,12 @@ Nodes (24): 1. Initialize the Workspace, 1. Master Google Sheet Schema, 1. Opera
 Cohesion: 0.18
 Nodes (10): 1.1 Scientific Methodology (1-10), 1.2 Data Triangulation (1-10), 1.3 Academic Writing Clarity (1-10), 1. The Core Academic Triad, 2.1 Evaluation Dual Checks, 2. Sponsor Alignment Index (SAI), 3.1 Degree Level, 3.2 Program Duration (+2 more)
 
+### Community 51 - "Community 51"
+Cohesion: 0.40
+Nodes (4): 1. How It Works under the Hood, 2. Natural Phrasing Dictionary, 3. Developer Guidelines for Extending Triggers, Trigger Board & Semantic Intent Guide
+
 ## Knowledge Gaps
-- **149 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+144 more)
+- **152 isolated node(s):** `name`, `nodes`, `main`, `main`, `main` (+147 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **32 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -181,9 +186,9 @@ Nodes (10): 1.1 Scientific Methodology (1-10), 1.2 Data Triangulation (1-10), 1.
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `connections` connect `Community 5` to `Community 8`, `Community 12`, `Community 13`, `Community 17`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 31`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`, `Community 49`, `Community 50`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
+  _High betweenness centrality (0.064) - this node is a cross-community bridge._
 - **What connects `name`, `nodes`, `main` to the rest of the system?**
-  _152 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _155 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
 - **Should `Community 3` be split into smaller, more focused modules?**
